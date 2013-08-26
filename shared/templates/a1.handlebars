@@ -1,0 +1,12 @@
+<section class="t a1" data-id="{{id}}">
+  <h1 class="a1__title">{{title}}</h1>
+  <p class="a1__deck">{{deck}}</p>
+  <article class="figures">
+    {{#each items}}
+      <figure class="figure">
+        <h2 class="figure__stat" style="color: rgba({{color.r}}, {{color.g}}, {{color.b}}, 1);">{{highlight}}</h2>
+        <p class="figure__text">{{text}}</p>
+      </figure>
+    {{/each}}
+  </article>
+</section>

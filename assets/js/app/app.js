@@ -1,12 +1,10 @@
 var $ = require('jQuery');
 var Backbone = require('backbone');
+Backbone.$ = $;
 
 var AppRouter = require('./backbone/routers/app');
 
-
-
-
-Backbone.$ = $;
+require('templates')(require('handlebars'));
 
 module.exports = (function (options) {
   options = options || {};

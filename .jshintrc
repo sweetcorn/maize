@@ -1,0 +1,17 @@
+{
+  "eqeqeq": true
+, "indent": 2
+, "undef": true
+, "trailing": true
+, "curly": false
+, "browser": true
+, "node": true
+, "laxcomma":true
+, "globals": {
+  , "$": false
+  , "Backbone": false
+  , "_": false
+  , "Handlebars": false
+  , "jQuery": false
+  }
+}

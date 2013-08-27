@@ -11,10 +11,16 @@ module.exports = function(grunt) {
             jQuery: {
               path: 'assets/vendor/components/jquery/jquery.js',
               exports: '$'
+            },
+            handlebars: {
+              path: 'assets/vendor/components/handlebars/handlebars.js',
+              exports: 'Handlebars'
             }
           },
           alias: [
-            'assets/vendor/components/backbone/backbone.js:backbone'
+            'assets/vendor/components/backbone/backbone.js:backbone',
+            'assets/js/compiled/templates:templates',
+            'assets/js/compiled/json:json'
           ]
         }
       },
@@ -23,21 +29,37 @@ module.exports = function(grunt) {
         dest: 'assets/js/compiled/app.js',
         options: {
           debug: true,
-          external: ['jQuery', 'backbone']
+          external: ['jQuery', 'handlebars', 'backbone', 'templates', 'json']
         }
+      },
+      json: {
+        src: ['assets/json/**/*.json'],
+        dest: 'assets/js/compiled/json.js'
       }
     },
 
     handlebars: {
       compile: {
         options: {
-          namespace: 'SYP.Templates',
-          processName: function(filePath) {
-            return filePath.replace(/^templates\//, '').replace(/\.handlebars$/, '');
+          wrapped: true,
+          commonjs: true,
+          processName: function (filePath) {
+            var name = filePath.split('/').join('.');
+            name = name.replace(/shared\.templates\./,'');
+            name = name.replace(/\.hbs/,'').replace(/\.handlebars/,'');
+            return name;
+          },
+          partialRegex: /^_/,
+          processPartialName: function (filePath) {
+            var name = filePath.split('/').join('.');
+            name = name.replace(/shared\.templates\./,'');
+            name = name.replace(/\.hbs/,'').replace(/\.handlebars/,'');
+            name = name.replace(/\._/, '.');
+            return name;
           }
         },
         files: {
-          "assets/js/templates.js": ['server/templates/**/*.handlebars', 'shared/templates/**/*.handlebars']
+          "assets/js/compiled/templates.js": ['server/templates/**/*.handlebars', 'shared/templates/**/*.handlebars']
         }
       }
     },
@@ -74,9 +96,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browserify');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
   grunt.registerTask('base', ['browserify', 'handlebars', 'sass']);
   grunt.registerTask('dev', ['base', 'watch']);
+  grunt.registerTask('deploy', ['base', 'jshint'])
   grunt.registerTask('default', ['dev']);
+
 
 };

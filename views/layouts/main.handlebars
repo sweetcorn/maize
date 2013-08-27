@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
-    <title>My App {{title}}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="IBM Knowledge Editions">
+
+    <!-- <link id="site-styles" rel="stylesheet" href="/stylesheets/screen.css"> -->
 
     {{{css 'compiled/screen'}}}
   </head>
-  <body>
 
-    {{{body}}}
+  <body class="js-body">
+
+   <!-- Main site nav -->
+    <div class="js-nav-container">
+
+    </div>
+
+    <!-- Site's Main Content-->
+    <main class="site-main js-main" role="main">
+
+    </main>
 
     {{{js 'compiled/vendor'}}}
     {{{js 'compiled/app'}}}
+
   </body>
 </html>

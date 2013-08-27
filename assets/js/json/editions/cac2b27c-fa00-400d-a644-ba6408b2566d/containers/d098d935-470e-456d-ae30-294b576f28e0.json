@@ -1,0 +1,90 @@
+{
+    "id": "d098d935-470e-456d-ae30-294b576f28e0",
+    "number": "02",
+    "title": "Three important shifts in the world",
+    "pages": [
+        {
+            "id": "0c2e08d9-8721-48ee-a198-92be7ca18c95",
+            "template": "I1",
+            "body": "Why you and your clients should be thinking about smarter cloud, and where to start",
+            "background": {
+                "url": "image.jpg",
+                "url@2x": "image@2x.jpg"
+            }
+        },
+        {
+            "id": "0c2e08d9-8721-48ee-a198-92be7ca18c95",
+            "template": "M6",
+            "items": [
+                {
+                    "id": "0c2e08d9-8721-48ee-a198-92be7ca18c95",
+                    "label": "Banking",
+                    "icon": "icon.svg",
+                    "links": [
+                        {
+                            "id": "0c2e08d9-8721-48ee-a198-92be7ca18c95",
+                            "text": "Talking to a Chief Procurement Officer",
+                            "target": {
+                                "template": "PO1",
+                                "title": "Business Process as a Service (BPaaS):",
+                                "body": "Cloud platform services, where a complete business process is provided as a ser- vice. This can include a wide range of functions across an enterprise, including billing, HR, payroll and advertising."
+                            }
+                        },
+                        {
+                            "id": "0c2e08d9-8721-48ee-a198-92be7ca18c95",
+                            "text": "Talking to a Chief Marketing Officer",
+                            "target": {
+                                "template": "PO1",
+                                "title": "Business Process as a Service (BPaaS):",
+                                "body": "Cloud platform services, where a complete business process is provided as a ser- vice. This can include a wide range of functions across an enterprise, including billing, HR, payroll and advertising."
+                            }
+                        },
+                        {
+                            "id": "0c2e08d9-8721-48ee-a198-92be7ca18c95",
+                            "text": "Talking to a VP of eCommerce",
+                            "target": {
+                                "template": "PO1",
+                                "title": "Business Process as a Service (BPaaS):",
+                                "body": "Cloud platform services, where a complete business process is provided as a ser- vice. This can include a wide range of functions across an enterprise, including billing, HR, payroll and advertising."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "0c2e08d9-8721-48ee-a198-92be7ca18c95",
+                    "label": "Retail",
+                    "icon": "icon.svg",
+                    "links": [
+                        {
+                            "id": "0c2e08d9-8721-48ee-a198-92be7ca18c95",
+                            "text": "Talking to a Chief Procurement Officer",
+                            "target": {
+                                "template": "PO1",
+                                "title": "Business Process as a Service (BPaaS):",
+                                "body": "Cloud platform services, where a complete business process is provided as a ser- vice. This can include a wide range of functions across an enterprise, including billing, HR, payroll and advertising."
+                            }
+                        },
+                        {
+                            "id": "0c2e08d9-8721-48ee-a198-92be7ca18c95",
+                            "text": "Talking to a Chief Marketing Officer",
+                            "target": {
+                                "template": "PO1",
+                                "title": "Business Process as a Service (BPaaS):",
+                                "body": "Cloud platform services, where a complete business process is provided as a ser- vice. This can include a wide range of functions across an enterprise, including billing, HR, payroll and advertising."
+                            }
+                        },
+                        {
+                            "id": "0c2e08d9-8721-48ee-a198-92be7ca18c95",
+                            "text": "Talking to a VP of eCommerce",
+                            "target": {
+                                "template": "PO1",
+                                "title": "Business Process as a Service (BPaaS):",
+                                "body": "Cloud platform services, where a complete business process is provided as a ser- vice. This can include a wide range of functions across an enterprise, including billing, HR, payroll and advertising."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "id": "e9ddaad3-83c6-4662-a461-4be70d765846",
+    "number": "03",
+    "title": "Three must-reads",
+    "pages": [
+        {
+            "id": "1f716f90-05c9-46f0-9f60-dd6b7ab34cc9",
+            "template": "I1",
+            "body": "A powerful way to increase the collective expertise",
+            "background": {
+                "url": "image.jpg",
+                "url@2x": "image@2x.jpg"
+            }
+        },
+        {
+            "id": "7bb25b8b-fcee-48f9-91b1-ad120c294d0c",
+            "template": "M6",
+            "links": [
+                {
+                    "text": "The power of cloud: Driving business model innovation",
+                    "target": {
+                        "id": "cdd95ca4-a8b8-4a25-8427-91675a4adc99",
+                        "template": "PO6",
+                        "title": "The power of cloud: Driving business model innovation",
+                        "body": "The IBM Institute for Business Value, through a survey conducted in conjunction with the Economist Intelligence Unit, discovers how global business and technology executives see the game-changing potential of cloud.",
+                        "link": {
+                            "text": "IBM Institute for Business Value executive report, February 2012",
+                            "target": "http://www-935.ibm.com/services/us/gbs/thoughtleadership/ibv-power-of-cloud.html"
+                        }
+                    }
+                },
+                {
+                    "text": "\"How Cloud Computing Is Changing IT Organizations\"",
+                    "target": {
+                        "id": "3ba5f79e-92f0-46d2-9aa3-747223ba6932",
+                        "template": "PO6",
+                        "title": "\"How Cloud Computing Is Changing IT Organizations\"",
+                        "body": "In investigating the effect of cloud on corporate IT departments, Deloitte Insights found a major shift in the responsibilities of IT professionals, including the ability to focus on high-value activities that enable new insights and innovation.",
+                        "link": {
+                            "text": "CIO Journal – Deloitte Insights, April 29, 2013",
+                            "target": "http://deloitte.wsj.com/cio/2013/04/29/how-cloud-computing-is-changing-it-organizations/"
+                        }
+                    }
+                },
+                {
+                    "text": "Embrace the Inevitable: Six Imperatives to Prepare Your Company for Cloud Computing",
+                    "target": {
+                        "id": "e379fcf1-6311-4d12-b4bc-87d39df84dca",
+                        "template": "PO6",
+                        "title": "Embrace the Inevitable: Six Imperatives to Prepare Your Company for Cloud Computing",
+                        "body": "In reviewing cloud adoption at 46 leading companies, the MIT Center for Information Systems Research (CISR) explores the six critical factors your company needs to implement to maximize the benefits of cloud computing.",
+                        "link": {
+                            "text": "MIT Sloan Management CISR research briefing, October 18, 2012",
+                            "target": "http://cisr.mit.edu/blog/documents/2012/10/18/2012_1001_embraceinevitable_mooneyrossphipps-pdf/"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

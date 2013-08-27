@@ -1,0 +1,8 @@
+.DS_Store
+tmp/
+node_modules
+config/key.pem
+.sass-cache
+public/scripts
+public/styles
+.vagrant

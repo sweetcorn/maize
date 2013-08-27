@@ -17,6 +17,7 @@
             "template": "M7",
             "links": [
                 {
+                    "id": "ad6a2a90-39b2-4445-9317-c8f0e2d92962",
                     "text": "Cloud",
                     "target": {
                         "id": "9a0921e5-27c0-4ca8-be3e-70d27bef2d3a",
@@ -26,6 +27,7 @@
                     }
                 },
                 {
+                    "id": "f21b29fb-0562-4935-aa2d-c79237412bce",
                     "text": "Private cloud",
                     "target": {
                         "id": "38f1ab73-8355-4509-847f-09dc4a835365",
@@ -35,6 +37,7 @@
                     }
                 },
                 {
+                    "id": "bb21ec15-9fdc-486c-b5aa-668e03f97cf9",
                     "text": "Public cloud",
                     "target": {
                         "id": "851c99b4-1a8c-41ab-b1a8-9cfab9261a31",
@@ -44,6 +47,7 @@
                     }
                 },
                 {
+                    "id": "7b2ad46f-6307-4413-adf6-a78eaee1c8d7",
                     "text": "Hybrid cloud",
                     "target": {
                         "id": "44745b6d-af9a-4c42-8ab9-337fbad9b6b4",
@@ -53,6 +57,7 @@
                     }
                 },
                 {
+                    "id": "2907b5c8-50cb-47a7-9c9f-fcf4d6a8985e",
                     "text": "Infrastructure as a service (IaaS)",
                     "target": {
                         "id": "8655ba9f-e716-4315-86ce-afe6012ad0b6",
@@ -62,6 +67,7 @@
                     }
                 },
                 {
+                    "id": "195d8e4a-1371-47da-aa05-0928cd93a2c3",
                     "text": "Platform as a service (PaaS)",
                     "target": {
                         "id": "8ad38ba9-baad-49ba-ba60-c1ef1f5c1623",
@@ -71,6 +77,7 @@
                     }
                 },
                 {
+                    "id": "c6841130-193d-43d5-88c2-add85d4f060a",
                     "text": "Software as a service (SaaS)",
                     "target": {
                         "id": "7a528ee3-5963-4003-888c-c903551d3640",
@@ -80,6 +87,7 @@
                     }
                 },
                 {
+                    "id": "4d49c25b-bd7c-4ea5-bf1d-057ce71ef6bf",
                     "text": "Business process as a service (BPaaS)",
                     "target": {
                         "id": "dbcfe762-6dbd-4065-95e9-1ede765708b2",
@@ -89,6 +97,7 @@
                     }
                 },
                 {
+                    "id": "d51aadec-a964-4a4c-8895-fe5e0d5cffed",
                     "text": "Chief cloud officer (CCO)",
                     "target": {
                         "id": "e3c1f446-be8c-4251-bb85-e34dee5491ad",
@@ -98,6 +107,7 @@
                     }
                 },
                 {
+                    "id": "d8eec5ab-173f-4760-99d9-b98cd1f04b85",
                     "text": "Cloud-centric workload",
                     "target": {
                         "id": "90db918d-15bb-481e-9069-14c40eaaba2f",
@@ -107,6 +117,7 @@
                     }
                 },
                 {
+                    "id": "f96278ff-f588-4086-87da-b01598775883",
                     "text": "Cloud-enabled workload",
                     "target": {
                         "id": "9cc26840-1cd6-4042-8f93-f1366fa28fae",
@@ -116,6 +127,7 @@
                     }
                 },
                 {
+                    "id": "284d613e-450f-4009-896e-d3d015cf6f87",
                     "text": "DevOps on PaaS",
                     "target": {
                         "id": "1d61bfe1-2631-42ff-8389-1a118dd62ad2",

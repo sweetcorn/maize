@@ -17,6 +17,7 @@
             "template": "M6",
             "links": [
                 {
+                    "id": "fb24a3a1-fd50-46d3-9ee1-608569fcfa80",
                     "text": "The power of cloud: Driving business model innovation",
                     "target": {
                         "id": "cdd95ca4-a8b8-4a25-8427-91675a4adc99",
@@ -30,6 +31,7 @@
                     }
                 },
                 {
+                    "id": "d24d6cb8-fead-484b-b2ac-2c9aed832c7e",
                     "text": "\"How Cloud Computing Is Changing IT Organizations\"",
                     "target": {
                         "id": "3ba5f79e-92f0-46d2-9aa3-747223ba6932",
@@ -43,6 +45,7 @@
                     }
                 },
                 {
+                    "id": "6cc957e7-2e0f-43be-a4a6-dbde2b577e48",
                     "text": "Embrace the Inevitable: Six Imperatives to Prepare Your Company for Cloud Computing",
                     "target": {
                         "id": "e379fcf1-6311-4d12-b4bc-87d39df84dca",

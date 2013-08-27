@@ -1,0 +1,533 @@
+/**
+
+  @templates
+--------------------------------------------------------
+
+  Templates
+
+-----------------------------------------------------  */
+
+.t {
+  position: relative;
+  // Mobile first dimensions
+  height: 30em; // 480px
+  width: 20em; // 320px;
+  overflow: hidden;
+  // Top padding for header bar, bottom for arrows
+  padding: 4.125em 1.25em; // 66px 20px;
+  background: $offwhite;
+
+  // at desk
+  @media only screen and (min-width: 769px) {
+    width: 100%;
+    height: 35rem;
+  }
+
+}
+
+
+
+
+
+
+/* @modal templates
+--------------------------------------------------------
+  .t + .modal equals a modal box
+------------------------------------------------------ */
+
+
+// main modal box
+.modal {
+  border: 1em solid white; // override template styles
+  padding: 1em; // override template styles
+  background: $light-blue;
+  background-size: cover;
+  color: white;
+  &.is-active {
+    // ENABLE THESE FOR ACTIVE MODALS
+    position: fixed;
+    z-index: 200; // modals live in level 2
+    top: 0; bottom: 0; left: 0; right: 0;
+  }
+
+}
+
+
+.modal__close {
+  position: absolute;
+  // Sample styles below, edit as you wish...
+  top: 1rem;
+  right: 1rem;
+}
+
+// modal body
+.modal__body {
+  overflow: auto;
+}
+
+// modal scroll
+.modal__scroll {
+  margin: .5em auto;
+}
+
+
+
+/* @i1
+--------------------------------------------------------
+  Intro
+------------------------------------------------------ */
+
+.i1 {
+  background: url(/images/fpo-intro.jpg);
+  background-size: cover;
+  color: white;
+}
+
+// Knowledge Edition (ke) Header
+.ke-header {
+  @extend %clearfix;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: .5em 0em 2.5em 0;
+  margin-bottom: .5em;
+}
+
+// Knowledge Edition (ke) Title
+.ke-title {
+  float: left;
+  @extend %small-serif;
+}
+
+// Knowledge Edition (ke) Number
+.ke-number {
+  float: right;
+  @extend %xl-serif;
+
+}
+
+// Knowledge Container (kc) Title
+.kc-title {
+  @extend %large-serif ;
+}
+
+// Deck
+.i1__deck {
+  position: absolute;
+  bottom: 3em; // 48px
+  left: 1.125em;  // 20px
+  right: 1.125em;  // 20px
+}
+
+
+
+
+/* @t1
+--------------------------------------------------------
+  Title
+------------------------------------------------------ */
+
+.t1 {
+
+}
+
+.t1__title {
+  @extend %xxl-sans-bold;
+}
+
+
+
+
+/* @t2
+--------------------------------------------------------
+  Title w/ Deck
+------------------------------------------------------ */
+
+.t2 {
+
+}
+
+.t2__title {
+  @extend %xl-sans-bold;
+  // Bottom margin
+  margin-bottom: $spacing-s;
+}
+
+
+
+
+/* @m3
+--------------------------------------------------------
+  Deck with button-menu
+------------------------------------------------------ */
+
+.m1 {}
+
+
+
+
+
+
+/* @m4
+--------------------------------------------------------
+  Graphic Menu
+------------------------------------------------------ */
+
+.m4 {
+  padding: 2.5em 0 0 0;
+}
+
+
+
+
+/* @m6
+--------------------------------------------------------
+  List Menu
+------------------------------------------------------ */
+
+.m6 {
+  padding: 2.5em 0 0 0;
+}
+
+
+
+
+/* @m7
+--------------------------------------------------------
+  List Menu -- Infinite
+------------------------------------------------------ */
+
+.m7 {
+  padding: 2.5em 0 0 0;
+  overflow: scroll;
+}
+
+
+
+/* @m8
+--------------------------------------------------------
+  List Menu w Highlighted words -- Infinite
+------------------------------------------------------ */
+
+.m8 {
+  padding: 2.5em 0 0 0;
+  overflow: scroll;
+}
+
+
+/* @m9
+--------------------------------------------------------
+  List Menu w Accordian Functionality
+------------------------------------------------------ */
+
+.m9 {
+  padding: 2.5em 0 0 0;
+  overflow: scroll;
+}
+
+
+
+
+
+
+
+
+/* @a1
+--------------------------------------------------------
+  Article 1, with figures
+------------------------------------------------------ */
+
+.a1 {}
+
+.a1__title {
+  @extend %xl-sans-bold;
+  margin-bottom: .7rem;
+}
+
+
+/* @a2
+--------------------------------------------------------
+  Article 2, with hero
+------------------------------------------------------ */
+
+.a2 {
+  padding-top: 2.5em;
+}
+
+
+/* @a3
+--------------------------------------------------------
+  Article 3, title subtitle deck-titles
+------------------------------------------------------ */
+
+.a3 {}
+
+.a3__title {
+  @extend %xl-sans-bold;
+  color: $orange;
+  margin-bottom: .25em;
+
+}
+.a3__subtitle {
+  @extend %large-sans-bold;
+  margin-bottom: .5em;
+}
+.a3__deck-title {
+  @extend %xsmall-sans-bold;
+  text-transform: uppercase;
+}
+
+
+/* @a4
+--------------------------------------------------------
+  Article 4 with Graphic
+------------------------------------------------------ */
+
+.a4 {}
+
+.a4__title {
+  @extend %xl-sans-bold;
+  margin-bottom: .5em;
+}
+
+.a4__graphic {
+  display: block;
+  width: auto;
+  margin: 0 auto;
+}
+
+
+/* @a5
+--------------------------------------------------------
+  Article 5
+------------------------------------------------------ */
+
+.a5 {}
+
+.a5__title {
+  @extend %xl-sans-bold;
+  margin-bottom: .5em;
+}
+
+
+
+
+/* @po1
+--------------------------------------------------------
+  Pop Over 1
+------------------------------------------------------ */
+
+.po1 {}
+
+.po1__title {
+  @extend %xl-sans-bold;
+  margin-bottom: .25em;
+  padding-right: 2em; // space for close button
+}
+
+
+
+/* @po2
+--------------------------------------------------------
+  Pop Over 2
+------------------------------------------------------ */
+
+.po2 {}
+
+.po2__title {
+  @extend %xl-sans-bold;
+  margin-bottom: .25em;
+  padding-right: 2em; // space for close button
+}
+.po2__title {
+  @extend %xl-sans-bold;
+  margin-bottom: .25em;
+
+}
+.po2__subtitle {
+  @extend %large-sans-bold;
+  margin-bottom: .5em;
+}
+.po2__deck-title {
+  @extend %xsmall-sans-bold;
+  text-transform: uppercase;
+  color: $dark-blue;
+}
+
+
+
+/* @po3
+--------------------------------------------------------
+  Pop Over 3
+------------------------------------------------------ */
+
+.po3 {}
+
+.po3__title {
+  @extend %xl-sans-bold;
+  margin-bottom: .25em;
+  padding-right: 2em; // space for close button
+}
+.po3__subtitle {
+  @extend %large-sans-bold;
+  margin-bottom: .5em;
+}
+.po3__deck-title {
+  @extend %xsmall-sans-bold;
+  text-transform: uppercase;
+  color: $dark-blue;
+}
+
+// Scrollable body
+.po3__body {
+  height: 11rem;
+  overflow: auto;
+  margin-bottom: 1rem;
+}
+
+
+
+/* @po4
+--------------------------------------------------------
+  Pop Over 4
+------------------------------------------------------ */
+
+.po4 {}
+
+.po4__title {
+  @extend %xl-sans-bold;
+  margin-bottom: .5em;
+  padding-right: 2em; // space for close button
+}
+
+// Scrollable body
+.po4__body {
+  height: 9rem;
+  overflow: auto;
+  margin-bottom: 1rem;
+}
+
+
+
+/* @po5
+--------------------------------------------------------
+  Pop Over 5
+------------------------------------------------------ */
+
+.po5 {}
+
+.po5__body {
+  height: 11rem;
+  overflow: auto;
+  margin-top: 1em;
+  margin-bottom: 1rem;
+}
+.po5__stat {
+  @extend %xxxl-serif-light;
+}
+.po5__stat,
+.po5__text {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.po5__text {
+  margin-bottom: 2em;
+  @extend %small-sans-medium;
+}
+
+
+
+/* @po6
+--------------------------------------------------------
+  Pop Over 6
+------------------------------------------------------ */
+
+.po6 {
+  text-align: center;
+}
+
+.po6__title {
+  @extend %xl-sans-bold;
+  margin: 1.25em 0 .5em;
+}
+
+.po6__deck {
+  @extend %small-sans-medium;
+}
+
+
+
+/* @po7
+--------------------------------------------------------
+  Pop Over 7
+------------------------------------------------------ */
+
+.po7 {
+  text-align: center;
+}
+
+.po7__title {
+  @extend %xl-sans-bold;
+}
+
+// Scrollable body
+.po7__body {
+  margin-top: 1.25em;
+  height: 17rem;
+  overflow: auto;
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* @template rwd
+--------------------------------------------------------
+------------------------------------------------------ */
+@media only screen and (min-width: 769px) {
+  .t1__title,
+  .t2__title,
+  .t2__deck,
+  .m1__deck,
+  .a1__title,
+  .a1__deck,
+  .a2__deck,
+  .a3__title,
+  .a3__subtitle,
+  .a3__deck-title,
+  .a3__deck,
+  .a4__title,
+  .a5__title,
+  .po1__title,
+  .po2__title,
+  .po2__subtitle,
+  .po2__deck-title,
+  .po2__deck,
+  .po3__title,
+  .po3__subtitle,
+  .po3__deck-title,
+  .po4__title,
+  .po5__stat,
+  .po5__text,
+  .po5__text,
+  .po6__title,
+  .po7__title {
+    text-align: left;
+    max-width: 66.666%;
+  }
+}
+
+
+
+
+
+
+
+
+

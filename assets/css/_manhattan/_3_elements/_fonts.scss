@@ -1,0 +1,151 @@
+/**
+
+   @fonts
+--------------------------------------------------------
+  _3_elements/_fonts.scss
+--------------------------------------------------------
+
+  Define the fonts used in this app and declare extend
+  classes to be used in your CSS.
+
+  If you are using a webfont, see the _1_foundations/_mixins.scss
+  file for deets on the font embed mixin that is used to
+  embed webfonts.
+
+  for example, to create a font-family named "interstate-light"
+  using a font at /fonts/interstate_light-webfont.woff (and other extensions)
+
+  @include embed-font("interstate-light", "/fonts/interstate_light-webfont");
+
+
+-------------------------------------------------------- */
+
+
+
+
+
+/* @sans
+-----------------------------------------------------
+Sans is Helvetica Neue Light
+This is the most common font in the app
+use @extend %sans for this font
+----------------------------------------------------- */
+
+@font-face{
+font-family:"HelveticaNeueW01-45Ligh";
+src:url("/fonts/HelveticaNeueW01-45Ligh.eot?#iefix");
+src:url("/fonts/HelveticaNeueW01-45Ligh.eot?#iefix") format("eot"),url("/fonts/HelveticaNeueW01-45Ligh.woff") format("woff"),url("/fonts/HelveticaNeueW01-45Ligh.ttf") format("truetype"),url("/fonts/HelveticaNeueW01-45Ligh.svg#HelveticaNeueW01-45Ligh") format("svg");
+}
+
+%sans {
+  font-family: "HelveticaNeueW01-45Ligh", helvetica, sans-serif;
+  font-weight: normal;
+}
+
+
+/* @sans-medium
+-----------------------------------------------------
+Sans-medium is Helvetica Neue Medium
+use @extend %sans-medium for this font
+----------------------------------------------------- */
+
+@font-face{
+font-family:"HelveticaNeueW01-65Medi";
+src:url("/fonts/HelveticaNeueW01-65Medi.eot?#iefix");
+src:url("/fonts/HelveticaNeueW01-65Medi.eot?#iefix") format("eot"),url("/fonts/HelveticaNeueW01-65Medi.woff") format("woff"),url("/fonts/HelveticaNeueW01-65Medi.ttf") format("truetype"),url("/fonts/HelveticaNeueW01-65Medi.svg#HelveticaNeueW01-65Medi") format("svg");
+}
+
+%sans-medium {
+  font-family: "HelveticaNeueW01-65Medi", helvetica, sans-serif;
+  font-weight: normal;
+}
+
+
+
+/* @sans-roman
+-----------------------------------------------------
+Sans-medium is Helvetica Neue Roman
+use @extend %sans-roman for this font
+----------------------------------------------------- */
+
+@font-face{
+font-family:"HelveticaNeueW01-55Roma";
+src:url("/fonts/HelveticaNeueW01-55Roma.eot?#iefix");
+src:url("/fonts/HelveticaNeueW01-55Roma?#iefix") format("eot"),url("/fonts/HelveticaNeueW01-55Roma.woff") format("woff"),url("/fonts/HelveticaNeueW01-55Roma.ttf") format("truetype"),url("/fonts/HelveticaNeueW01-55Roma.svg#HelveticaNeueW01-55Roma") format("svg");
+}
+
+%sans-roman {
+  font-family: "HelveticaNeueW01-55Roma", helvetica, sans-serif;
+  font-weight: normal;
+}
+
+
+/* @sans-bold
+-----------------------------------------------------
+Sans-bold is Helvetica Neue Bold
+use @extend %sans-bold for this font
+----------------------------------------------------- */
+
+@font-face{
+font-family:"HelveticaNeueW01-75Bold";
+src:url("/fonts/HelveticaNeueW01-75Bold.eot?#iefix");
+src:url("/fonts/HelveticaNeueW01-75Bold?#iefix") format("eot"),url("/fonts/HelveticaNeueW01-75Bold.woff") format("woff"),url("/fonts/HelveticaNeueW01-75Bold.ttf") format("truetype"),url("/fonts/HelveticaNeueW01-75Bold.svg#HelveticaNeueW01-75Bold") format("svg");
+}
+
+%sans-bold {
+  font-family: "HelveticaNeueW01-75Bold", helvetica, sans-serif;
+  font-weight: normal;
+}
+
+
+
+/* @serif-light
+-----------------------------------------------------
+serif-light is Lubalin Light
+use @extend %serif-light for this font
+----------------------------------------------------- */
+
+@font-face{
+font-family:"ITCLubalinGraphW01-XLt";
+src:url("/fonts/ITCLubalinGraphW01-XLt.eot?#iefix");
+src:url("/fonts/ITCLubalinGraphW01-XLt.eot?#iefix") format("eot"),url("/fonts/ITCLubalinGraphW01-XLt.woff") format("woff"),url("/fonts/ITCLubalinGraphW01-XLt.ttf") format("truetype"),url("/fonts/ITCLubalinGraphW01-XLt.svg#5b1a4f6f-183e-4a2b-897c-02b9544ff090") format("svg");
+}
+%serif-light {
+  font-family: "ITCLubalinGraphW01-XLt", georgia, serif;
+  font-weight: normal;
+}
+
+
+/* @serif
+-----------------------------------------------------
+serif is Lubalin Medium
+use @extend %serif for this font
+----------------------------------------------------- */
+
+@font-face{
+font-family:"ITCLubalinGraphW01-Md";
+src:url("/fonts/ITCLubalinGraphW01-Md.eot?#iefix");
+src:url("/fonts/ITCLubalinGraphW01-Md.eot?#iefix") format("eot"),url("/fonts/ITCLubalinGraphW01-Md.woff") format("woff"),url("/fonts/ITCLubalinGraphW01-Md.ttf") format("truetype"),url("/fonts/ITCLubalinGraphW01-Md.svg#5b1a4f6f-183e-4a2b-897c-02b9544ff090") format("svg");
+}
+%serif {
+  font-family: "ITCLubalinGraphW01-Md", georgia, serif;
+  font-weight: normal;
+}
+
+
+/* @serif-bold
+-----------------------------------------------------
+serif bold is Lubalin Demi
+use @extend %serif-bold for this font
+----------------------------------------------------- */
+
+@font-face{
+font-family:"ITCLubalinGraphW01-Demi";
+src:url("/fonts/ITCLubalinGraphW01-Demi.eot?#iefix");
+src:url("/fonts/ITCLubalinGraphW01-Demi.eot?#iefix") format("eot"),url("/fonts/ITCLubalinGraphW01-Demi.woff") format("woff"),url("/fonts/ITCLubalinGraphW01-Demi.ttf") format("truetype"),url("/fonts/ITCLubalinGraphW01-Demi.svg#ITCLubalinGraphW01-Demi") format("svg");
+}
+
+%serif-bold {
+  font-family: "ITCLubalinGraphW01-Demi", georgia, serif;
+  font-weight: normal;
+}

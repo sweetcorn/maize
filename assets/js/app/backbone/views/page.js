@@ -9,11 +9,11 @@ var PageView;
 
 PageView = module.exports = Backbone.View.extend({
 
-  initialize: function() {
+  initialize: function(options) {
     this.render();
 
-    new NavView({el: $('.js-nav-container'), model: this.model});
-    new ContainerView({el: this.$('.js-main'), model: this.model});
+    new NavView({el: $('.js-nav-container'), model: options.edition});
+    new ContainerView({el: this.$('.js-main'), model: options.container});
   }
 
 });

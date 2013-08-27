@@ -1,0 +1,37 @@
+/**
+
+  @hide
+---------------------------------------------------------
+
+  Utility state classes to hide things in different ways
+
+  Note: there is room for improvement here.
+
+--------------------------------------------------------- */
+
+
+//
+// The classic, display none
+.is-hidden {
+  display: none;
+}
+
+
+//
+// Use this if you still need js access to this element
+// it's visually hidden but still in the DOM
+.is-visually-hidden {
+  position: absolute;
+  left: -9999%;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+// Hide at desk
+@media only screen and (min-width: 1025px) {
+  %hidde--at-desk {
+    @extend .is-hidden;
+  }
+}

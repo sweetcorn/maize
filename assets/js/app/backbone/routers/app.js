@@ -17,11 +17,11 @@ AppRouter = module.exports = Backbone.Router.extend({
   }
 
 , renderView: function(editionId, containerId) {
-    var edition = new Edition({id: editionId});
+    var edition = (editionId) ? new Edition({id: editionId}) : new Edition();
 
     edition.on('sync', function() {
       var _edition = edition;
-      var container = edition.containers.findWhere({id: containerId});
+      var container = (containerId) ? edition.containers.findWhere({id: containerId}) : edition.containers.models[0];
 
       container.on('sync', function(){
         new PageView({el: $('.js-body'), edition: _edition, container: container});
@@ -34,11 +34,11 @@ AppRouter = module.exports = Backbone.Router.extend({
   }
 
 , index: function() {
-    this.renderView(1, 1)
+    this.renderView()
   }
 
 , edition: function(editionId) {
-    this.renderView(editionId, 1);
+    this.renderView(editionId);
   }
 
 , container: function(editionId, containerId) {

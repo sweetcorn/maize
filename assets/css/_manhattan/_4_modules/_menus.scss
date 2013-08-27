@@ -1,0 +1,199 @@
+/**
+
+  @menus
+--------------------------------------------------------
+
+  Menus
+
+-----------------------------------------------------  */
+
+
+
+
+
+/* @btn-menu
+--------------------------------------------------------
+  Button Menu
+
+  Example: Button Menu
+  <ul class="btn-menu">
+    <li><a class="btn" href="#resiliency-matters">Resiliency matters</a></li>
+    <li><a class="btn" href="#efficiency-matters">Efficiency matters</a></li>
+    <li><a class="btn" href="#responsiveness-matters">Responsiveness matters</a></li>
+  </ul>
+------------------------------------------------------ */
+
+
+.btn-menu {
+  position: absolute;
+  bottom: 1.25em; // 20px
+  left: 1.25em; // 20px
+  right: 1.25em; // 20px
+
+
+  li {
+    display: block;
+
+    .btn {
+      border-bottom: 0;
+      border-radius: 0;
+    }
+
+    &:first-child .btn {
+      border-radius: .25rem .25rem 0 0;
+
+    }
+    &:last-child .btn {
+      border-radius: 0 0 .25rem .25rem;
+      border-bottom: 1px solid $light-grey;
+    }
+  }
+}
+
+// modifier
+.btn-menu--single li .btn {
+  border-radius: .25rem !important;
+}
+
+
+
+
+
+/* @graphic-menu
+--------------------------------------------------------
+  Graphic Menu
+
+  <ul class="graphic-menu">
+    <li><div class="graphic-menu__graphic"><img src="/images/fpo-graphic-menu.jpg"></div></li>
+    <li><a class="graphic-menu__link"><img src="/images/fpo-graphic-menu-icon.jpg"> Cloud-enabled data center</a></li>
+    <li><a class="graphic-menu__link"><img src="/images/fpo-graphic-menu-icon.jpg"> Cloud-enabled data center</a></li>
+    <li><a class="graphic-menu__link"><img src="/images/fpo-graphic-menu-icon.jpg"> Cloud-enabled data center</a></li>
+  </ul>
+------------------------------------------------------ */
+
+.graphic-menu {
+  display: table;
+  width: 100%;
+  li {
+    display: table-row;
+  }
+}
+.graphic-menu__graphic,
+.graphic-menu__link {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 3.85rem;
+  border-bottom: 1px solid $light-grey;
+}
+.graphic-menu__graphic {
+  height: 16em;
+  text-align: center;
+  img {
+    width:60%;
+  }
+}
+
+.graphic-menu__link {
+  background: white;
+  padding-left: 1.25rem;
+  @extend %small-sans-bold;
+  img {
+    width: 1.5em;
+    display: inline-block;
+    margin-right: .8em;
+  }
+  &:hover, &:focus {
+    background: #FAFAFA;
+  }
+  // Colors?
+
+}
+
+
+
+
+
+/* @list-menu
+--------------------------------------------------------
+  List Menu
+
+  <ul class="list-menu">
+    <li><a class="list-menu__link">Talking to a Chief<br>Procurement Officer</a></li>
+    <li><a class="list-menu__link">Talking to a Chief<br>Procurement Officer</a></li>
+    <li><a class="list-menu__link">Talking to a Chief<br>Procurement Officer</a></li>
+    <li><a class="list-menu__link">Talking to a Chief<br>Procurement Officer</a></li>
+  </ul>
+------------------------------------------------------ */
+
+.list-menu {
+  display: table;
+  width: 100%;
+  border-top: 1px solid $light-grey;
+  li {
+    display: table-row;
+  }
+}
+
+.list-menu__link {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 4.5rem;
+  border-bottom: 1px solid $light-grey;
+  background: white;
+  padding-left: 1.25rem;
+  @extend %medium-sans-bold;
+    &:hover, &:focus {
+    background: #FAFAFA;
+  }
+  // Highlight text
+  b {
+    @extend %small-serif-light;
+  }
+}
+
+// large modifier
+.list-menu__link--large {
+  height: 6.1rem;
+}
+
+// with highlight
+.list-menu__link--with-highlight {
+  @extend %small-sans-bold;
+}
+
+
+
+
+
+
+/* @accordian-menu
+--------------------------------------------------------
+  A List Menu modifier
+------------------------------------------------------ */
+
+.accordian-menu {}
+
+.accordian-menu__toggle {
+  background: #808285;
+  color: white;
+  @extend %small-sans-bold;
+  height: 3.8rem;
+  line-height: 3.5;
+  &:hover {
+    background: #717273;
+  }
+  img {
+    width: 1.75em;
+    margin-right: .5em;
+  }
+}
+
+.accordian-menu__link {
+  height: 3.8rem;
+  display: none;
+  &.is-active {
+    display: table-cell;
+  }
+}

@@ -71,7 +71,7 @@ module.exports = function(grunt) {
           compass: true
         },
         files: {
-          'assets/css/compiled/screen.css': 'assets/css/screen.scss'
+          'assets/css/compiled/screen.css': 'assets/css/screen.css.scss'
         }
       }
     },
@@ -83,7 +83,7 @@ module.exports = function(grunt) {
       },
       handlebars: {
         files: ['server/templates/**/*.handlebars', 'shared/templates/**/*.handlebars'],
-        tasks: ['handlebars']
+        tasks: ['handlebars', 'browserify']
       },
       scripts: {
         files: ['assets/js/app/**/*.js', 'assets/js/lib/**/*.js'],

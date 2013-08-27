@@ -1,0 +1,85 @@
+/**
+
+  @variables
+---------------------------------------------------------
+  _1_foundation/_vars.scss
+---------------------------------------------------------
+
+  Global variables are defined here
+
+  NOTE: Let's discuss what else makes sense to put here.
+        For instance, should we specify the max width of
+        containers here?  Up for debate.
+
+-----------------------------------------------------  */
+
+
+
+
+
+/* @colors
+--------------------------------------------------------
+  All color variables are defined here.
+
+  We use real color names here.  Although naming something
+  like 'brand' is in fact more generic and reusable, we've
+  found that you end up creating variables like $brand-2,
+  $brand-alt, $brand-complimentary etc.  While coding,
+  it's too easy to forget what those mean.
+
+  If the design changes drastically and the brand changes
+  from, let's say, blue to green, just do a global
+  find/replace - that's what text editors are for.
+------------------------------------------------------ */
+
+$light-blue: #00b0da;
+
+$dark-blue: #004f79;
+
+$orange: #f04e37;
+
+$blue-grey: #babdbf;    // mobile nav numbers
+
+$light-grey: #cdcdcd;   // button border
+
+$grey: #404040;         // mobile nav bg color
+
+$medium-grey: #808285;
+
+$dark-grey: #333333;
+
+$offwhite: #f0f0f0;
+
+
+
+
+
+/* @spacing
+---------------------------------------------------------
+  Create spacing units to reuse throughout your CSS.
+--------------------------------------------------------- */
+
+$spacing-xl: 2rem;
+
+$spacing-l: 1.5rem;
+
+$spacing-m: 1rem;
+
+$spacing-s: 0.7rem;
+
+$spacing-xs: .35rem;
+
+
+
+
+/* @grid settings
+---------------------------------------------------------
+  Define the grid padding/gutter width and also the
+  breakpoint at which default grid-units stack.
+--------------------------------------------------------- */
+
+// Define the width of grid padding (applied to left and right)
+$grid-padding: 1em;
+
+// Define breakpoint at which grids stack
+$grid-stack-at-width: 34.375em;   // 550px

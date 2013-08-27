@@ -1,3 +1,3357 @@
-h1 {
-  color: red;
+@charset "UTF-8";
+/****
+
+  MAIN STYLESHEET for IBM Knowledge Editions
+---------------------------------------------------------
+  screen.css.scss
+---------------------------------------------------------
+
+  CREATED by Crush & Lovely Front End Team
+  AUTHOR(S) Jeff Schram (@jeffschram)
+
+---------------------------------------------------------
+
+
+  ADDITIONAL CREDITS, INSPIRATION & SHOUT OUTS
+
+  Harry Roberts       Chris Coyier
+  (@csswizardry)      (@crishcoyier)
+  csswizardry.com     css-tricks.com
+  inuitcss.com        codepen.io
+
+  Jonathan Snook      Nicole Sullivan
+  (@snook)            (@stubbornella)
+  smaccs.com          stubbornella.org
+
+  - For some mixins, naming conventions and OOCSS concepts
+  - Check these guys out and learn from their awesomeness
+
+
+  Nicolas Gallagher
+  nicolasgallagher.com
+  necolas.github.io/normalize.css
+
+  - For the reset
+
+
+  HTML5 Boilerplate (@h5bp)
+  html5boilerplate.com
+
+  - For the print stylesheet
+
+
+  Twitter Bootstrap (@twbootstrap)
+  twitter.github.com/bootstrap
+
+  - For some component ideas, naming conventions and javascript
+
+
+  A quite note on navigating through these files:
+  We are using @waypoints to allow you to easily search
+  for certain sections. For instance, to get to the
+  Table Of Contents (or toc) just search for "@toc"
+  and you'll jump right to it.
+
+  If you're using Sublime Text and want to quickly open
+  a partial, use cmd+p and then start typing the name of
+  the partial.
+
+---------------------------------------------------------
+
+  TABLE OF CONTENTS
+  @toc
+
+  - 1 Foundations
+  - 2 Layout
+  - 2 Elements
+  - 4 Components
+  - 5 Sections
+  - 6 Templates
+  - Shame
+
+---------------------------------------------------------  */
+/***
+
+  @foundations
+---------------------------------------------------------
+
+  We built this city, we built this city on rock 'n' roll
+  and solid web standards.
+
+-----------------------------------------------------  */
+/**
+
+  @variables
+---------------------------------------------------------
+  _1_foundation/_vars.scss
+---------------------------------------------------------
+
+  Global variables are defined here
+
+  NOTE: Let's discuss what else makes sense to put here.
+        For instance, should we specify the max width of
+        containers here?  Up for debate.
+
+-----------------------------------------------------  */
+/* @colors
+--------------------------------------------------------
+  All color variables are defined here.
+
+  We use real color names here.  Although naming something
+  like 'brand' is in fact more generic and reusable, we've
+  found that you end up creating variables like $brand-2,
+  $brand-alt, $brand-complimentary etc.  While coding,
+  it's too easy to forget what those mean.
+
+  If the design changes drastically and the brand changes
+  from, let's say, blue to green, just do a global
+  find/replace - that's what text editors are for.
+------------------------------------------------------ */
+/* @spacing
+---------------------------------------------------------
+  Create spacing units to reuse throughout your CSS.
+--------------------------------------------------------- */
+/* @grid settings
+---------------------------------------------------------
+  Define the grid padding/gutter width and also the
+  breakpoint at which default grid-units stack.
+--------------------------------------------------------- */
+/*
+
+  RESET
+---------------------------------------------------------
+  @reset
+
+  This reset institutes the border-box box model and then
+  it's just normalize.css from here on out.
+
+--------------------------------------------------------- */
+/* ==========================================================================
+   Add the new box model definition & reset to no top margin on anything
+   ========================================================================== */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
 }
+
+/* normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/*
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Address styling not present in IE 8/9.
+ */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* Actually for Manhattan we're not going to use this
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+/*
+
+/*
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/*
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/*
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/*
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+
+/*
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/*
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/*
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+
+/*
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/*
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/*
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+
+  @mixins
+--------------------------------------------------------
+  _1_foundations/_mixins.scss
+--------------------------------------------------------
+
+  Here you'll find a nice arrow helper and a font embedder
+
+-----------------------------------------------------  */
+/*
+
+  Arrow
+---------------------------------------------------------
+  @arrow
+
+  A mixin to create an arrow relative to a parent.  Note
+  that your parent element will need to have relative,
+  absolute, or fixed position declared.
+
+  The arguments are:
+
+    Position: top / right / bottom / left
+    Background Color
+    Size
+    Border Color
+    Border Size
+
+--------------------------------------------------------- */
+/*
+
+  FONT FACE IMPORT
+---------------------------------------------------------
+  @font-face
+
+  Use this mixin to embed a font
+
+  $font-name is used in your css in font-family declarations
+  $font-filepath-and-name is the location of your font
+  file and the filename WITHOUT the file extension.  The
+  extensions are added here in the mixin
+
+--------------------------------------------------------- */
+/***
+
+  @layout
+---------------------------------------------------------
+
+  A large portion of CSS is structural layout. You will use
+  these helpers to create the scaffolding that will support
+  the elements that make up your site.
+
+  Comment out any partial you don't need for this app.
+
+---------------------------------------------------------  */
+/**
+
+  @clearfix
+---------------------------------------------------------
+  _2_layout/_clearfix.scss
+--------------------------------------------------------
+
+  Use @extend %clearfix in your CSS
+
+--------------------------------------------------------- */
+.nav, .figures, .site-header, .site-nav, .ke-header {
+  zoom: 1;
+}
+.nav:before, .figures:before, .site-header:before, .site-nav:before, .ke-header:before, .nav:after, .figures:after, .site-header:after, .site-nav:after, .ke-header:after {
+  content: " ";
+  display: table;
+}
+.nav:after, .figures:after, .site-header:after, .site-nav:after, .ke-header:after {
+  clear: both;
+}
+
+/**
+
+  WIDTHS
+---------------------------------------------------------
+  _2_layout/_widths.scss
+--------------------------------------------------------
+
+  Global Widths
+
+  Use these in your HTML or extend them in CSS like this:
+
+  .g {
+    @extend .one-fourth;
+  }
+
+  <div class="g one-fourth"></div>
+
+---------------------------------------------------------  */
+.one-whole {
+  width: 100%;
+}
+
+.one-half, .two-fourths, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
+  width: 50%;
+}
+
+.one-third, .two-sixths, .four-twelfths {
+  width: 33.333%;
+}
+
+.two-thirds, .four-sixths, .eight-twelfths {
+  width: 66.666%;
+}
+
+.one-fourth, .two-eighths, .three-twelfths {
+  width: 25%;
+}
+
+.three-fourths, .six-eighths, .nine-twelfths {
+  width: 75%;
+}
+
+.one-fifth, .two-tenths {
+  width: 20%;
+}
+
+.two-fifths, .four-tenths {
+  width: 40%;
+}
+
+.three-fifths, .six-tenths {
+  width: 60%;
+}
+
+.four-fifths, .eight-tenths {
+  width: 80%;
+}
+
+.one-sixth, .two-twelfths {
+  width: 16.666%;
+}
+
+.five-sixths, .ten-twelfths {
+  width: 83.333%;
+}
+
+.one-eighth {
+  width: 12.5%;
+}
+
+.three-eighths {
+  width: 37.5%;
+}
+
+.five-eighths {
+  width: 62.5%;
+}
+
+.seven-eighths {
+  width: 87.5%;
+}
+
+.one-tenth {
+  width: 10%;
+}
+
+.three-tenths {
+  width: 30%;
+}
+
+.seven-tenths {
+  width: 70%;
+}
+
+.nine-tenths {
+  width: 90%;
+}
+
+.one-twelfth {
+  width: 8.333%;
+}
+
+.five-twelfths {
+  width: 41.666%;
+}
+
+.seven-twelfths {
+  width: 58.333%;
+}
+
+.eleven-twelfths {
+  width: 91.666%;
+}
+
+/**
+
+  @hide
+---------------------------------------------------------
+
+  Utility state classes to hide things in different ways
+
+  Note: there is room for improvement here.
+
+--------------------------------------------------------- */
+.is-hidden {
+  display: none;
+}
+
+.is-visually-hidden {
+  position: absolute;
+  left: -9999%;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+/***
+
+  @elements
+---------------------------------------------------------
+
+  Global styling of elements.
+
+  Feel free to edit these partials; add your own
+  styling for this app or improve on the base styling.
+
+  Comment out any partial you don't need for this app.
+
+---------------------------------------------------------  */
+/**
+
+   @fonts
+--------------------------------------------------------
+  _3_elements/_fonts.scss
+--------------------------------------------------------
+
+  Define the fonts used in this app and declare extend
+  classes to be used in your CSS.
+
+  If you are using a webfont, see the _1_foundations/_mixins.scss
+  file for deets on the font embed mixin that is used to
+  embed webfonts.
+
+  for example, to create a font-family named "interstate-light"
+  using a font at /fonts/interstate_light-webfont.woff (and other extensions)
+
+  @include embed-font("interstate-light", "/fonts/interstate_light-webfont");
+
+
+-------------------------------------------------------- */
+/* @sans
+-----------------------------------------------------
+Sans is Helvetica Neue Light
+This is the most common font in the app
+use @extend %sans for this font
+----------------------------------------------------- */
+@font-face {
+  font-family: "HelveticaNeueW01-45Ligh";
+  src: url("/fonts/HelveticaNeueW01-45Ligh.eot?#iefix");
+  src: url("/fonts/HelveticaNeueW01-45Ligh.eot?#iefix") format("eot"), url("/fonts/HelveticaNeueW01-45Ligh.woff") format("woff"), url("/fonts/HelveticaNeueW01-45Ligh.ttf") format("truetype"), url("/fonts/HelveticaNeueW01-45Ligh.svg#HelveticaNeueW01-45Ligh") format("svg");
+}
+
+p, body, .site-nav__links > li a {
+  font-family: "HelveticaNeueW01-45Ligh", helvetica, sans-serif;
+  font-weight: normal;
+}
+
+/* @sans-medium
+-----------------------------------------------------
+Sans-medium is Helvetica Neue Medium
+use @extend %sans-medium for this font
+----------------------------------------------------- */
+@font-face {
+  font-family: "HelveticaNeueW01-65Medi";
+  src: url("/fonts/HelveticaNeueW01-65Medi.eot?#iefix");
+  src: url("/fonts/HelveticaNeueW01-65Medi.eot?#iefix") format("eot"), url("/fonts/HelveticaNeueW01-65Medi.woff") format("woff"), url("/fonts/HelveticaNeueW01-65Medi.ttf") format("truetype"), url("/fonts/HelveticaNeueW01-65Medi.svg#HelveticaNeueW01-65Medi") format("svg");
+}
+
+.figure__text, .po5__text, .po6__deck, .external-link {
+  font-family: "HelveticaNeueW01-65Medi", helvetica, sans-serif;
+  font-weight: normal;
+}
+
+/* @sans-roman
+-----------------------------------------------------
+Sans-medium is Helvetica Neue Roman
+use @extend %sans-roman for this font
+----------------------------------------------------- */
+@font-face {
+  font-family: "HelveticaNeueW01-55Roma";
+  src: url("/fonts/HelveticaNeueW01-55Roma.eot?#iefix");
+  src: url("/fonts/HelveticaNeueW01-55Roma?#iefix") format("eot"), url("/fonts/HelveticaNeueW01-55Roma.woff") format("woff"), url("/fonts/HelveticaNeueW01-55Roma.ttf") format("truetype"), url("/fonts/HelveticaNeueW01-55Roma.svg#HelveticaNeueW01-55Roma") format("svg");
+}
+
+/* @sans-bold
+-----------------------------------------------------
+Sans-bold is Helvetica Neue Bold
+use @extend %sans-bold for this font
+----------------------------------------------------- */
+@font-face {
+  font-family: "HelveticaNeueW01-75Bold";
+  src: url("/fonts/HelveticaNeueW01-75Bold.eot?#iefix");
+  src: url("/fonts/HelveticaNeueW01-75Bold?#iefix") format("eot"), url("/fonts/HelveticaNeueW01-75Bold.woff") format("woff"), url("/fonts/HelveticaNeueW01-75Bold.ttf") format("truetype"), url("/fonts/HelveticaNeueW01-75Bold.svg#HelveticaNeueW01-75Bold") format("svg");
+}
+
+.t1__title, .t2__title, .a1__title, .a3__title, .a4__title, .a5__title, .po1__title, .po2__title, .po3__title, .po4__title, .po6__title, .po7__title, h1, .a3__subtitle, .po2__subtitle, .po3__subtitle, h2, h3, h4, .list-menu__link, h5, .graphic-menu__link, .list-menu__link--with-highlight, .accordian-menu__toggle, h6, .btn, .a3__deck-title, .po2__deck-title, .po3__deck-title, .hero__subtitle, p b,
+p strong {
+  font-family: "HelveticaNeueW01-75Bold", helvetica, sans-serif;
+  font-weight: normal;
+}
+
+/* @serif-light
+-----------------------------------------------------
+serif-light is Lubalin Light
+use @extend %serif-light for this font
+----------------------------------------------------- */
+@font-face {
+  font-family: "ITCLubalinGraphW01-XLt";
+  src: url("/fonts/ITCLubalinGraphW01-XLt.eot?#iefix");
+  src: url("/fonts/ITCLubalinGraphW01-XLt.eot?#iefix") format("eot"), url("/fonts/ITCLubalinGraphW01-XLt.woff") format("woff"), url("/fonts/ITCLubalinGraphW01-XLt.ttf") format("truetype"), url("/fonts/ITCLubalinGraphW01-XLt.svg#5b1a4f6f-183e-4a2b-897c-02b9544ff090") format("svg");
+}
+
+.po5__stat, .figure__stat, .list-menu__link b {
+  font-family: "ITCLubalinGraphW01-XLt", georgia, serif;
+  font-weight: normal;
+}
+
+/* @serif
+-----------------------------------------------------
+serif is Lubalin Medium
+use @extend %serif for this font
+----------------------------------------------------- */
+@font-face {
+  font-family: "ITCLubalinGraphW01-Md";
+  src: url("/fonts/ITCLubalinGraphW01-Md.eot?#iefix");
+  src: url("/fonts/ITCLubalinGraphW01-Md.eot?#iefix") format("eot"), url("/fonts/ITCLubalinGraphW01-Md.woff") format("woff"), url("/fonts/ITCLubalinGraphW01-Md.ttf") format("truetype"), url("/fonts/ITCLubalinGraphW01-Md.svg#5b1a4f6f-183e-4a2b-897c-02b9544ff090") format("svg");
+}
+
+.ke-number, .kc-title, .hero__title, .ke-title, .site-nav__title, .site-nav__ke-title {
+  font-family: "ITCLubalinGraphW01-Md", georgia, serif;
+  font-weight: normal;
+}
+
+/* @serif-bold
+-----------------------------------------------------
+serif bold is Lubalin Demi
+use @extend %serif-bold for this font
+----------------------------------------------------- */
+@font-face {
+  font-family: "ITCLubalinGraphW01-Demi";
+  src: url("/fonts/ITCLubalinGraphW01-Demi.eot?#iefix");
+  src: url("/fonts/ITCLubalinGraphW01-Demi.eot?#iefix") format("eot"), url("/fonts/ITCLubalinGraphW01-Demi.woff") format("woff"), url("/fonts/ITCLubalinGraphW01-Demi.ttf") format("truetype"), url("/fonts/ITCLubalinGraphW01-Demi.svg#ITCLubalinGraphW01-Demi") format("svg");
+}
+
+/**
+
+  @text-styles
+--------------------------------------------------------
+
+  Reusable classes to define
+  commonly used text styles.
+
+  Use the naming convention of:
+
+  .size-font-(weight)-(font-style)
+
+  Where font-weight and font-style (italic) are optional
+
+  Note: Feel free to add/rremove/edit as you see fit.
+
+-----------------------------------------------------  */
+/* @xxlarge-sans-bold
+--------------------------------------------------------
+  Used for xlarge main text titles
+------------------------------------------------------ */
+.t1__title {
+  font-size: 2.375rem;
+  line-height: 1;
+}
+
+/* @xlarge-sans-bold
+--------------------------------------------------------
+  Used for main text titles
+------------------------------------------------------ */
+.t2__title, .a1__title, .a3__title, .a4__title, .a5__title, .po1__title, .po2__title, .po3__title, .po4__title, .po6__title, .po7__title {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+/* @large-sans-bold
+--------------------------------------------------------
+  Used for main text sub-titles
+------------------------------------------------------ */
+h1, .a3__subtitle, .po2__subtitle, .po3__subtitle {
+  font-size: 1.125rem;
+  line-height: 1.166666667;
+}
+
+/* @medium-sans-bold
+--------------------------------------------------------
+  Used for bold text in menus
+------------------------------------------------------ */
+h2, h3, h4, .list-menu__link {
+  font-size: 1.25rem;
+  line-height: 1.1;
+}
+
+/* @small-sans-bold
+--------------------------------------------------------
+  Used for buttons
+  Used for text in graphic menus
+------------------------------------------------------ */
+h5, .graphic-menu__link, .list-menu__link--with-highlight, .accordian-menu__toggle {
+  font-size: 1rem;
+  line-height: 1.125;
+}
+
+/* @xsmall-sans-bold
+--------------------------------------------------------
+  Used for buttons
+------------------------------------------------------ */
+h5, .graphic-menu__link, .list-menu__link--with-highlight, .accordian-menu__toggle {
+  font-size: .875rem;
+  line-height: 1;
+}
+
+/* @small-sans-medium
+--------------------------------------------------------
+  Used for text under popover numbers
+------------------------------------------------------ */
+.figure__text, .po5__text, .po6__deck {
+  font-size: 1rem;
+  line-height: 1.125;
+}
+
+/* @xsmall-sans-bold
+--------------------------------------------------------
+  Used for buttons
+------------------------------------------------------ */
+h6, .btn, .a3__deck-title, .po2__deck-title, .po3__deck-title {
+  font-size: .875rem;
+  line-height: 1;
+}
+
+/* @xsmall-sans-medium
+--------------------------------------------------------
+  Used for link text in external popup links
+------------------------------------------------------ */
+.external-link {
+  font-size: .875rem;
+  line-height: 1.25;
+}
+
+/* @xxsmall-sans-medium
+--------------------------------------------------------
+  Used for Article Hero sub-title
+------------------------------------------------------ */
+.hero__subtitle {
+  font-size: .75rem;
+  line-height: 1.166666667;
+}
+
+/* @base-sans
+--------------------------------------------------------
+  Used for base paragraphs
+------------------------------------------------------ */
+p, body {
+  font-size: 1.0625rem;
+  line-height: 1.2;
+}
+
+/* @base-sans-bold
+--------------------------------------------------------
+  Used for base paragraphs bold text
+------------------------------------------------------ */
+/* @small-sans
+--------------------------------------------------------
+  Used for nav menu
+------------------------------------------------------ */
+.site-nav__links > li a {
+  font-size: .825rem;
+}
+
+/* @xlarge-serif
+--------------------------------------------------------
+  Used for Knowledge Container Number
+  Used for Numbers in Number figure callout
+------------------------------------------------------ */
+.ke-number {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+/* @large-serif
+--------------------------------------------------------
+  Used for Book Title, "Ideas on a page"
+------------------------------------------------------ */
+.kc-title {
+  font-size: 2.5rem;
+  line-height: 1.075;
+}
+
+/* @medium-serif
+--------------------------------------------------------
+  Used for Article hero title
+------------------------------------------------------ */
+.hero__title {
+  font-size: 1.6875rem;
+  line-height: 1.3;
+}
+
+/* @small-serif
+--------------------------------------------------------
+  Used for Knowledege Edition Title "Smarter Cloud"
+------------------------------------------------------ */
+.ke-title {
+  font-size: 1.3125rem;
+  line-height: 1;
+}
+
+/* @xsmall-serif
+--------------------------------------------------------
+  Used for Nav title
+------------------------------------------------------ */
+.site-nav__title, .site-nav__ke-title {
+  font-size: .9375rem;
+  line-height: 1;
+}
+
+/* @xxxlarge-serif-light
+--------------------------------------------------------
+  Used for Data numbers in modals
+------------------------------------------------------ */
+.po5__stat {
+  font-size: 6.375rem;
+  line-height: 1;
+}
+
+/* @xlarge-serif-light
+--------------------------------------------------------
+  Used for Numbers in Number figure callout
+------------------------------------------------------ */
+.figure__stat {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+/* @small-serif-light
+--------------------------------------------------------
+  Used for Highlighted text in menus
+------------------------------------------------------ */
+.list-menu__link b {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/**
+
+  @headings
+--------------------------------------------------------
+   _3_elements/_headings.scss
+--------------------------------------------------------
+
+ We set any base styles for any headings that have
+ no classnames.
+-------------------------------------------------------- */
+/* @headings
+--------------------------------------------------------
+  Headings
+
+  Note: Often, we'll use bold fonts, and if a bold font
+        has font-weight: bold it looks terrible.  In
+        this case, use font-weight: normal;
+
+        Also, you can use the heading font sizes that
+        you created in _1_foundations/_font-sizes.scss.
+
+------------------------------------------------------ */
+/* Have something else to add?
+--------------------------------------------------------
+  + Add any new modifier classes below
+------------------------------------------------------ */
+/**
+
+  @paragraphs
+--------------------------------------------------------
+  _3_elements/_paragraphs.scss
+--------------------------------------------------------
+
+  Some basic styles to paragraphs and
+  inline styles
+
+-----------------------------------------------------  */
+/* @paragraphs
+--------------------------------------------------------
+
+  Example: Paragraphs
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+--------------------------------------------------------  */
+p {
+  margin-bottom: 1rem;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* @inline
+--------------------------------------------------------
+  Common inline elements
+
+  Example: inline elements
+  <p>Lorem Ipsum is <b>bold</b> text of the <strong>strong</strong> printing and typesetting industry. Lorem Ipsum is <i>italic</i> simply dummy text <em>emphasized</em> of the printing and typesetting industry.</p<
+
+-------------------------------------------------------- */
+p i,
+p em {
+  font-style: italic;
+}
+
+/**
+
+  @quotes
+--------------------------------------------------------
+  _3_elements/_quotes.scss
+--------------------------------------------------------
+
+  Blockquotes and pull quotes
+
+-----------------------------------------------------  */
+/* @blockquote
+--------------------------------------------------------
+  Example:
+  <blockquote>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  </blockquote>
+-------------------------------------------------------- */
+blockquote p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* @quote-bubble
+--------------------------------------------------------
+  Large quotes pulled from body text
+
+  Example:
+  <blockquote class="quote-bubble">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
+  </blockquote>
+-------------------------------------------------------- */
+.bubble {
+  background-image: url(/images/quote-bubble.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 8.125em;
+  color: #333333;
+  padding: .5em;
+  margin-bottom: 2em;
+}
+
+.bubble {
+  background-image: url(/images/quote-bubble.svg);
+}
+
+/**
+
+   @lists
+--------------------------------------------------------
+  _3_elements/_lists.scss
+--------------------------------------------------------
+
+  Structure for lists
+
+  Example: Unordered List
+  <ul>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>
+      <ul>
+        <li>Nested Item</li>
+        <li>Nested Item</li>
+        <li>Nested Item</li>
+        <li>Nested Item</li>
+      </ul>
+    </li>
+  </ul>
+
+  Example: Ordered List
+  <ol>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>
+      <ol>
+        <li>Nested Item</li>
+        <li>Nested Item</li>
+        <li>Nested Item</li>
+        <li>Nested Item</li>
+      </ul>
+    </li>
+  </ol>
+
+  NOTE: This is pretty bare-bones right now, it can be
+        improved upon.  For instance, there are no <dl> styles
+
+-------------------------------------------------------- */
+ul,
+ol {
+  padding-left: 0;
+  margin-left: 0;
+  list-style-type: none;
+}
+
+/* @links
+--------------------------------------------------------
+  _3_elements/_links.scss
+--------------------------------------------------------
+  Links, <a> etc.
+  & Webkit tap highlight
+
+  Example: link
+  <p>Lorem Ipsum is simply <a href="#">dummy text</a> of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+-------------------------------------------------------- */
+/* @anchors
+--------------------------------------------------------
+  Anchors will have this base styling
+------------------------------------------------------ */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* @external-link
+--------------------------------------------------------
+  Style for a jump-link
+------------------------------------------------------ */
+.external-link {
+  display: block;
+  margin: 0 auto;
+  text-transform: uppercase;
+  padding-top: 3em;
+  background-image: url(/images/icon--external-link.png);
+  background-size: 1.825rem 1.825rem;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+.external-link b {
+  display: block;
+}
+
+.svg .external-link {
+  background-image: url(/images/icon--external-link.svg);
+}
+
+/* @webkit-tap-highlight
+--------------------------------------------------------
+  Declare the webkit tap highlight style
+------------------------------------------------------ */
+body {
+  -webkit-tap-highlight-color: rba(0, 0, 0, 0.35);
+}
+
+/**
+
+  @images
+---------------------------------------------------------
+  _3_elements/_images.scss
+--------------------------------------------------------
+
+  Base styling for images, plus some helpful utility
+  classes that modify images.
+
+  Note: You won't add any styling to these image classes,
+        these are just utility classes
+
+--------------------------------------------------------- */
+/* @images
+--------------------------------------------------------
+  Base Image Style is 100% width by default
+
+  Example: Image
+  <img src="http://fillmurray.com/600/300">
+
+------------------------------------------------------ */
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* @img--natural
+--------------------------------------------------------
+  Natural Images are 100% max-width, but their natural width by default
+
+  Example: Image, Natural Width
+  <img class="img--natural" src="http://fillmurray.com/600/300">
+
+------------------------------------------------------ */
+.img--natural {
+  width: auto;
+}
+
+/* @img--title
+--------------------------------------------------------
+  Title images fit within a heading/title element
+
+  Example: Image inside a title (.img--title)
+  <h1><img class="img--title" src="http://fillmurray.com/300/300"> Title Here versions of Lorem Ipsum.</h1>
+  <h2><img class="img--title" src="http://fillmurray.com/300/300"> Title Here versions of Lorem Ipsum.</h2>
+  <h3><img class="img--title" src="http://fillmurray.com/300/300"> Title Here versions of Lorem Ipsum.</h3>
+
+------------------------------------------------------ */
+.img--title {
+  height: 1em;
+  width: auto;
+  vertical-align: top;
+}
+
+/* @img--placement
+--------------------------------------------------------
+  Here are a few helper classes to position images, particularly
+  helpful inside paragraphs.
+
+  Example: Image Right
+  <p><img class="img--right" src="http://fillmurray.com/400/300"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+  Example: Image, Natural Width
+  <p><img class="img--left" src="http://fillmurray.com/400/300"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+  Example: Image, Center
+  <p><img class="img--center" src="http://fillmurray.com/400/300"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+------------------------------------------------------ */
+.img--right {
+  width: auto;
+  float: right;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.img--left {
+  width: auto;
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.img--center {
+  width: auto;
+  display: block;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  margin-left: auto;
+}
+
+.img--right img,
+.img--left img,
+.img--center img {
+  width: auto;
+}
+
+/* @img--circle
+--------------------------------------------------------
+  Popular circle image for bios etc.
+
+  Example: Circle image
+  <img class="img--circle" src="http://fillmurray.com/600/300">
+
+------------------------------------------------------ */
+.img--circle {
+  border-radius: 50%;
+}
+
+/* Have something else to add?
+--------------------------------------------------------
+  + Add any new modifier classes below
+------------------------------------------------------ */
+/**
+
+   Nav
+---------------------------------------------------------
+  _3_elements/_nav.scss
+--------------------------------------------------------
+
+  The '.nav' modules
+
+  NOTE: We are reconsidering using these because sometimes
+        a nav is a row, but at different viewports, it is
+        stacked.  This is up for debate.
+
+---------------------------------------------------------  */
+/* @nav
+--------------------------------------------------------
+  The usual .nav floats everything left in a row
+
+  Example: .nav
+   <ul class=nav>
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+
+------------------------------------------------------ */
+.nav {
+  list-style: none;
+  margin-left: 0;
+}
+.nav > li,
+.nav > li > a {
+  display: inline-block;
+}
+
+/* @nav--stacked
+--------------------------------------------------------
+
+  .nav--stacked extends .nav and throws the list into vertical mode, e.g.:
+
+  Example: Nav, stacked
+   <ul class="nav  nav--stacked">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+
+------------------------------------------------------ */
+.nav--stacked > li {
+  margin-left: 0;
+  display: list-item;
+}
+.nav--stacked > li > a {
+  display: block;
+}
+
+/* @nav--centered
+--------------------------------------------------------
+  .nav--centered extends .nav and centers the list
+
+  Example: Nav, centered
+   <ul class="nav  nav--centered">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+------------------------------------------------------ */
+.nav--centered {
+  text-align: center;
+}
+
+/* @nav--fit
+--------------------------------------------------------
+  Force a nav to occupy 100% of the available width of its parent.
+
+  Example: Nav, fit
+  <ul class="nav  nav--fit">
+     <li><a href=#>Home</a></li>
+     <li><a href=#>About</a></li>
+     <li><a href=#>Portfolio</a></li>
+     <li><a href=#>Contact</a></li>
+  </ul>
+
+------------------------------------------------------ */
+.nav--fit {
+  display: table;
+  width: 100%;
+}
+.nav--fit > li {
+  display: table-cell;
+}
+.nav--fit > li > a {
+  display: block;
+}
+
+/* @nav--piped
+--------------------------------------------------------
+  Add pipes in between nav links.
+
+  Example: Nav piped
+  <ul class="nav  nav--piped">
+     <li><a href=#>Home</a></li>
+     <li><a href=#>About</a></li>
+     <li><a href=#>Portfolio</a></li>
+     <li><a href=#>Contact</a></li>
+  </ul>
+
+------------------------------------------------------ */
+.nav--piped a {
+  display: inline-block;
+  padding-right: .75em;
+  margin-right: .5em;
+  position: relative;
+}
+.nav--piped a:after {
+  content: "";
+  display: block;
+  width: 1px;
+  background: white;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  bottom: 30%;
+}
+
+/* Have something else to add?
+--------------------------------------------------------
+  + Add any new modifier classes below
+------------------------------------------------------ */
+/**
+
+  @buttons
+--------------------------------------------------------
+  _3_elements/_buttons.scss
+--------------------------------------------------------
+
+  Buttons are a common UI component in sites/apps.  They
+  are usually either anchor, button, or input elements
+  with a classname of 'btn'.  They provide an easily
+  identified clickable target.
+
+  Buttons commonly have modifying classes that apply
+  specific styles.
+
+  Also see _button-groups.scss, a related component
+  that arranges buttons into useful groups.
+
+------------------------------------------------------ */
+/* @btn
+--------------------------------------------------------
+  Your primary, go-to button
+
+  Example: Anchor Button
+  <a href="#" class="btn" title="sample">Anchor Button</a>
+
+  Example: Button with class .btn
+  <button class="btn">Button Button</button>
+
+  Example: Input with class .btn
+  <input type="submit" class="btn" value="Input Button">
+
+  Example: Active state, with .active
+  <a href="#" class="btn is-active">Active Button</a>
+
+------------------------------------------------------ */
+.btn {
+  display: block;
+  border: 1px solid #cdcdcd;
+  padding: .5rem;
+  border-radius: .25rem;
+  background: white url(/images/angle--right.png) 95% 50% no-repeat;
+}
+.btn.is-active {
+  opacity: .75;
+}
+.btn:hover, .btn:focus {
+  background-color: #FAFAFA;
+}
+
+.svg .btn {
+  background-image: url(/images/angle--right.svg);
+}
+
+/* @btn--large
+--------------------------------------------------------
+  A btn modifier, large
+
+  Example: .btn--large
+  <a class="btn btn--large">Large button</a>
+------------------------------------------------------ */
+/* @btn--inline
+--------------------------------------------------------
+  A btn modifier, if this button is in a paragraph or
+  in anything else that has a defined font-size, this
+  modifier will make the btn inherit the font-size of
+  the partent.
+
+  Example: .btn--inline
+  <p>Here's some text <a class="btn btn--inline">Cool button</a> text keeps going</p>
+
+------------------------------------------------------ */
+.btn--inline {
+  font-size: 1em;
+}
+
+/* @btn--block
+--------------------------------------------------------
+  A btn modifier - makes the button display block, 100%
+  width and aligns the text to the center.  Removes left
+  and right padding since the text is center aligned, it
+  is not needed.  Actually sometimes having the padding
+  on the left and right causes problems if the centered
+  text is quite long - so we just remove it.
+
+  Example: .btn--block
+  <a href="#" class="btn btn--block">Block button</a>
+------------------------------------------------------ */
+.btn--block {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Have something else to add?
+--------------------------------------------------------
+  + Add any new modifier classes below
+------------------------------------------------------ */
+/**
+
+  @icons
+---------------------------------------------------------
+  _3_elements/_icons.scss
+--------------------------------------------------------
+
+  Define classes for icons.  First a base class, .icon, and
+  then any modifiers.
+
+--------------------------------------------------------- */
+/* @icon
+--------------------------------------------------------
+
+------------------------------------------------------ */
+.icon {
+  display: block;
+  width: 1.875rem;
+  height: 1.875rem;
+  background-size: 100% 100%;
+  font: 0/0 a;
+  text-shadow: none;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+}
+
+.icon--close {
+  background-image: url(/images/icon--close.png);
+}
+
+.svg .icon--close {
+  background-image: url(/images/icon--close.svg);
+}
+
+.icon--scroll {
+  background-image: url(/images/icon--scroll-down.png);
+}
+
+.svg .icon--scroll {
+  background-image: url(/images/icon--scroll-down.svg);
+}
+
+.icon--pager {
+  background-image: url(/images/icon--pager.png);
+}
+
+.svg .icon--pager {
+  background-image: url(/images/icon--pager.svg);
+}
+
+/* @symbolset
+--------------------------------------------------------
+Symbolset
+www.symbolset.com
+Copyright © 2012 Oak Studios LLC
+------------------------------------------------------ */
+@font-face {
+  font-family: "SSStandard";
+  src: url("/fonts/ss-standard.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/ss-standard.eot?#iefix") format("embedded-opentype"), url("/fonts/ss-standard.woff") format("woff"), url("/fonts/ss-standard.ttf") format("truetype"), url("/fonts/ss-standard.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+}
+
+.ss-icon, .ss-icon.ss-standard,
+[class^="ss-"]:before, [class*=" ss-"]:before,
+[class^="ss-"].ss-standard:before, [class*=" ss-"].ss-standard:before,
+[class^="ss-"].right:after, [class*=" ss-"].right:after,
+[class^="ss-"].ss-standard.right:after, [class*=" ss-"].ss-standard.right:after {
+  font-family: "SSStandard";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+[class^="ss-"].right:before, [class*=" ss-"].ss-standard.right:before {
+  display: none;
+  content: '';
+}
+
+.ss-cursor:before, .ss-cursor.right:after {
+  content: '';
+}
+
+.ss-crosshair:before, .ss-crosshair.right:after {
+  content: '⌖';
+}
+
+.ss-search:before, .ss-search.right:after {
+  content: '';
+}
+
+.ss-zoomin:before, .ss-zoomin.right:after {
+  content: '';
+}
+
+.ss-zoomout:before, .ss-zoomout.right:after {
+  content: '';
+}
+
+.ss-view:before, .ss-view.right:after {
+  content: '';
+}
+
+.ss-attach:before, .ss-attach.right:after {
+  content: '';
+}
+
+.ss-link:before, .ss-link.right:after {
+  content: '';
+}
+
+.ss-move:before, .ss-move.right:after {
+  content: '';
+}
+
+.ss-write:before, .ss-write.right:after {
+  content: '✎';
+}
+
+.ss-writingdisabled:before, .ss-writingdisabled.right:after {
+  content: '';
+}
+
+.ss-erase:before, .ss-erase.right:after {
+  content: '✐';
+}
+
+.ss-compose:before, .ss-compose.right:after {
+  content: '';
+}
+
+.ss-lock:before, .ss-lock.right:after {
+  content: '';
+}
+
+.ss-unlock:before, .ss-unlock.right:after {
+  content: '';
+}
+
+.ss-key:before, .ss-key.right:after {
+  content: '';
+}
+
+.ss-backspace:before, .ss-backspace.right:after {
+  content: '⌫';
+}
+
+.ss-ban:before, .ss-ban.right:after {
+  content: '';
+}
+
+.ss-trash:before, .ss-trash.right:after {
+  content: '';
+}
+
+.ss-target:before, .ss-target.right:after {
+  content: '◎';
+}
+
+.ss-tag:before, .ss-tag.right:after {
+  content: '';
+}
+
+.ss-bookmark:before, .ss-bookmark.right:after {
+  content: '';
+}
+
+.ss-flag:before, .ss-flag.right:after {
+  content: '⚑';
+}
+
+.ss-like:before, .ss-like.right:after {
+  content: '';
+}
+
+.ss-dislike:before, .ss-dislike.right:after {
+  content: '';
+}
+
+.ss-heart:before, .ss-heart.right:after {
+  content: '♥';
+}
+
+.ss-halfheart:before, .ss-halfheart.right:after {
+  content: '';
+}
+
+.ss-star:before, .ss-star.right:after {
+  content: '⋆';
+}
+
+.ss-halfstar:before, .ss-halfstar.right:after {
+  content: '';
+}
+
+.ss-sample:before, .ss-sample.right:after {
+  content: '';
+}
+
+.ss-crop:before, .ss-crop.right:after {
+  content: '';
+}
+
+.ss-layers:before, .ss-layers.right:after {
+  content: '';
+}
+
+.ss-phone:before, .ss-phone.right:after {
+  content: '';
+}
+
+.ss-phonedisabled:before, .ss-phonedisabled.right:after {
+  content: '';
+}
+
+.ss-rss:before, .ss-rss.right:after {
+  content: '';
+}
+
+.ss-facetime:before, .ss-facetime.right:after {
+  content: '';
+}
+
+.ss-reply:before, .ss-reply.right:after {
+  content: '↩';
+}
+
+.ss-send:before, .ss-send.right:after {
+  content: '';
+}
+
+.ss-mail:before, .ss-mail.right:after {
+  content: '✉';
+}
+
+.ss-inbox:before, .ss-inbox.right:after {
+  content: '';
+}
+
+.ss-chat:before, .ss-chat.right:after {
+  content: '';
+}
+
+.ss-user:before, .ss-user.right:after {
+  content: '';
+}
+
+.ss-femaleuser:before, .ss-femaleuser.right:after {
+  content: '';
+}
+
+.ss-users:before, .ss-users.right:after {
+  content: '';
+}
+
+.ss-cart:before, .ss-cart.right:after {
+  content: '';
+}
+
+.ss-creditcard:before, .ss-creditcard.right:after {
+  content: '';
+}
+
+.ss-dollarsign:before, .ss-dollarsign.right:after {
+  content: '';
+}
+
+.ss-barchart:before, .ss-barchart.right:after {
+  content: '';
+}
+
+.ss-piechart:before, .ss-piechart.right:after {
+  content: '';
+}
+
+.ss-box:before, .ss-box.right:after {
+  content: '';
+}
+
+.ss-home:before, .ss-home.right:after {
+  content: '⌂';
+}
+
+.ss-globe:before, .ss-globe.right:after {
+  content: '';
+}
+
+.ss-navigate:before, .ss-navigate.right:after {
+  content: '';
+}
+
+.ss-compass:before, .ss-compass.right:after {
+  content: '';
+}
+
+.ss-signpost:before, .ss-signpost.right:after {
+  content: '';
+}
+
+.ss-location:before, .ss-location.right:after {
+  content: '';
+}
+
+.ss-map:before, .ss-map.right:after {
+  content: '';
+}
+
+.ss-pin:before, .ss-pin.right:after {
+  content: '';
+}
+
+.ss-database:before, .ss-database.right:after {
+  content: '';
+}
+
+.ss-hdd:before, .ss-hdd.right:after {
+  content: '';
+}
+
+.ss-music:before, .ss-music.right:after {
+  content: '♫';
+}
+
+.ss-mic:before, .ss-mic.right:after {
+  content: '';
+}
+
+.ss-volume:before, .ss-volume.right:after {
+  content: '';
+}
+
+.ss-volumelow:before, .ss-volumelow.right:after {
+  content: '';
+}
+
+.ss-volumehigh:before, .ss-volumehigh.right:after {
+  content: '';
+}
+
+.ss-airplay:before, .ss-airplay.right:after {
+  content: '';
+}
+
+.ss-camera:before, .ss-camera.right:after {
+  content: '';
+}
+
+.ss-picture:before, .ss-picture.right:after {
+  content: '';
+}
+
+.ss-video:before, .ss-video.right:after {
+  content: '';
+}
+
+.ss-play:before, .ss-play.right:after {
+  content: '▶';
+}
+
+.ss-pause:before, .ss-pause.right:after {
+  content: '';
+}
+
+.ss-stop:before, .ss-stop.right:after {
+  content: '■';
+}
+
+.ss-record:before, .ss-record.right:after {
+  content: '●';
+}
+
+.ss-rewind:before, .ss-rewind.right:after {
+  content: '⏪';
+}
+
+.ss-fastforward:before, .ss-fastforward.right:after {
+  content: '⏩';
+}
+
+.ss-skipback:before, .ss-skipback.right:after {
+  content: '⏮';
+}
+
+.ss-skipforward:before, .ss-skipforward.right:after {
+  content: '⏭';
+}
+
+.ss-eject:before, .ss-eject.right:after {
+  content: '⏏';
+}
+
+.ss-repeat:before, .ss-repeat.right:after {
+  content: '';
+}
+
+.ss-replay:before, .ss-replay.right:after {
+  content: '↺';
+}
+
+.ss-shuffle:before, .ss-shuffle.right:after {
+  content: '';
+}
+
+.ss-book:before, .ss-book.right:after {
+  content: '';
+}
+
+.ss-openbook:before, .ss-openbook.right:after {
+  content: '';
+}
+
+.ss-notebook:before, .ss-notebook.right:after {
+  content: '';
+}
+
+.ss-grid:before, .ss-grid.right:after {
+  content: '';
+}
+
+.ss-rows:before, .ss-rows.right:after {
+  content: '';
+}
+
+.ss-columns:before, .ss-columns.right:after {
+  content: '';
+}
+
+.ss-thumbnails:before, .ss-thumbnails.right:after {
+  content: '';
+}
+
+.ss-desktop:before, .ss-desktop.right:after {
+  content: '';
+}
+
+.ss-laptop:before, .ss-laptop.right:after {
+  content: '';
+}
+
+.ss-tablet:before, .ss-tablet.right:after {
+  content: '';
+}
+
+.ss-cell:before, .ss-cell.right:after {
+  content: '';
+}
+
+.ss-battery:before, .ss-battery.right:after {
+  content: '';
+}
+
+.ss-batteryhigh:before, .ss-batteryhigh.right:after {
+  content: '';
+}
+
+.ss-batterymedium:before, .ss-batterymedium.right:after {
+  content: '';
+}
+
+.ss-batterylow:before, .ss-batterylow.right:after {
+  content: '';
+}
+
+.ss-batteryempty:before, .ss-batteryempty.right:after {
+  content: '';
+}
+
+.ss-clouddownload:before, .ss-clouddownload.right:after {
+  content: '';
+}
+
+.ss-download:before, .ss-download.right:after {
+  content: '';
+}
+
+.ss-cloudupload:before, .ss-cloudupload.right:after {
+  content: '';
+}
+
+.ss-upload:before, .ss-upload.right:after {
+  content: '';
+}
+
+.ss-fork:before, .ss-fork.right:after {
+  content: '';
+}
+
+.ss-merge:before, .ss-merge.right:after {
+  content: '';
+}
+
+.ss-refresh:before, .ss-refresh.right:after {
+  content: '↻';
+}
+
+.ss-sync:before, .ss-sync.right:after {
+  content: '';
+}
+
+.ss-loading:before, .ss-loading.right:after {
+  content: '';
+}
+
+.ss-wifi:before, .ss-wifi.right:after {
+  content: '';
+}
+
+.ss-connection:before, .ss-connection.right:after {
+  content: '';
+}
+
+.ss-file:before, .ss-file.right:after {
+  content: '';
+}
+
+.ss-folder:before, .ss-folder.right:after {
+  content: '';
+}
+
+.ss-quote:before, .ss-quote.right:after {
+  content: '“';
+}
+
+.ss-text:before, .ss-text.right:after {
+  content: '';
+}
+
+.ss-font:before, .ss-font.right:after {
+  content: '';
+}
+
+.ss-print:before, .ss-print.right:after {
+  content: '⎙';
+}
+
+.ss-fax:before, .ss-fax.right:after {
+  content: '';
+}
+
+.ss-list:before, .ss-list.right:after {
+  content: '';
+}
+
+.ss-layout:before, .ss-layout.right:after {
+  content: '';
+}
+
+.ss-action:before, .ss-action.right:after {
+  content: '';
+}
+
+.ss-redirect:before, .ss-redirect.right:after {
+  content: '↪';
+}
+
+.ss-expand:before, .ss-expand.right:after {
+  content: '⤢';
+}
+
+.ss-contract:before, .ss-contract.right:after {
+  content: '';
+}
+
+.ss-help:before, .ss-help.right:after {
+  content: '❓';
+}
+
+.ss-info:before, .ss-info.right:after {
+  content: 'ℹ';
+}
+
+.ss-alert:before, .ss-alert.right:after {
+  content: '⚠';
+}
+
+.ss-caution:before, .ss-caution.right:after {
+  content: '⛔';
+}
+
+.ss-logout:before, .ss-logout.right:after {
+  content: '';
+}
+
+.ss-plus:before, .ss-plus.right:after {
+  content: '+';
+}
+
+.ss-hyphen:before, .ss-hyphen.right:after {
+  content: '-';
+}
+
+.ss-check:before, .ss-check.right:after {
+  content: '✓';
+}
+
+.ss-delete:before, .ss-delete.right:after {
+  content: '␡';
+}
+
+.ss-settings:before, .ss-settings.right:after {
+  content: '⚙';
+}
+
+.ss-dashboard:before, .ss-dashboard.right:after {
+  content: '';
+}
+
+.ss-notifications:before, .ss-notifications.right:after {
+  content: '';
+}
+
+.ss-notificationsdisabled:before, .ss-notificationsdisabled.right:after {
+  content: '';
+}
+
+.ss-clock:before, .ss-clock.right:after {
+  content: '⏲';
+}
+
+.ss-stopwatch:before, .ss-stopwatch.right:after {
+  content: '⏱';
+}
+
+.ss-calendar:before, .ss-calendar.right:after {
+  content: '';
+}
+
+.ss-calendaradd:before, .ss-calendaradd.right:after {
+  content: '';
+}
+
+.ss-calendarremove:before, .ss-calendarremove.right:after {
+  content: '';
+}
+
+.ss-calendarcheck:before, .ss-calendarcheck.right:after {
+  content: '';
+}
+
+.ss-calendardelete:before, .ss-calendardelete.right:after {
+  content: '';
+}
+
+.ss-briefcase:before, .ss-briefcase.right:after {
+  content: '';
+}
+
+.ss-cloud:before, .ss-cloud.right:after {
+  content: '☁';
+}
+
+.ss-droplet:before, .ss-droplet.right:after {
+  content: '';
+}
+
+.ss-navigateup:before, .ss-navigateup.right:after {
+  content: '';
+}
+
+.ss-navigateright:before, .ss-navigateright.right:after {
+  content: '▻';
+}
+
+.ss-navigatedown:before, .ss-navigatedown.right:after {
+  content: '';
+}
+
+.ss-navigateleft:before, .ss-navigateleft.right:after {
+  content: '◅';
+}
+
+.ss-up:before, .ss-up.right:after {
+  content: '⬆';
+}
+
+.ss-upright:before, .ss-upright.right:after {
+  content: '⬈';
+}
+
+.ss-right:before, .ss-right.right:after {
+  content: '➡';
+}
+
+.ss-downright:before, .ss-downright.right:after {
+  content: '⬊';
+}
+
+.ss-down:before, .ss-down.right:after {
+  content: '⬇';
+}
+
+.ss-downleft:before, .ss-downleft.right:after {
+  content: '⬋';
+}
+
+.ss-left:before, .ss-left.right:after {
+  content: '⬅';
+}
+
+.ss-upleft:before, .ss-upleft.right:after {
+  content: '⬉';
+}
+
+.ss-directup:before, .ss-directup.right:after {
+  content: '▴';
+}
+
+.ss-directright:before, .ss-directright.right:after {
+  content: '▹';
+}
+
+.ss-dropdown:before, .ss-dropdown.right:after {
+  content: '▾';
+}
+
+.ss-directleft:before, .ss-directleft.right:after {
+  content: '◃';
+}
+
+.ss-retweet:before, .ss-retweet.right:after {
+  content: '';
+}
+
+@font-face {
+  font-family: "SSSocial";
+  src: url("/fonts/ss-social-regular.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/ss-social-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/ss-social-regular.woff") format("woff"), url("/fonts/ss-social-regular.ttf") format("truetype"), url("/fonts/ss-social-regular.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+}
+
+.ss-icon.ss-social, .ss-icon.ss-social-circle,
+[class^="ss-"]:before, [class*=" ss-"]:before,
+[class^="ss-"][class*=" ss-social"]:before, [class*=" ss-"][class*=" ss-social"]:before,
+[class^="ss-"].right:after, [class*=" ss-"].right:after,
+[class^="ss-"][class*=" ss-social"].right:after, [class*=" ss-"][class*=" ss-social"].right:after {
+  font-family: "SSSocial";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+[class^="ss-"].right:before, [class^="ss-"][class*=" ss-social"].right:before {
+  display: none;
+  content: '';
+}
+
+.ss-facebook:before, .ss-facebook.right:after {
+  content: '';
+}
+
+.ss-twitter:before, .ss-twitter.right:after {
+  content: '';
+}
+
+.ss-linkedin:before, .ss-linkedin.right:after {
+  content: '';
+}
+
+.ss-googleplus:before, .ss-googleplus.right:after {
+  content: '';
+}
+
+.ss-tumblr:before, .ss-tumblr.right:after {
+  content: '';
+}
+
+.ss-wordpress:before, .ss-wordpress.right:after {
+  content: '';
+}
+
+.ss-blogger:before, .ss-blogger.right:after {
+  content: '';
+}
+
+.ss-posterous:before, .ss-posterous.right:after {
+  content: '';
+}
+
+.ss-youtube:before, .ss-youtube.right:after {
+  content: '';
+}
+
+.ss-vimeo:before, .ss-vimeo.right:after {
+  content: '';
+}
+
+.ss-flickr:before, .ss-flickr.right:after {
+  content: '';
+}
+
+.ss-instagram:before, .ss-instagram.right:after {
+  content: '';
+}
+
+.ss-pinterest:before, .ss-pinterest.right:after {
+  content: '';
+}
+
+.ss-dribbble:before, .ss-dribbble.right:after {
+  content: '';
+}
+
+.ss-behance:before, .ss-behance.right:after {
+  content: '';
+}
+
+.ss-github:before, .ss-github.right:after {
+  content: '';
+}
+
+.ss-octocat:before, .ss-octocat.right:after {
+  content: '';
+}
+
+.ss-paypal:before, .ss-paypal.right:after {
+  content: '';
+}
+
+.ss-foursquare:before, .ss-foursquare.right:after {
+  content: '';
+}
+
+.ss-skype:before, .ss-skype.right:after {
+  content: '';
+}
+
+.ss-rdio:before, .ss-rdio.right:after {
+  content: '';
+}
+
+.ss-spotify:before, .ss-spotify.right:after {
+  content: '';
+}
+
+.ss-lastfm:before, .ss-lastfm.right:after {
+  content: '';
+}
+
+.ss-mail:before, .ss-mail.right:after {
+  content: '✉';
+}
+
+.ss-like:before, .ss-like.right:after {
+  content: '👍';
+}
+
+.ss-rss:before, .ss-rss.right:after {
+  content: '';
+}
+
+/* Have something else to add?
+--------------------------------------------------------
+  + Add any new modifier classes below
+------------------------------------------------------ */
+/**
+
+  @figures
+--------------------------------------------------------
+
+  Figures
+
+-----------------------------------------------------  */
+.figure {
+  float: left;
+  width: 50%;
+}
+.figure:first-child {
+  padding-right: .5em;
+}
+.figure:last-child {
+  padding-left: .5em;
+}
+
+.figure__stat {
+  color: #00b0da;
+}
+
+/***
+
+  @modules
+---------------------------------------------------------
+
+  Small, reusable objects that are usually combinations
+  of elemements.
+
+  If you create a new module, make sure the partial is
+  in the _4_modules directory, and you import it below
+
+  Comment out any partial you don't need for this app.
+
+---------------------------------------------------------  */
+/**
+
+  @heroes
+--------------------------------------------------------
+  _4_modules/_heroes.scss
+--------------------------------------------------------
+
+  Hero Units
+
+------------------------------------------------------ */
+/* @hero
+--------------------------------------------------------
+  Just your everyday, normal hero.  Contains a div that has
+  the media (video or image) in the background, and a div
+  for the main content.
+
+  Example: Hero
+  <div class="hero">
+    <div class="hero__main"><h1>Hello, there</h1></div>
+    <div class="hero__media"><img src="http://fillmurray.com/1000/400"></div>
+  </div>
+------------------------------------------------------ */
+.hero {
+  position: relative;
+  margin: 0 -1.25em 1.25em;
+}
+
+.hero__media {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__main {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  left: 1.25rem;
+  right: 1.25rem;
+  bottom: .75rem;
+  color: white;
+}
+
+/* Have something else to add?
+--------------------------------------------------------
+  + Add any new modifier classes below
+------------------------------------------------------ */
+/**
+
+  @modals
+---------------------------------------------------------
+  _4_modules/_modals.scss
+--------------------------------------------------------
+
+  These are very basic modals, there's room for improvement.
+
+--------------------------------------------------------- */
+/**
+
+  @menus
+--------------------------------------------------------
+
+  Menus
+
+-----------------------------------------------------  */
+/* @btn-menu
+--------------------------------------------------------
+  Button Menu
+
+  Example: Button Menu
+  <ul class="btn-menu">
+    <li><a class="btn" href="#resiliency-matters">Resiliency matters</a></li>
+    <li><a class="btn" href="#efficiency-matters">Efficiency matters</a></li>
+    <li><a class="btn" href="#responsiveness-matters">Responsiveness matters</a></li>
+  </ul>
+------------------------------------------------------ */
+.btn-menu {
+  position: absolute;
+  bottom: 1.25em;
+  left: 1.25em;
+  right: 1.25em;
+}
+.btn-menu li {
+  display: block;
+}
+.btn-menu li .btn {
+  border-bottom: 0;
+  border-radius: 0;
+}
+.btn-menu li:first-child .btn {
+  border-radius: .25rem .25rem 0 0;
+}
+.btn-menu li:last-child .btn {
+  border-radius: 0 0 .25rem .25rem;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.btn-menu--single li .btn {
+  border-radius: .25rem !important;
+}
+
+/* @graphic-menu
+--------------------------------------------------------
+  Graphic Menu
+
+  <ul class="graphic-menu">
+    <li><div class="graphic-menu__graphic"><img src="/images/fpo-graphic-menu.jpg"></div></li>
+    <li><a class="graphic-menu__link"><img src="/images/fpo-graphic-menu-icon.jpg"> Cloud-enabled data center</a></li>
+    <li><a class="graphic-menu__link"><img src="/images/fpo-graphic-menu-icon.jpg"> Cloud-enabled data center</a></li>
+    <li><a class="graphic-menu__link"><img src="/images/fpo-graphic-menu-icon.jpg"> Cloud-enabled data center</a></li>
+  </ul>
+------------------------------------------------------ */
+.graphic-menu {
+  display: table;
+  width: 100%;
+}
+.graphic-menu li {
+  display: table-row;
+}
+
+.graphic-menu__graphic,
+.graphic-menu__link {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 3.85rem;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.graphic-menu__graphic {
+  height: 16em;
+  text-align: center;
+}
+.graphic-menu__graphic img {
+  width: 60%;
+}
+
+.graphic-menu__link {
+  background: white;
+  padding-left: 1.25rem;
+}
+.graphic-menu__link img {
+  width: 1.5em;
+  display: inline-block;
+  margin-right: .8em;
+}
+.graphic-menu__link:hover, .graphic-menu__link:focus {
+  background: #FAFAFA;
+}
+
+/* @list-menu
+--------------------------------------------------------
+  List Menu
+
+  <ul class="list-menu">
+    <li><a class="list-menu__link">Talking to a Chief<br>Procurement Officer</a></li>
+    <li><a class="list-menu__link">Talking to a Chief<br>Procurement Officer</a></li>
+    <li><a class="list-menu__link">Talking to a Chief<br>Procurement Officer</a></li>
+    <li><a class="list-menu__link">Talking to a Chief<br>Procurement Officer</a></li>
+  </ul>
+------------------------------------------------------ */
+.list-menu {
+  display: table;
+  width: 100%;
+  border-top: 1px solid #cdcdcd;
+}
+.list-menu li {
+  display: table-row;
+}
+
+.list-menu__link {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 4.5rem;
+  border-bottom: 1px solid #cdcdcd;
+  background: white;
+  padding-left: 1.25rem;
+}
+.list-menu__link:hover, .list-menu__link:focus {
+  background: #FAFAFA;
+}
+
+.list-menu__link--large {
+  height: 6.1rem;
+}
+
+/* @accordian-menu
+--------------------------------------------------------
+  A List Menu modifier
+------------------------------------------------------ */
+.accordian-menu__toggle {
+  background: #808285;
+  color: white;
+  height: 3.8rem;
+  line-height: 3.5;
+}
+.accordian-menu__toggle:hover {
+  background: #717273;
+}
+.accordian-menu__toggle img {
+  width: 1.75em;
+  margin-right: .5em;
+}
+
+.accordian-menu__link {
+  height: 3.8rem;
+  display: none;
+}
+.accordian-menu__link.is-active {
+  display: table-cell;
+}
+
+/***
+
+  @sections
+---------------------------------------------------------
+
+  Main areas of the site like the site's header,
+  main, and footer.  Other areas of the site that deserve
+  specific styling goes here too.
+
+  If you create a new section, make sure the partial is
+  in the _5_sections directory, and you import it below
+
+  Comment out any partial you don't need for this app.
+
+--------------------------------------------------------- */
+/**
+
+   @site-document
+--------------------------------------------------------
+  _5_sections/_site-document.scss
+--------------------------------------------------------
+
+  Main HTML structure, styles, & font declarations
+  Main body structure, styles, & font declarationsr
+------------------------------------------------------ */
+/* @HTML
+--------------------------------------------------------
+  HTML should contain the site's default background color
+  and font-size plus any
+------------------------------------------------------ */
+html {
+  font-size: 100%;
+  background: #404040;
+}
+@media only screen and (min-width: 769px) {
+  html {
+    background: #cdcdcd;
+  }
+}
+
+/* @body
+--------------------------------------------------------
+  Body should contain the document's default font and
+  background color for the content, if that background
+  color is different than the html.
+------------------------------------------------------ */
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  color: #333333;
+  font-size: 100%;
+}
+@media only screen and (min-width: 769px) {
+  body {
+    padding: 2em;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 125%;
+  }
+}
+
+/**
+
+   @site-header
+--------------------------------------------------------
+  _5_sections/_site-header.scss
+--------------------------------------------------------
+
+  Site-wide header
+------------------------------------------------------ */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: transform .5s ease-in-out;
+  -webkit-backface-visibility: visible;
+  z-index: 300;
+  background: black;
+}
+.site-header.is-active-nav {
+  transform: translate3d(85%, 0, 0);
+}
+@media only screen and (min-width: 769px) {
+  .site-header {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+  }
+}
+
+.site-nav__button {
+  float: left;
+  background-image: url(/images/icon--hamburger.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 1rem .8125rem;
+  background-color: transparent;
+  width: 3.25rem;
+  height: 2.625rem;
+  border: none;
+  font: 0/0 a;
+}
+.site-nav__button.is-active {
+  background-color: #333333;
+}
+@media only screen and (min-width: 769px) {
+  .site-nav__button {
+    display: none;
+  }
+}
+
+.svg .site-nav__button {
+  background-image: url(/images/icon--hamburger.svg);
+}
+
+.site-nav__title {
+  float: left;
+  height: 2.625em;
+  line-height: 2.9;
+  color: white;
+  margin-left: .2em;
+}
+@media only screen and (min-width: 769px) {
+  .site-nav__title {
+    margin-left: 1.5em;
+  }
+}
+
+/* @site-nav
+--------------------------------------------------------
+  Main Site Navigation
+------------------------------------------------------ */
+.site-nav {
+  background: #404040;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 85%;
+  overflow: auto;
+}
+@media only screen and (min-width: 769px) {
+  .site-nav {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: auto;
+    z-index: 400;
+    background: #004f79;
+  }
+}
+
+.site-nav__ke-title {
+  height: 2.625em;
+  line-height: 2.9;
+  color: white;
+  padding-left: 1em;
+  background: #004f79;
+}
+
+.site-nav__links {
+  display: block;
+  background: #404040;
+}
+.site-nav__links > li a {
+  display: block;
+  height: 2.625rem;
+  line-height: 3.1;
+  color: white;
+  padding: 0 0 0 1em;
+  border-bottom: 1px solid #6e6e70;
+}
+.site-nav__links > li a b {
+  color: #babdbf;
+  margin-left: .5em;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 769px) {
+  .site-nav__ke-title {
+    float: left;
+    margin-left: .5em;
+  }
+
+  .site-nav__links {
+    background: transparent;
+    float: left;
+  }
+  .site-nav__links > li {
+    display: inline-block;
+  }
+  .site-nav__links > li a {
+    display: inline-block;
+    border-bottom: none;
+  }
+  .site-nav__links > li a b {
+    display: none;
+  }
+}
+/* @site-main
+--------------------------------------------------------
+  _5_sections/_site-main.scss
+--------------------------------------------------------
+
+
+  main content
+------------------------------------------------------ */
+.site-main {
+  display: block;
+  position: relative;
+  z-index: 200;
+  transition: transform .5s ease-in-out;
+  -webkit-backface-visibility: visible;
+}
+.site-main.is-active-nav {
+  transform: translate3d(85%, 0, 0);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background: black;
+}
+@media only screen and (min-width: 769px) {
+  .site-main {
+    height: 35rem;
+    overflow: scroll;
+  }
+}
+
+/**
+
+  @templates
+--------------------------------------------------------
+
+  Templates
+
+-----------------------------------------------------  */
+.t {
+  position: relative;
+  height: 30em;
+  width: 20em;
+  overflow: hidden;
+  padding: 4.125em 1.25em;
+  background: #f0f0f0;
+}
+@media only screen and (min-width: 769px) {
+  .t {
+    width: 100%;
+    height: 35rem;
+  }
+}
+
+/* @modal templates
+--------------------------------------------------------
+  .t + .modal equals a modal box
+------------------------------------------------------ */
+.modal {
+  border: 1em solid white;
+  padding: 1em;
+  background: #00b0da;
+  background-size: cover;
+  color: white;
+}
+.modal.is-active {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.modal__body {
+  overflow: auto;
+}
+
+.modal__scroll {
+  margin: .5em auto;
+}
+
+/* @i1
+--------------------------------------------------------
+  Intro
+------------------------------------------------------ */
+.i1 {
+  background: url(/images/fpo-intro.jpg);
+  background-size: cover;
+  color: white;
+}
+
+.ke-header {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: .5em 0em 2.5em 0;
+  margin-bottom: .5em;
+}
+
+.ke-title {
+  float: left;
+}
+
+.ke-number {
+  float: right;
+}
+
+.i1__deck {
+  position: absolute;
+  bottom: 3em;
+  left: 1.125em;
+  right: 1.125em;
+}
+
+/* @t1
+--------------------------------------------------------
+  Title
+------------------------------------------------------ */
+/* @t2
+--------------------------------------------------------
+  Title w/ Deck
+------------------------------------------------------ */
+.t2__title {
+  margin-bottom: 0.7rem;
+}
+
+/* @m3
+--------------------------------------------------------
+  Deck with button-menu
+------------------------------------------------------ */
+/* @m4
+--------------------------------------------------------
+  Graphic Menu
+------------------------------------------------------ */
+.m4 {
+  padding: 2.5em 0 0 0;
+}
+
+/* @m6
+--------------------------------------------------------
+  List Menu
+------------------------------------------------------ */
+.m6 {
+  padding: 2.5em 0 0 0;
+}
+
+/* @m7
+--------------------------------------------------------
+  List Menu -- Infinite
+------------------------------------------------------ */
+.m7 {
+  padding: 2.5em 0 0 0;
+  overflow: scroll;
+}
+
+/* @m8
+--------------------------------------------------------
+  List Menu w Highlighted words -- Infinite
+------------------------------------------------------ */
+.m8 {
+  padding: 2.5em 0 0 0;
+  overflow: scroll;
+}
+
+/* @m9
+--------------------------------------------------------
+  List Menu w Accordian Functionality
+------------------------------------------------------ */
+.m9 {
+  padding: 2.5em 0 0 0;
+  overflow: scroll;
+}
+
+/* @a1
+--------------------------------------------------------
+  Article 1, with figures
+------------------------------------------------------ */
+.a1__title {
+  margin-bottom: .7rem;
+}
+
+/* @a2
+--------------------------------------------------------
+  Article 2, with hero
+------------------------------------------------------ */
+.a2 {
+  padding-top: 2.5em;
+}
+
+/* @a3
+--------------------------------------------------------
+  Article 3, title subtitle deck-titles
+------------------------------------------------------ */
+.a3__title {
+  color: #f04e37;
+  margin-bottom: .25em;
+}
+
+.a3__subtitle {
+  margin-bottom: .5em;
+}
+
+.a3__deck-title {
+  text-transform: uppercase;
+}
+
+/* @a4
+--------------------------------------------------------
+  Article 4 with Graphic
+------------------------------------------------------ */
+.a4__title {
+  margin-bottom: .5em;
+}
+
+.a4__graphic {
+  display: block;
+  width: auto;
+  margin: 0 auto;
+}
+
+/* @a5
+--------------------------------------------------------
+  Article 5
+------------------------------------------------------ */
+.a5__title {
+  margin-bottom: .5em;
+}
+
+/* @po1
+--------------------------------------------------------
+  Pop Over 1
+------------------------------------------------------ */
+.po1__title {
+  margin-bottom: .25em;
+  padding-right: 2em;
+}
+
+/* @po2
+--------------------------------------------------------
+  Pop Over 2
+------------------------------------------------------ */
+.po2__title {
+  margin-bottom: .25em;
+  padding-right: 2em;
+}
+
+.po2__title {
+  margin-bottom: .25em;
+}
+
+.po2__subtitle {
+  margin-bottom: .5em;
+}
+
+.po2__deck-title {
+  text-transform: uppercase;
+  color: #004f79;
+}
+
+/* @po3
+--------------------------------------------------------
+  Pop Over 3
+------------------------------------------------------ */
+.po3__title {
+  margin-bottom: .25em;
+  padding-right: 2em;
+}
+
+.po3__subtitle {
+  margin-bottom: .5em;
+}
+
+.po3__deck-title {
+  text-transform: uppercase;
+  color: #004f79;
+}
+
+.po3__body {
+  height: 11rem;
+  overflow: auto;
+  margin-bottom: 1rem;
+}
+
+/* @po4
+--------------------------------------------------------
+  Pop Over 4
+------------------------------------------------------ */
+.po4__title {
+  margin-bottom: .5em;
+  padding-right: 2em;
+}
+
+.po4__body {
+  height: 9rem;
+  overflow: auto;
+  margin-bottom: 1rem;
+}
+
+/* @po5
+--------------------------------------------------------
+  Pop Over 5
+------------------------------------------------------ */
+.po5__body {
+  height: 11rem;
+  overflow: auto;
+  margin-top: 1em;
+  margin-bottom: 1rem;
+}
+
+.po5__stat,
+.po5__text {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.po5__text {
+  margin-bottom: 2em;
+}
+
+/* @po6
+--------------------------------------------------------
+  Pop Over 6
+------------------------------------------------------ */
+.po6 {
+  text-align: center;
+}
+
+.po6__title {
+  margin: 1.25em 0 .5em;
+}
+
+/* @po7
+--------------------------------------------------------
+  Pop Over 7
+------------------------------------------------------ */
+.po7 {
+  text-align: center;
+}
+
+.po7__body {
+  margin-top: 1.25em;
+  height: 17rem;
+  overflow: auto;
+  margin-bottom: 1rem;
+}
+
+/* @template rwd
+--------------------------------------------------------
+------------------------------------------------------ */
+@media only screen and (min-width: 769px) {
+  .t1__title,
+  .t2__title,
+  .t2__deck,
+  .m1__deck,
+  .a1__title,
+  .a1__deck,
+  .a2__deck,
+  .a3__title,
+  .a3__subtitle,
+  .a3__deck-title,
+  .a3__deck,
+  .a4__title,
+  .a5__title,
+  .po1__title,
+  .po2__title,
+  .po2__subtitle,
+  .po2__deck-title,
+  .po2__deck,
+  .po3__title,
+  .po3__subtitle,
+  .po3__deck-title,
+  .po4__title,
+  .po5__stat,
+  .po5__text,
+  .po5__text,
+  .po6__title,
+  .po7__title {
+    text-align: left;
+    max-width: 66.666%;
+  }
+}
+/***
+
+  @shame
+---------------------------------------------------------
+
+  If you're in a bind and need to throw in some code
+  and don't really know where it should go, put it here
+  and then later, put it in the right place.
+
+  A la @csswizardy _shame.scss
+  http://csswizardry.com/2013/04/shame-css/
+
+--------------------------------------------------------- */

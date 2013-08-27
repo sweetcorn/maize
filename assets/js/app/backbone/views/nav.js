@@ -8,7 +8,7 @@ var NavView;
 NavView = module.exports = Backbone.View.extend({
 
   template: function() {
-    return JST['nav']();
+    return JST.nav;
   }
 
 , initialize: function(options) {
@@ -16,7 +16,7 @@ NavView = module.exports = Backbone.View.extend({
   }
 
 , render: function() {
-    var html = this.template(this.model.toJSON());
+    var html = this.template()(this.model.toJSON());
     this.$el.html(html);
 
     return this;

@@ -1,0 +1,26 @@
+/**
+
+  @tooltips
+---------------------------------------------------------
+  _4_modules/_tooltips.scss
+--------------------------------------------------------
+
+  This is in-progress
+
+--------------------------------------------------------- */
+
+//
+// the element you hover over
+[data-behavior=tooltip] {
+  position: relative;
+}
+
+//
+// the tooltip itself
+.tooltip {
+  content: attr(title);
+  @include arrow(down, #555, 1em, #555, 0);
+  position: absolute;
+  bottom: 100%;
+  background: #555;
+}

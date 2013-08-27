@@ -1,0 +1,57 @@
+/**
+
+  Button Groups
+---------------------------------------------------------
+  _4_modules/_button-groups.scss
+--------------------------------------------------------
+
+  Ways of grouping buttons together
+
+--------------------------------------------------------- */
+
+
+/* @button-group
+--------------------------------------------------------
+  Default group
+
+  Example: Normal button group
+  <ul class="btn-group">
+    <li><a href="#" class="btn">Button Here</a></li>
+    <li><a href="#" class="btn">Button Here</a></li>
+    <li><a href="#" class="btn">Button Here</a></li>
+    <li><a href="#" class="btn">Button Here</a></li>
+  </ul>
+
+------------------------------------------------------ */
+
+.btn-group {
+  @extend %clearfix;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  li {
+    display: block;
+  }
+
+  li:last-child .btn {
+    border-radius: .25px .25px 0 0;
+
+  }
+  li:first-child .btn {
+    border-radius: 0 0 .25px .25px;
+  }
+
+}
+
+
+
+/* Have something else to add?
+--------------------------------------------------------
+  + Add any new modifier classes below
+------------------------------------------------------ */
+
+
+
+

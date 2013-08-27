@@ -1,0 +1,74 @@
+/* @links
+--------------------------------------------------------
+  _3_elements/_links.scss
+--------------------------------------------------------
+  Links, <a> etc.
+  & Webkit tap highlight
+
+  Example: link
+  <p>Lorem Ipsum is simply <a href="#">dummy text</a> of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+-------------------------------------------------------- */
+
+
+
+
+
+
+/* @anchors
+--------------------------------------------------------
+  Anchors will have this base styling
+------------------------------------------------------ */
+
+a {
+  // We usually remove the text-decoration
+  text-decoration: none;
+  color: inherit;
+  // Any custom styles below...
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+
+
+
+
+
+/* @external-link
+--------------------------------------------------------
+  Style for a jump-link
+------------------------------------------------------ */
+
+.external-link {
+  display: block;
+  margin: 0 auto;
+  text-transform: uppercase;
+  @extend %xs-sans-medium ;
+  padding-top: 3em;
+  background-image: url(/images/icon--external-link.png);
+  background-size: 1.825rem 1.825rem; // 30 30
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  b {
+    display: block;
+  }
+}
+.svg .external-link {
+  background-image: url(/images/icon--external-link.svg);
+}
+
+
+
+
+
+/* @webkit-tap-highlight
+--------------------------------------------------------
+  Declare the webkit tap highlight style
+------------------------------------------------------ */
+
+body {
+  -webkit-tap-highlight-color: rba(0, 0, 0, .35);
+}

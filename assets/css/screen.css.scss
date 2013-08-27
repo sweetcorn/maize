@@ -1,0 +1,268 @@
+/****
+
+  MAIN STYLESHEET for IBM Knowledge Editions
+---------------------------------------------------------
+  screen.css.scss
+---------------------------------------------------------
+
+  CREATED by Crush & Lovely Front End Team
+  AUTHOR(S) Jeff Schram (@jeffschram)
+
+---------------------------------------------------------
+
+
+  ADDITIONAL CREDITS, INSPIRATION & SHOUT OUTS
+
+  Harry Roberts       Chris Coyier
+  (@csswizardry)      (@crishcoyier)
+  csswizardry.com     css-tricks.com
+  inuitcss.com        codepen.io
+
+  Jonathan Snook      Nicole Sullivan
+  (@snook)            (@stubbornella)
+  smaccs.com          stubbornella.org
+
+  - For some mixins, naming conventions and OOCSS concepts
+  - Check these guys out and learn from their awesomeness
+
+
+  Nicolas Gallagher
+  nicolasgallagher.com
+  necolas.github.io/normalize.css
+
+  - For the reset
+
+
+  HTML5 Boilerplate (@h5bp)
+  html5boilerplate.com
+
+  - For the print stylesheet
+
+
+  Twitter Bootstrap (@twbootstrap)
+  twitter.github.com/bootstrap
+
+  - For some component ideas, naming conventions and javascript
+
+
+  A quite note on navigating through these files:
+  We are using @waypoints to allow you to easily search
+  for certain sections. For instance, to get to the
+  Table Of Contents (or toc) just search for "@toc"
+  and you'll jump right to it.
+
+  If you're using Sublime Text and want to quickly open
+  a partial, use cmd+p and then start typing the name of
+  the partial.
+
+---------------------------------------------------------
+
+  TABLE OF CONTENTS
+  @toc
+
+  - 1 Foundations
+  - 2 Layout
+  - 2 Elements
+  - 4 Components
+  - 5 Sections
+  - 6 Templates
+  - Shame
+
+---------------------------------------------------------  */
+
+
+
+
+
+/***
+
+  @foundations
+---------------------------------------------------------
+
+  We built this city, we built this city on rock 'n' roll
+  and solid web standards.
+
+-----------------------------------------------------  */
+
+  @import "_manhattan/_1_foundations/vars";
+
+  @import "_manhattan/_1_foundations/reset";
+
+  @import "_manhattan/_1_foundations/mixins";
+
+// @import "_manhattan/_1_foundations/print";
+
+
+
+
+
+
+/***
+
+  @layout
+---------------------------------------------------------
+
+  A large portion of CSS is structural layout. You will use
+  these helpers to create the scaffolding that will support
+  the elements that make up your site.
+
+  Comment out any partial you don't need for this app.
+
+---------------------------------------------------------  */
+
+  @import "_manhattan/_2_layout/clearfix";
+
+//@import "_manhattan/_2_layout/container";
+
+  @import "_manhattan/_2_layout/widths";
+
+// @import "_manhattan/_2_layout/ups";
+
+// @import "_manhattan/_2_layout/grids";
+
+// @import "_manhattan/_2_layout/media";
+
+  @import "_manhattan/_2_layout/hide";
+
+
+
+
+
+/***
+
+  @elements
+---------------------------------------------------------
+
+  Global styling of elements.
+
+  Feel free to edit these partials; add your own
+  styling for this app or improve on the base styling.
+
+  Comment out any partial you don't need for this app.
+
+---------------------------------------------------------  */
+
+  @import "_manhattan/_3_elements/fonts";
+
+  @import "_manhattan/_3_elements/text-styles";
+
+  @import "_manhattan/_3_elements/headings";
+
+  @import "_manhattan/_3_elements/paragraphs";
+
+  @import "_manhattan/_3_elements/quotes";
+
+  @import "_manhattan/_3_elements/lists";
+
+//@import "_manhattan/_3_elements/hr";
+
+  @import "_manhattan/_3_elements/links";
+
+  @import "_manhattan/_3_elements/images";
+
+//@import "_manhattan/_3_elements/tables";
+
+//@import "_manhattan/_3_elements/forms";
+
+  @import "_manhattan/_3_elements/nav";
+
+  @import "_manhattan/_3_elements/buttons";
+
+  @import "_manhattan/_3_elements/icons";
+
+  @import "_manhattan/_3_elements/figures";
+
+
+
+
+/***
+
+  @modules
+---------------------------------------------------------
+
+  Small, reusable objects that are usually combinations
+  of elemements.
+
+  If you create a new module, make sure the partial is
+  in the _4_modules directory, and you import it below
+
+  Comment out any partial you don't need for this app.
+
+---------------------------------------------------------  */
+
+//@import "_manhattan/_4_modules/alerts";
+
+//@import "_manhattan/_4_modules/button-groups";
+
+//@import "_manhattan/_4_modules/carousel";
+
+//@import "_manhattan/_4_modules/dropdowns";
+
+  @import "_manhattan/_4_modules/heroes";
+
+  @import "_manhattan/_4_modules/modals";
+
+  @import "_manhattan/_4_modules/menus";
+
+//@import "_manhattan/_4_modules/popover";
+
+//@import "_manhattan/_4_modules/tabs";
+
+//@import "_manhattan/_4_modules/thumbnails";
+
+//@import "_manhattan/_4_modules/tooltips";
+
+  // your additional modules below
+
+
+
+
+/***
+
+  @sections
+---------------------------------------------------------
+
+  Main areas of the site like the site's header,
+  main, and footer.  Other areas of the site that deserve
+  specific styling goes here too.
+
+  If you create a new section, make sure the partial is
+  in the _5_sections directory, and you import it below
+
+  Comment out any partial you don't need for this app.
+
+--------------------------------------------------------- */
+
+  @import "_manhattan/_5_sections/site-document";
+
+  @import "_manhattan/_5_sections/site-header";
+
+  @import "_manhattan/_5_sections/site-main";
+
+//@import "_manhattan/_5_sections/site-footer";
+
+  // your additional sections below
+
+  @import "_manhattan/_5_sections/templates";
+
+
+
+
+/***
+
+  @shame
+---------------------------------------------------------
+
+  If you're in a bind and need to throw in some code
+  and don't really know where it should go, put it here
+  and then later, put it in the right place.
+
+  A la @csswizardy _shame.scss
+  http://csswizardry.com/2013/04/shame-css/
+
+--------------------------------------------------------- */
+
+
+
+
+

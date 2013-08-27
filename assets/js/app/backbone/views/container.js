@@ -1,19 +1,27 @@
 var Backbone = require('backbone');
+var _ = require('underscore');
 
+var TemplateView = require('./template');
 var ContainerView;
 
 ContainerView = module.exports = Backbone.View.extend({
 
-  template: function() {
-    return
-  }
-
-, initialize: function(options) {
+  initialize: function(options) {
     this.render();
   }
 
 , render: function() {
+    var _this = this;
 
+    var edition = _.pick(this.model.get('edition'), 'id', 'title');
+    var container = _.pick(this.model.attributes, 'id', 'title', 'number');
+
+    _.each(this.model.get('pages'), function(page){
+      var attributes = _.extend(page, {edition: edition, container: container});
+      var model = new Backbone.Model(attributes);
+      var view = new TemplateView({model: model});
+      _this.$el.append(view.render().el);
+    });
   }
 
 })

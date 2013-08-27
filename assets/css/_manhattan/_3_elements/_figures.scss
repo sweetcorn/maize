@@ -1,0 +1,31 @@
+/**
+
+  @figures
+--------------------------------------------------------
+
+  Figures
+
+-----------------------------------------------------  */
+
+.figures {
+  @extend %clearfix;
+}
+
+.figure {
+  float: left;
+  width: 50%;
+  &:first-child {
+    padding-right: .5em;
+  }
+  &:last-child {
+    padding-left: .5em;
+  }
+}
+
+.figure__stat {
+  @extend %xl-serif-light;
+  color: $light-blue;
+}
+.figure__text {
+  @extend %small-sans-medium;
+}

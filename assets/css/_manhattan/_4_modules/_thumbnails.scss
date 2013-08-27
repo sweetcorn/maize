@@ -1,0 +1,42 @@
+/**
+
+  @thumbnails
+--------------------------------------------------------
+  _4_modules/_thumbnails.scss
+--------------------------------------------------------
+
+  Thumbnails have an image and a caption
+
+-----------------------------------------------------  */
+
+.thumbnail {
+  position: relative;       // some thumbnails have tooltips
+
+  .thumbnail__title {
+    // Sample styles below, edit as you wish...
+    @extend %text-l;
+    line-height: 1.2;
+    width: 75%;
+    margin-bottom: .2em;
+  }
+
+  figcaption {
+    position: relative;
+    // Sample styles below, edit as you wish...
+    margin-top: 1em;
+  }
+
+}
+
+
+
+
+
+/* Have something else to add?
+--------------------------------------------------------
+  + Add any new modifier classes below
+------------------------------------------------------ */
+
+
+
+

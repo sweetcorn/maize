@@ -1,0 +1,155 @@
+/**
+
+   @site-header
+--------------------------------------------------------
+  _5_sections/_site-header.scss
+--------------------------------------------------------
+
+  Site-wide header
+------------------------------------------------------ */
+
+.site-header {
+  @extend %clearfix;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: transform .5s ease-in-out;
+  -webkit-backface-visibility: visible;
+  z-index: 300; // 3rd z level
+  background: black;
+  &.is-active-nav {
+    transform: translate3d(85%, 0, 0);
+  }
+  // at desk
+  @media only screen and (min-width: 769px) {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+  }
+}
+
+.site-nav__button {
+  // hamburger, hidden at desk
+  @extend %hide--at-desk;
+  float: left;
+  background-image: url(/images/icon--hamburger.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 1rem .8125rem;
+  background-color: transparent;
+  width: 3.25rem; //42px
+  height: 2.625rem; //42px
+  border: none;
+  font: 0/0 a;
+  &.is-active {
+    background-color: $dark-grey;
+  }
+  // at desk
+  @media only screen and (min-width: 769px) {
+    display: none;
+  }
+}
+.svg .site-nav__button {
+  background-image: url(/images/icon--hamburger.svg);
+}
+
+.site-nav__title {
+  // the title of the knowledge container (kc)
+  float: left;
+  height: 2.625em; //42px
+  line-height: 2.9;
+  @extend %xsmall-serif;
+  color: white;
+  margin-left: .2em;
+  @media only screen and (min-width: 769px) {
+    margin-left: 1.5em;
+  }
+}
+
+
+
+
+
+
+/* @site-nav
+--------------------------------------------------------
+  Main Site Navigation
+------------------------------------------------------ */
+
+.site-nav {
+  @extend %clearfix;
+  background: $grey;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 85%;
+  overflow: auto;
+
+  // at desk
+  @media only screen and (min-width: 769px) {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: auto;
+    z-index: 400;
+    background: $dark-blue;
+  }
+
+}
+
+.site-nav__ke-title {
+  height: 2.625em; //42px
+  line-height: 2.9;
+  @extend %xsmall-serif;
+  color: white;
+  padding-left: 1em;
+  background: $dark-blue;
+}
+
+.site-nav__links {
+  // the links, stacked at mobile - horz at desk
+  // off-screen at mobile
+  display: block;
+  background: $grey;
+  >li a {
+    display: block;
+    height: 2.625rem; //42px
+    line-height: 3.1;
+    @extend %small-sans;
+    color: white;
+    padding: 0 0 0 1em;
+    border-bottom: 1px solid #6e6e70;
+    b {
+      color: $blue-grey;
+      margin-left: .5em;
+      display: inline-block;
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .site-nav__ke-title {
+    float: left;
+    margin-left: .5em;
+  }
+
+  .site-nav__links {
+    background: transparent;
+    float: left;
+    > li {
+      display: inline-block;
+      a {
+        display: inline-block;
+        border-bottom: none;
+        b {
+          display: none;
+        }
+      }
+    }
+  }
+}

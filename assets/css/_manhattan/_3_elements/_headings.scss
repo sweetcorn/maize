@@ -1,0 +1,80 @@
+/**
+
+  @headings
+--------------------------------------------------------
+   _3_elements/_headings.scss
+--------------------------------------------------------
+
+ We set any base styles for any headings that have
+ no classnames.
+-------------------------------------------------------- */
+
+
+
+
+
+/* @headings
+--------------------------------------------------------
+  Headings
+
+  Note: Often, we'll use bold fonts, and if a bold font
+        has font-weight: bold it looks terrible.  In
+        this case, use font-weight: normal;
+
+        Also, you can use the heading font sizes that
+        you created in _1_foundations/_font-sizes.scss.
+
+------------------------------------------------------ */
+
+// H1
+h1 {
+  @extend %large-sans-bold;
+}
+
+
+
+// H2
+h2 {
+  @extend %medium-sans-bold;
+}
+
+
+
+// H3
+h3 {
+  @extend %medium-sans-bold;
+}
+
+
+
+// H4
+h4 {
+  @extend %medium-sans-bold;
+}
+
+
+
+// H5
+h5 {
+  @extend %small-sans-bold;
+}
+
+
+
+// H6
+h6 {
+  @extend %xsmall-sans-bold;
+}
+
+
+
+
+
+/* Have something else to add?
+--------------------------------------------------------
+  + Add any new modifier classes below
+------------------------------------------------------ */
+
+
+
+

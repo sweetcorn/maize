@@ -1,0 +1,71 @@
+/**
+
+  @heroes
+--------------------------------------------------------
+  _4_modules/_heroes.scss
+--------------------------------------------------------
+
+  Hero Units
+
+------------------------------------------------------ */
+
+
+
+
+
+/* @hero
+--------------------------------------------------------
+  Just your everyday, normal hero.  Contains a div that has
+  the media (video or image) in the background, and a div
+  for the main content.
+
+  Example: Hero
+  <div class="hero">
+    <div class="hero__main"><h1>Hello, there</h1></div>
+    <div class="hero__media"><img src="http://fillmurray.com/1000/400"></div>
+  </div>
+------------------------------------------------------ */
+
+
+.hero {
+  position: relative;
+  margin: 0 -1.25em 1.25em;
+}
+
+.hero__media {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__main {
+  position: absolute;
+  z-index: 10;
+  // Example code, edit as you wish...
+  width: 100%;
+  left: 1.25rem; // 20px
+  right: 1.25rem; // 20px
+  bottom: .75rem;
+  color: white;
+}
+
+.hero__title {
+  @extend %medium-serif;
+
+}
+.hero__subtitle {
+  @extend %xxs-sans-medium;
+}
+
+
+
+
+
+/* Have something else to add?
+--------------------------------------------------------
+  + Add any new modifier classes below
+------------------------------------------------------ */
+
+
+
+
+

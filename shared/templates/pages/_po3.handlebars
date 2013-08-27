@@ -1,0 +1,16 @@
+<section class="t modal po3" id="{{parent.id}}-po">
+  <button class="icon icon--close modal__close">x</button>
+
+  <h1 class="po3__title">{{title}}</h1>
+  <h2 class="po3__subtitle">{{body}}</h2>
+
+  <div class="po3__body">
+    {{#each items}}
+      <h3 class="po3__deck-title">{{title}}</h3>
+      <p class="po3__deck">{{body}}</p>
+    {{/each}}
+  </div>
+
+  <button class="icon icon--scroll modal__scroll">scroll down</button>
+
+</section>

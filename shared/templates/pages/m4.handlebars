@@ -1,0 +1,8 @@
+<section class="t m4">
+  <ul class="graphic-menu">
+    <li><div class="graphic-menu__graphic"><img src="{{graphic}}"></div></li>
+    {{#each links}}
+      <li><a href="{{target}}" class="graphic-menu__link" style="color: {{#with color}}rgba({{r}}, {{g}}, {{b}}, 1){{/with}}"><img src="{{icon}}"> {{text}}</a></li>
+    {{/each}}
+  </ul>
+</section>

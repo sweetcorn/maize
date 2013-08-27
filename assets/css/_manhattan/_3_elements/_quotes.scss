@@ -1,0 +1,71 @@
+/**
+
+  @quotes
+--------------------------------------------------------
+  _3_elements/_quotes.scss
+--------------------------------------------------------
+
+  Blockquotes and pull quotes
+
+-----------------------------------------------------  */
+
+
+
+
+
+/* @blockquote
+--------------------------------------------------------
+  Example:
+  <blockquote>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  </blockquote>
+-------------------------------------------------------- */
+
+blockquote {
+ // Any custom styles below...
+
+ p:last-of-type{
+   // Remove bottom margin from last paragraph
+   margin-bottom: 0;
+ }
+
+}
+
+
+
+
+
+
+/* @quote-bubble
+--------------------------------------------------------
+  Large quotes pulled from body text
+
+  Example:
+  <blockquote class="quote-bubble">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
+  </blockquote>
+-------------------------------------------------------- */
+
+.bubble {
+  background-image: url(/images/quote-bubble.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 8.125em;
+  color: $dark-grey;
+  padding: .5em;
+  margin-bottom: 2em;
+}
+
+// .svg .bubble {
+.bubble {
+  background-image: url(/images/quote-bubble.svg);
+}
+
+
+
+
+
+
+
+

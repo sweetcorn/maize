@@ -1,0 +1,33 @@
+/* @site-main
+--------------------------------------------------------
+  _5_sections/_site-main.scss
+--------------------------------------------------------
+
+
+  main content
+------------------------------------------------------ */
+
+.site-main {
+  display: block; // <main> element still needs block declaration
+  position: relative;
+  z-index: 200; // 2nd z level
+  // moves for nav
+  transition: transform .5s ease-in-out;
+  -webkit-backface-visibility: visible;
+  &.is-active-nav {
+    transform: translate3d(85%, 0, 0);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    background: black;
+  }
+
+  @media only screen and (min-width: 769px) {
+    height: 35rem;
+    overflow: scroll;
+  }
+
+}

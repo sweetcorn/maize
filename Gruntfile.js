@@ -1,3 +1,8 @@
+var cp = require('child_process');
+
+
+
+
 module.exports = function(grunt) {
 
   grunt.initConfig({
@@ -115,8 +120,28 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
+
+
+
+  // custom tasks
+
+  grunt.registerTask('bower', 'Install bower dependencies', function () {
+    var done = this.async();
+    if (grunt.file.exists('./vendor/components')) {
+      gruGruntnt.log.writeln('Cleaning existing bower components');
+      grunt.file.delete('./vendor/components');
+    }
+    grunt.log.writeln('Installing bower components...');
+     cp
+      .spawn('./node_modules/.bin/bower', ['install'], {stdio: 'inherit'})
+      .on('exit', function () {
+        grunt.log.writeln('... finished installing components');
+        done();
+      });
+  });
+
   grunt.registerTask('base', ['browserify', 'handlebars', 'sass']);
-  grunt.registerTask('server', ['base', 'express', 'watch']);
+  grunt.registerTask('server', ['base', 'bower', 'express', 'watch']);
   grunt.registerTask('dev', ['base', 'watch']);
   grunt.registerTask('deploy', ['base', 'jshint'])
   grunt.registerTask('default', ['dev']);

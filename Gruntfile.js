@@ -2,6 +2,19 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
+    // grunt-express will serve the files from the folders listed in `bases`
+    // on specified `port` and `hostname`
+    express: {
+      all: {
+        options: {
+          port: 3000,
+          hostname: "0.0.0.0",
+          server: 'app.js',
+          livereload: true
+        }
+      }
+    },
+
     browserify: {
       vendor: {
         src: [],
@@ -77,8 +90,11 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      options: {
+        livereload: true
+      },
       scss: {
-        files: ['assets/css/scss/**/*.scss'],
+        files: ['assets/css/**/*.scss'],
         tasks: ['sass']
       },
       handlebars: {
@@ -92,6 +108,7 @@ module.exports = function(grunt) {
     },
   });
 
+  grunt.loadNpmTasks('grunt-express');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -99,6 +116,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
   grunt.registerTask('base', ['browserify', 'handlebars', 'sass']);
+  grunt.registerTask('server', ['base', 'express', 'watch']);
   grunt.registerTask('dev', ['base', 'watch']);
   grunt.registerTask('deploy', ['base', 'jshint'])
   grunt.registerTask('default', ['dev']);

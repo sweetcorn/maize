@@ -67,8 +67,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          style: 'expanded',
-          compass: true
+          style: 'expanded'
         },
         files: {
           'assets/css/compiled/screen.css': 'assets/css/screen.css.scss'

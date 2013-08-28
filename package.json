@@ -11,7 +11,8 @@
     "connect-assets": "2.5.2",
     "express3-handlebars": "0.5.0",
     "ejs": "~0.8.4",
-    "underscore": "~1.5.1"
+    "underscore": "~1.5.1",
+    "forever": "~0.10.8"
   },
   "devDependencies": {
     "grunt-cli": "*",

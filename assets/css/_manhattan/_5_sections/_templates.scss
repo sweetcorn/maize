@@ -8,36 +8,17 @@
 -----------------------------------------------------  */
 
 .t {
-  // Mobile first dimensions
-  height: 30em; // 480px
-  width: 20em; // 320px;
-  overflow: hidden;
   // Top padding for header bar, bottom for arrows
-  padding: 4.125em 1.25em; // 66px 20px;
+  padding: 1.25em 0; // 20px;
   background: $offwhite;
-
-  // testing slider
-  position: absolute;
-  top: -9999%;
-  transform: translate3d(100%, 0, 0);
-  transition: transform .6s;
-  &.is-active {
-    top: 0;
-    transform: translate3d(0, 0, 0);
-  }
-
-  // at desk
-  @media only screen and (min-width: 769px) {
-    width: 100%;
-    height: 34rem;
-    padding: 1.25em;
-  }
+  position: relative;
 
   // pagers
   .t__pager {
     position: absolute;
     bottom: 1.25rem;
     left: 1.25rem;
+    border: 2px solid red;
     // at desk
     @media only screen and (min-width: 769px) {
       left: auto;
@@ -65,25 +46,9 @@
   background: $light-blue;
   background-size: cover;
   color: white;
-  transform: translate3d(0,0,0); // override template
-  display: none;
-  &.is-active {
-    // ENABLE THESE FOR ACTIVE MODALS
-    position: fixed;
-    z-index: 200; // modals live in level 2
-    top: 0; bottom: 0; left: 0; right: 0;
-    display: block;
-    @media only screen and (min-width: 769px) {
-      top: 1.25em; bottom: 6.25em; left: 1.25em; right: 1.25em;
-      border: none;
-      width: auto;
-      height: auto;
-    }
-  }
-
 }
 
-
+//
 .modal__close {
   position: absolute;
   // Sample styles below, edit as you wish...
@@ -103,6 +68,8 @@
 
 
 
+
+
 /* @i1
 --------------------------------------------------------
   Intro
@@ -112,6 +79,10 @@
   background: url(/images/fpo-intro.jpg);
   background-size: cover;
   color: white;
+  padding-top: 6em;
+  .container {
+    height: 28.75em; // 460px
+  }
 }
 
 // Knowledge Edition (ke) Header
@@ -145,8 +116,6 @@
 .i1__deck {
   position: absolute;
   bottom: 3em; // 48px
-  left: 1.125em;  // 20px
-  right: 1.125em;  // 20px
 }
 
 
@@ -154,13 +123,15 @@
 @media only screen and (min-width: 769px) {
   // the template
   .i1 {
-    padding: .25em 1.25em;
+    padding: 4rem 0;
+    height: 24rem;
+    overflow: hidden;
   }
 
   // header
   .ke-header {
     border: none;
-    padding: .25em 0 0;
+    padding: 0;
     margin-bottom: 0;
   }
 
@@ -172,7 +143,7 @@
   // Knowledge Edition (ke) Number
   .ke-number {
     float: none;
-    font-size: 9em;
+    font-size: 7em;
     margin-bottom: .25em;
     font-family: "ITCLubalinGraphW01-XLt", georgia, serif;
     font-weight: normal;
@@ -183,23 +154,16 @@
   .kc-title {
     font-size: 3.5em;
     line-height: 1.05;
+    margin-bottom: 1rem;
   }
 
   // Deck
   .i1__deck {
-    position: absolute;
-    bottom: 1.5em;
-    left: 33.3333%;
-    right: 3.5em;
-    text-align: right;
-    margin: 0;
-  }
-
-  // Pager
-  .t__pager {
+    position: relative;
+    top: auto;
+    bottom: auto;
     left: auto;
-    right: 2.25rem;
-    bottom: 3.2rem;
+    right: auto;
   }
 
 }

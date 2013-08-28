@@ -1,12 +1,15 @@
 <section class="t modal po2" id="{{parent.id}}-po">
-  <button class="icon icon--close modal__close">x</button>
+  <div class="container">
 
-  <h1 class="po2__title">{{title}}</h1>
-  <h2 class="po2__subtitle">{{body}}</h2>
+    <button class="icon icon--close modal__close">x</button>
 
-  {{#each items}}
-    <h3 class="po2__deck-title">{{title}}</h3>
-    <p class="po2__deck">{{body}}</p>
-  {{/each}}
+    <h1 class="po2__title">{{title}}</h1>
+    <h2 class="po2__subtitle">{{body}}</h2>
 
+    {{#each items}}
+      <h3 class="po2__deck-title">{{title}}</h3>
+      <p class="po2__deck">{{body}}</p>
+    {{/each}}
+
+  </div>
 </section>

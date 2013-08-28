@@ -26,10 +26,7 @@
 
 .btn-group {
   @extend %clearfix;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  margin-top: 2em;
 
   li {
     display: block;

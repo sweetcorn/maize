@@ -29,7 +29,7 @@
 
 .hero {
   position: relative;
-  margin: 0 -1.25em 1.25em;
+  margin: 0 0 1.25em;
 }
 
 .hero__media {
@@ -54,14 +54,6 @@
 }
 .hero__subtitle {
   @extend %xxs-sans-medium;
-}
-
-// RWD Desk
-@media only screen and (min-width: 769px) {
-  .hero {
-    overflow: hidden;
-    height: 13em;
-  }
 }
 
 

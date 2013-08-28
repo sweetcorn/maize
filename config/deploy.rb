@@ -2,6 +2,12 @@ set :application, "ibm-knowledge-editions-app"
 
 set :repository, "git@github.com:crushlovely/ibm-knowledge-editions-app.git"
 ssh_options[:forward_agent] = true
+default_run_options[:pty] = true
+
+on :start do
+  `ssh-add`
+end
+
 set :scm, :git                                      #capper default
 set :user, 'deploy'
 

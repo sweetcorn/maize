@@ -874,7 +874,7 @@ use @extend %serif-bold for this font
 
   Where font-weight and font-style (italic) are optional
 
-  Note: Feel free to add/rremove/edit as you see fit.
+  Note: Feel free to add/remove/edit as you see fit.
 
 -----------------------------------------------------  */
 /* @xxlarge-sans-bold
@@ -882,7 +882,7 @@ use @extend %serif-bold for this font
   Used for xlarge main text titles
 ------------------------------------------------------ */
 .t1__title {
-  font-size: 2.375rem;
+  font-size: 2.375em;
   line-height: 1;
 }
 
@@ -891,7 +891,7 @@ use @extend %serif-bold for this font
   Used for main text titles
 ------------------------------------------------------ */
 .t2__title, .a1__title, .a3__title, .a4__title, .a5__title, .po1__title, .po2__title, .po3__title, .po4__title, .po6__title, .po7__title {
-  font-size: 1.75rem;
+  font-size: 1.75em;
   line-height: 1;
 }
 
@@ -900,7 +900,7 @@ use @extend %serif-bold for this font
   Used for main text sub-titles
 ------------------------------------------------------ */
 h1, .a3__subtitle, .po2__subtitle, .po3__subtitle {
-  font-size: 1.125rem;
+  font-size: 1.125em;
   line-height: 1.166666667;
 }
 
@@ -909,7 +909,7 @@ h1, .a3__subtitle, .po2__subtitle, .po3__subtitle {
   Used for bold text in menus
 ------------------------------------------------------ */
 h2, h3, h4, .list-menu__link {
-  font-size: 1.25rem;
+  font-size: 1.25em;
   line-height: 1.1;
 }
 
@@ -919,7 +919,7 @@ h2, h3, h4, .list-menu__link {
   Used for text in graphic menus
 ------------------------------------------------------ */
 h5, .graphic-menu__link, .list-menu__link--with-highlight, .accordian-menu__toggle {
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 1.125;
 }
 
@@ -928,7 +928,7 @@ h5, .graphic-menu__link, .list-menu__link--with-highlight, .accordian-menu__togg
   Used for buttons
 ------------------------------------------------------ */
 h5, .graphic-menu__link, .list-menu__link--with-highlight, .accordian-menu__toggle {
-  font-size: .875rem;
+  font-size: .875em;
   line-height: 1;
 }
 
@@ -937,7 +937,7 @@ h5, .graphic-menu__link, .list-menu__link--with-highlight, .accordian-menu__togg
   Used for text under popover numbers
 ------------------------------------------------------ */
 .figure__text, .po5__text, .po6__deck {
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 1.125;
 }
 
@@ -946,7 +946,7 @@ h5, .graphic-menu__link, .list-menu__link--with-highlight, .accordian-menu__togg
   Used for buttons
 ------------------------------------------------------ */
 h6, .btn, .a3__deck-title, .po2__deck-title, .po3__deck-title {
-  font-size: .875rem;
+  font-size: .875em;
   line-height: 1;
 }
 
@@ -955,7 +955,7 @@ h6, .btn, .a3__deck-title, .po2__deck-title, .po3__deck-title {
   Used for link text in external popup links
 ------------------------------------------------------ */
 .external-link {
-  font-size: .875rem;
+  font-size: .875em;
   line-height: 1.25;
 }
 
@@ -964,7 +964,7 @@ h6, .btn, .a3__deck-title, .po2__deck-title, .po3__deck-title {
   Used for Article Hero sub-title
 ------------------------------------------------------ */
 .hero__subtitle {
-  font-size: .75rem;
+  font-size: .75em;
   line-height: 1.166666667;
 }
 
@@ -973,7 +973,7 @@ h6, .btn, .a3__deck-title, .po2__deck-title, .po3__deck-title {
   Used for base paragraphs
 ------------------------------------------------------ */
 p, body {
-  font-size: 1.0625rem;
+  font-size: 1.0625em;
   line-height: 1.2;
 }
 
@@ -986,7 +986,7 @@ p, body {
   Used for nav menu
 ------------------------------------------------------ */
 .site-nav__links > li a {
-  font-size: .825rem;
+  font-size: .825em;
 }
 
 /* @xlarge-serif
@@ -995,7 +995,7 @@ p, body {
   Used for Numbers in Number figure callout
 ------------------------------------------------------ */
 .ke-number {
-  font-size: 3rem;
+  font-size: 3em;
   line-height: 1;
 }
 
@@ -1004,7 +1004,7 @@ p, body {
   Used for Book Title, "Ideas on a page"
 ------------------------------------------------------ */
 .kc-title {
-  font-size: 2.5rem;
+  font-size: 2.5em;
   line-height: 1.075;
 }
 
@@ -1013,7 +1013,7 @@ p, body {
   Used for Article hero title
 ------------------------------------------------------ */
 .hero__title {
-  font-size: 1.6875rem;
+  font-size: 1.6875em;
   line-height: 1.3;
 }
 
@@ -1022,7 +1022,7 @@ p, body {
   Used for Knowledege Edition Title "Smarter Cloud"
 ------------------------------------------------------ */
 .ke-title {
-  font-size: 1.3125rem;
+  font-size: 1.3125em;
   line-height: 1;
 }
 
@@ -1031,7 +1031,7 @@ p, body {
   Used for Nav title
 ------------------------------------------------------ */
 .site-nav__title, .site-nav__ke-title {
-  font-size: .9375rem;
+  font-size: .9375em;
   line-height: 1;
 }
 
@@ -1040,7 +1040,7 @@ p, body {
   Used for Data numbers in modals
 ------------------------------------------------------ */
 .po5__stat {
-  font-size: 6.375rem;
+  font-size: 6.375em;
   line-height: 1;
 }
 
@@ -1049,7 +1049,7 @@ p, body {
   Used for Numbers in Number figure callout
 ------------------------------------------------------ */
 .figure__stat {
-  font-size: 3rem;
+  font-size: 3em;
   line-height: 1;
 }
 
@@ -1058,7 +1058,7 @@ p, body {
   Used for Highlighted text in menus
 ------------------------------------------------------ */
 .list-menu__link b {
-  font-size: 1.25rem;
+  font-size: 1.25em;
   line-height: 1;
 }
 
@@ -1579,6 +1579,12 @@ img {
   background-image: url(/images/angle--right.svg);
 }
 
+@media only screen and (min-width: 769px) {
+  .btn {
+    text-align: center;
+    background-image: none !important;
+  }
+}
 /* @btn--large
 --------------------------------------------------------
   A btn modifier, large
@@ -1650,6 +1656,7 @@ img {
   text-decoration: none;
   border: none;
   background-color: transparent;
+  -webkit-appearance: none;
 }
 
 .icon--close {
@@ -1669,13 +1676,44 @@ img {
 }
 
 .icon--pager {
-  background-image: url(/images/icon--pager.png);
+  background-image: url(/images/angle--down.png);
+  width: 1.75rem;
+  height: 1rem;
 }
 
 .svg .icon--pager {
-  background-image: url(/images/icon--pager.svg);
+  background-image: url(/images/angle--down.svg);
 }
 
+.icon--pager-white {
+  background-image: url(/images/angle--down-white.png);
+}
+
+.svg .icon--pager-white {
+  background-image: url(/images/angle--down-white.svg);
+}
+
+@media only screen and (min-width: 769px) {
+  .icon--pager {
+    background-image: url(/images/angle--right.png);
+    width: 1.25rem;
+    height: 2.62rem;
+  }
+
+  .svg .icon--pager {
+    background-image: url(/images/angle--right.svg);
+  }
+
+  .icon--pager-white {
+    background-image: url(/images/angle---right-white.png);
+    width: 1.5625rem;
+    height: 2.625rem;
+  }
+
+  .svg .icon--pager-white {
+    background-image: url(/images/angle--right-white.svg);
+  }
+}
 /* @symbolset
 --------------------------------------------------------
 Symbolset
@@ -2579,6 +2617,12 @@ Copyright © 2012 Oak Studios LLC
   color: white;
 }
 
+@media only screen and (min-width: 769px) {
+  .hero {
+    overflow: hidden;
+    height: 13em;
+  }
+}
 /* Have something else to add?
 --------------------------------------------------------
   + Add any new modifier classes below
@@ -2637,6 +2681,29 @@ Copyright © 2012 Oak Studios LLC
   border-radius: .25rem !important;
 }
 
+@media only screen and (min-width: 769px) {
+  .btn-menu {
+    display: table;
+    width: 100%;
+  }
+  .btn-menu li {
+    display: table-cell;
+  }
+  .btn-menu li .btn {
+    padding: 1.5em;
+    margin: .5em;
+    border-bottom: 1px solid #cdcdcd !important;
+    border-radius: .25rem !important;
+  }
+
+  .btn-menu--single li {
+    width: 66.666%%;
+    display: block;
+  }
+  .btn-menu--single li .btn {
+    margin: 0;
+  }
+}
 /* @graphic-menu
 --------------------------------------------------------
   Graphic Menu
@@ -2686,6 +2753,49 @@ Copyright © 2012 Oak Studios LLC
   background: #FAFAFA;
 }
 
+@media only screen and (min-width: 769px) {
+  .graphic-menu {
+    width: auto;
+    display: block;
+    overflow: hidden;
+    margin: 0 1em;
+  }
+  .graphic-menu li {
+    float: left;
+    width: 33.33333%;
+    padding: .5em;
+  }
+  .graphic-menu li:first-child {
+    display: table;
+    width: 100%;
+  }
+
+  .graphic-menu__graphic {
+    width: 100%;
+    display: table-cell;
+    border: none;
+    height: 17.75em;
+  }
+  .graphic-menu__graphic img {
+    width: 50%;
+  }
+
+  .graphic-menu__link {
+    display: block;
+    float: left;
+    padding: .5rem;
+    background: white;
+    display: block;
+    height: 6em;
+    text-align: center;
+    border-radius: .25em;
+    border: 1px solid #cdcdcd;
+  }
+  .graphic-menu__link img {
+    display: block;
+    margin: .5em auto;
+  }
+}
 /* @list-menu
 --------------------------------------------------------
   List Menu
@@ -2723,6 +2833,31 @@ Copyright © 2012 Oak Studios LLC
   height: 6.1rem;
 }
 
+@media only screen and (min-width: 769px) {
+  .list-menu {
+    display: block;
+    border: none;
+    padding: 0 .5em;
+  }
+  .list-menu li {
+    display: inline;
+    float: left;
+    width: 50%;
+    padding: 0 .5em 1em .5em;
+  }
+  .list-menu li .list-menu__link {
+    display: block;
+    height: 6em;
+    padding: 1.5em 2em 0 2em;
+    border-radius: .25em;
+    border: 1px solid #cdcdcd;
+  }
+  .list-menu li .list-menu__link.list-menu__link--with-highlight {
+    height: 8.75em;
+    padding: 3em 2em 0 2em;
+    background: blue;
+  }
+}
 /* @accordian-menu
 --------------------------------------------------------
   A List Menu modifier
@@ -2772,7 +2907,7 @@ Copyright © 2012 Oak Studios LLC
 --------------------------------------------------------
 
   Main HTML structure, styles, & font declarations
-  Main body structure, styles, & font declarationsr
+  Main body structure, styles, & font declarations
 ------------------------------------------------------ */
 /* @HTML
 --------------------------------------------------------
@@ -2785,7 +2920,7 @@ html {
 }
 @media only screen and (min-width: 769px) {
   html {
-    background: #cdcdcd;
+    background: white;
   }
 }
 
@@ -2804,8 +2939,8 @@ body {
 }
 @media only screen and (min-width: 769px) {
   body {
-    padding: 2em;
-    max-width: 1100px;
+    padding: .75em;
+    max-width: 58rem;
     margin: 0 auto;
     font-size: 125%;
   }
@@ -2833,14 +2968,6 @@ body {
 .site-header.is-active-nav {
   transform: translate3d(85%, 0, 0);
 }
-@media only screen and (min-width: 769px) {
-  .site-header {
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-  }
-}
 
 .site-nav__button {
   float: left;
@@ -2857,11 +2984,6 @@ body {
 .site-nav__button.is-active {
   background-color: #333333;
 }
-@media only screen and (min-width: 769px) {
-  .site-nav__button {
-    display: none;
-  }
-}
 
 .svg .site-nav__button {
   background-image: url(/images/icon--hamburger.svg);
@@ -2869,15 +2991,10 @@ body {
 
 .site-nav__title {
   float: left;
-  height: 2.625em;
+  height: 2.625rem;
   line-height: 2.9;
   color: white;
   margin-left: .2em;
-}
-@media only screen and (min-width: 769px) {
-  .site-nav__title {
-    margin-left: 1.5em;
-  }
 }
 
 /* @site-nav
@@ -2894,24 +3011,13 @@ body {
   width: 85%;
   overflow: auto;
 }
-@media only screen and (min-width: 769px) {
-  .site-nav {
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-    width: auto;
-    z-index: 400;
-    background: #004f79;
-  }
-}
 
 .site-nav__ke-title {
-  height: 2.625em;
+  height: 2.625rem;
   line-height: 2.9;
   color: white;
   padding-left: 1em;
-  background: #004f79;
+  background: black;
 }
 
 .site-nav__links {
@@ -2921,26 +3027,67 @@ body {
 .site-nav__links > li a {
   display: block;
   height: 2.625rem;
-  line-height: 3.1;
+  line-height: 3.2;
   color: white;
   padding: 0 0 0 1em;
   border-bottom: 1px solid #6e6e70;
 }
 .site-nav__links > li a b {
-  color: #babdbf;
+  color: #cdcdcd;
   margin-left: .5em;
   display: inline-block;
 }
+.site-nav__links > li a.is-active {
+  color: white;
+}
+.site-nav__links > li a.is-active b {
+  color: white;
+}
 
+/* RWD for site header
+--------------------------------------------------------
+  At Desk
+------------------------------------------------------ */
 @media only screen and (min-width: 769px) {
+  .site-header {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  .site-nav {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: auto;
+    z-index: 400;
+    background: #042836;
+    overflow: hidden;
+  }
+
+  .site-nav__button {
+    display: none;
+  }
+
+  .site-nav__title {
+    margin-left: 1.5rem;
+    line-height: 2.4;
+  }
+
   .site-nav__ke-title {
     float: left;
-    margin-left: .5em;
+    padding-left: 1.5rem;
+    background: #042836;
+    line-height: 2.5;
   }
 
   .site-nav__links {
     background: transparent;
-    float: left;
+    float: right;
+    margin-right: 2em;
   }
   .site-nav__links > li {
     display: inline-block;
@@ -2948,6 +3095,15 @@ body {
   .site-nav__links > li a {
     display: inline-block;
     border-bottom: none;
+    padding: 0 0 0 .25em;
+    font-family: "ITCLubalinGraphW01-Md", georgia, serif;
+    font-weight: normal;
+    color: white;
+    opacity: .3;
+    line-height: 2.6;
+  }
+  .site-nav__links > li a.is-active {
+    opacity: 1;
   }
   .site-nav__links > li a b {
     display: none;
@@ -2970,18 +3126,12 @@ body {
 }
 .site-main.is-active-nav {
   transform: translate3d(85%, 0, 0);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  background: black;
 }
 @media only screen and (min-width: 769px) {
   .site-main {
-    height: 35rem;
+    height: 34rem;
     overflow: scroll;
+    transform: translate3d(0, 0, 0) !important;
   }
 }
 
@@ -2994,17 +3144,37 @@ body {
 
 -----------------------------------------------------  */
 .t {
-  position: relative;
   height: 30em;
   width: 20em;
   overflow: hidden;
   padding: 4.125em 1.25em;
   background: #f0f0f0;
+  position: absolute;
+  top: -9999%;
+  transform: translate3d(100%, 0, 0);
+  transition: transform .6s;
+}
+.t.is-active {
+  top: 0;
+  transform: translate3d(0, 0, 0);
 }
 @media only screen and (min-width: 769px) {
   .t {
     width: 100%;
-    height: 35rem;
+    height: 34rem;
+    padding: 1.25em;
+  }
+}
+.t .t__pager {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+}
+@media only screen and (min-width: 769px) {
+  .t .t__pager {
+    left: auto;
+    right: 1.5rem;
+    bottom: 2.25rem;
   }
 }
 
@@ -3018,6 +3188,8 @@ body {
   background: #00b0da;
   background-size: cover;
   color: white;
+  transform: translate3d(0, 0, 0);
+  display: none;
 }
 .modal.is-active {
   position: fixed;
@@ -3026,6 +3198,18 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  display: block;
+}
+@media only screen and (min-width: 769px) {
+  .modal.is-active {
+    top: 1.25em;
+    bottom: 6.25em;
+    left: 1.25em;
+    right: 1.25em;
+    border: none;
+    width: auto;
+    height: auto;
+  }
 }
 
 .modal__close {
@@ -3074,6 +3258,49 @@ body {
   right: 1.125em;
 }
 
+@media only screen and (min-width: 769px) {
+  .i1 {
+    padding: .25em 1.25em;
+  }
+
+  .ke-header {
+    border: none;
+    padding: .25em 0 0;
+    margin-bottom: 0;
+  }
+
+  .ke-title {
+    display: none;
+  }
+
+  .ke-number {
+    float: none;
+    font-size: 9em;
+    margin-bottom: .25em;
+    font-family: "ITCLubalinGraphW01-XLt", georgia, serif;
+    font-weight: normal;
+  }
+
+  .kc-title {
+    font-size: 3.5em;
+    line-height: 1.05;
+  }
+
+  .i1__deck {
+    position: absolute;
+    bottom: 1.5em;
+    left: 33.3333%;
+    right: 3.5em;
+    text-align: right;
+    margin: 0;
+  }
+
+  .t__pager {
+    left: auto;
+    right: 2.25rem;
+    bottom: 3.2rem;
+  }
+}
 /* @t1
 --------------------------------------------------------
   Title
@@ -3133,6 +3360,14 @@ body {
   overflow: scroll;
 }
 
+/* @menu-template-rwd
+--------------------------------------------------------
+------------------------------------------------------ */
+@media only screen and (min-width: 769px) {
+  .m3, .m4, .m6, .m7, .m8 {
+    padding-top: 1em;
+  }
+}
 /* @a1
 --------------------------------------------------------
   Article 1, with figures
@@ -3149,6 +3384,11 @@ body {
   padding-top: 2.5em;
 }
 
+@media only screen and (min-width: 769px) {
+  .a2 {
+    padding-top: 0;
+  }
+}
 /* @a3
 --------------------------------------------------------
   Article 3, title subtitle deck-titles
@@ -3164,6 +3404,7 @@ body {
 
 .a3__deck-title {
   text-transform: uppercase;
+  line-height: 1.5;
 }
 
 /* @a4
@@ -3178,6 +3419,12 @@ body {
   display: block;
   width: auto;
   margin: 0 auto;
+}
+@media only screen and (min-width: 769px) {
+  .a4__graphic {
+    width: 25%;
+    margin-top: 2em;
+  }
 }
 
 /* @a5
@@ -3217,6 +3464,7 @@ body {
 .po2__deck-title {
   text-transform: uppercase;
   color: #004f79;
+  line-height: 1.5;
 }
 
 /* @po3
@@ -3235,6 +3483,7 @@ body {
 .po3__deck-title {
   text-transform: uppercase;
   color: #004f79;
+  line-height: 1.5;
 }
 
 .po3__body {
@@ -3313,33 +3562,25 @@ body {
 @media only screen and (min-width: 769px) {
   .t1__title,
   .t2__title,
-  .t2__deck,
-  .m1__deck,
   .a1__title,
   .a1__deck,
   .a2__deck,
   .a3__title,
   .a3__subtitle,
+  .a4__title,
+  .a5__title {
+    text-align: left;
+    max-width: 75%;
+  }
+
+  .t2__deck,
+  .m1__deck,
   .a3__deck-title,
   .a3__deck,
-  .a4__title,
-  .a5__title,
-  .po1__title,
-  .po2__title,
-  .po2__subtitle,
   .po2__deck-title,
-  .po2__deck,
-  .po3__title,
-  .po3__subtitle,
-  .po3__deck-title,
-  .po4__title,
-  .po5__stat,
-  .po5__text,
-  .po5__text,
-  .po6__title,
-  .po7__title {
+  .po2__deck {
     text-align: left;
-    max-width: 66.666%;
+    max-width: 50%;
   }
 }
 /***

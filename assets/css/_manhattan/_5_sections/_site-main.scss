@@ -16,18 +16,12 @@
   -webkit-backface-visibility: visible;
   &.is-active-nav {
     transform: translate3d(85%, 0, 0);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    background: black;
   }
 
   @media only screen and (min-width: 769px) {
-    height: 35rem;
+    height: 34rem;
     overflow: scroll;
+    transform: translate3d(0, 0, 0) !important; // overrides active
   }
 
 }

@@ -230,30 +230,6 @@ function program1(depth0,data) {
   return buffer;
   }));
 
-this["JST"]["server.templates.index"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
-
-
-  buffer += "<!DOCTYPE html>\n<html>\n  <head>\n    <title>";
-  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
-  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
-  buffer += escapeExpression(stack1)
-    + "</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>";
-  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
-  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
-  buffer += escapeExpression(stack1)
-    + "</h1>\n    <p>"
-    + escapeExpression(((stack1 = ((stack1 = depth0.params),stack1 == null || stack1 === false ? stack1 : stack1.edition_id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</p>\n    <p>"
-    + escapeExpression(((stack1 = ((stack1 = depth0.params),stack1 == null || stack1 === false ? stack1 : stack1.container_id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</p>\n    <p>"
-    + escapeExpression(((stack1 = ((stack1 = depth0.params),stack1 == null || stack1 === false ? stack1 : stack1.page_id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</p>\n  </body>\n</html>";
-  return buffer;
-  });
-
 this["JST"]["nav"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
@@ -536,7 +512,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += "<section class=\"t i1\">\n  <header class=\"ke-header\">\n    <h1 class=\"ke-title\">"
     + escapeExpression(((stack1 = ((stack1 = depth0.edition),stack1 == null || stack1 === false ? stack1 : stack1.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "</h1>\n    <b class=\"ke-number\">"
-    + escapeExpression(((stack1 = ((stack1 = depth0.edition),stack1 == null || stack1 === false ? stack1 : stack1.number)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + escapeExpression(((stack1 = ((stack1 = depth0.container),stack1 == null || stack1 === false ? stack1 : stack1.number)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "</b>\n  </header>\n  <h2 class=\"kc-title\">"
     + escapeExpression(((stack1 = ((stack1 = depth0.container),stack1 == null || stack1 === false ? stack1 : stack1.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "</h2>\n  <p class=\"i1__deck\">";
@@ -15727,12 +15703,12 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
 
 },{}],"jQuery":[function(require,module,exports){
 module.exports=require('1VaGHu');
-},{}],"json":[function(require,module,exports){
-module.exports=require('uAOebS');
-},{}],"backbone":[function(require,module,exports){
-module.exports=require('CqHUwP');
 },{}],"templates":[function(require,module,exports){
 module.exports=require('jhNdV9');
+},{}],"backbone":[function(require,module,exports){
+module.exports=require('CqHUwP');
+},{}],"json":[function(require,module,exports){
+module.exports=require('uAOebS');
 },{}],"handlebars":[function(require,module,exports){
 module.exports=require('bmT/P1');
 },{}]},{},[])

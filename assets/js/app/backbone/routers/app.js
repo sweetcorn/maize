@@ -18,12 +18,15 @@ AppRouter = module.exports = Backbone.Router.extend({
 
 , renderView: function(editionId, containerId) {
     var edition = (editionId) ? new Edition({id: editionId}) : new Edition();
+    var _this = this;
 
     edition.on('sync', function() {
       var _edition = edition;
       var container = (containerId) ? edition.containers.findWhere({id: containerId}) : edition.containers.models[0];
+      var __this = _this;
 
       container.on('sync', function(){
+        __this.navigate('/editions/' + _edition.id + '/containers/' + container.id, {replace: true});
         new PageView({el: $('.js-body'), edition: _edition, container: container});
       });
 

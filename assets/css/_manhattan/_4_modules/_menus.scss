@@ -56,6 +56,32 @@
 }
 
 
+// button menus at desktop
+@media only screen and (min-width: 769px) {
+  .btn-menu {
+    display: table;
+    width: 100%;
+    li {
+      display: table-cell;
+      .btn {
+        padding: 1.5em;
+        margin: .5em;
+        border-bottom: 1px solid #cdcdcd !important;
+        border-radius: .25rem !important;
+      }
+    }
+  }
+
+  .btn-menu--single li {
+    width: 66.666%%;
+    display: block;
+    .btn {
+      margin: 0;
+    }
+  }
+}
+
+
 
 
 
@@ -106,7 +132,52 @@
   &:hover, &:focus {
     background: #FAFAFA;
   }
-  // Colors?
+}
+
+// graphic menus at desktop
+@media only screen and (min-width: 769px) {
+
+  .graphic-menu {
+    width: auto;
+    display: block;
+    overflow: hidden;
+    margin: 0 1em;
+    li {
+      float: left;
+      width: 33.33333%;
+      padding: .5em;
+      &:first-child {
+        display: table;
+        width: 100%;
+      }
+    }
+  }
+
+  .graphic-menu__graphic {
+    width: 100%;
+    display: table-cell;
+    border: none;
+    height: 17.75em;
+    img {
+      width: 50%;
+    }
+  }
+
+  .graphic-menu__link {
+    display: block;
+    float: left;
+    padding: .5rem;
+    background: white;
+    display: block;
+    height: 6em;
+    text-align: center;
+    border-radius: .25em;
+    border: 1px solid $light-grey;
+    img {
+      display: block;
+      margin: .5em auto;
+    }
+  }
 
 }
 
@@ -161,6 +232,33 @@
 // with highlight
 .list-menu__link--with-highlight {
   @extend %small-sans-bold;
+}
+
+
+@media only screen and (min-width: 769px) {
+  .list-menu {
+    display: block;
+    border: none;
+    padding: 0 .5em;
+    li {
+      display: inline;
+      float: left;
+      width: 50%;
+      padding: 0 .5em 1em .5em;
+      .list-menu__link {
+        display: block;
+        height: 6em;
+        padding: 1.5em 2em 0 2em;
+        border-radius: .25em;
+        border: 1px solid $light-grey;
+        &.list-menu__link--with-highlight {
+          height: 8.75em;
+          padding: 3em 2em 0 2em;
+          background: blue;
+        }
+      }
+    }
+  }
 }
 
 

@@ -14,6 +14,7 @@ BaseView = module.exports = Backbone.View.extend({
 , render: function() {
     var html = this.template()(this.model.toJSON());
     this.$el.html(html);
+    this.setElement(this.$('section'))
 
     return this;
   }

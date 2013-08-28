@@ -13,7 +13,7 @@ ContainerView = module.exports = Backbone.View.extend({
 , render: function() {
     var _this = this;
 
-    var edition = _.pick(this.model.get('edition'), 'id', 'title');
+    var edition = this.model.get('edition');
     var container = _.pick(this.model.attributes, 'id', 'title', 'number');
 
     _.each(this.model.get('pages'), function(page){

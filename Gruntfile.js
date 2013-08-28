@@ -59,7 +59,7 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          "assets/js/compiled/templates.js": ['server/templates/**/*.handlebars', 'shared/templates/**/*.handlebars']
+          "assets/js/compiled/templates.js": ['shared/templates/**/*.handlebars']
         }
       }
     },
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
         tasks: ['sass']
       },
       handlebars: {
-        files: ['server/templates/**/*.handlebars', 'shared/templates/**/*.handlebars'],
+        files: ['shared/templates/**/*.handlebars'],
         tasks: ['handlebars', 'browserify']
       },
       scripts: {

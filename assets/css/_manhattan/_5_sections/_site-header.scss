@@ -21,18 +21,9 @@
   &.is-active-nav {
     transform: translate3d(85%, 0, 0);
   }
-  // at desk
-  @media only screen and (min-width: 769px) {
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-  }
 }
 
 .site-nav__button {
-  // hamburger, hidden at desk
-  @extend %hide--at-desk;
   float: left;
   background-image: url(/images/icon--hamburger.png);
   background-repeat: no-repeat;
@@ -46,10 +37,6 @@
   &.is-active {
     background-color: $dark-grey;
   }
-  // at desk
-  @media only screen and (min-width: 769px) {
-    display: none;
-  }
 }
 .svg .site-nav__button {
   background-image: url(/images/icon--hamburger.svg);
@@ -58,17 +45,12 @@
 .site-nav__title {
   // the title of the knowledge container (kc)
   float: left;
-  height: 2.625em; //42px
+  height: 2.625rem; //42px
   line-height: 2.9;
   @extend %xsmall-serif;
   color: white;
   margin-left: .2em;
-  @media only screen and (min-width: 769px) {
-    margin-left: 1.5em;
-  }
 }
-
-
 
 
 
@@ -88,64 +70,107 @@
   bottom: 0;
   width: 85%;
   overflow: auto;
+}
 
-  // at desk
-  @media only screen and (min-width: 769px) {
+.site-nav__ke-title {
+  height: 2.625rem; //42px
+  line-height: 2.9;
+  @extend %xsmall-serif;
+  color: white;
+  padding-left: 1em;
+  background: black;
+}
+
+.site-nav__links {
+  display: block;
+  background: $grey;
+  >li a {
+    display: block;
+    height: 2.625rem; //42px
+    line-height: 3.2;
+    @extend %small-sans;
+    color: white;
+    padding: 0 0 0 1em;
+    border-bottom: 1px solid #6e6e70;
+    b {
+      color: $light-grey;
+      margin-left: .5em;
+      display: inline-block;
+    }
+    &.is-active {
+      color: white;
+      b {
+        color: white;
+      }
+    }
+  }
+}
+
+
+
+
+
+/* RWD for site header
+--------------------------------------------------------
+  At Desk
+------------------------------------------------------ */
+@media only screen and (min-width: 769px) {
+
+  .site-header {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: translate3d(0, 0, 0) !important; // overrides active
+  }
+
+  .site-nav {
     position: relative;
     top: auto;
     left: auto;
     right: auto;
     width: auto;
     z-index: 400;
-    background: $dark-blue;
+    background: $darker-blue;
+    overflow: hidden;
   }
 
-}
-
-.site-nav__ke-title {
-  height: 2.625em; //42px
-  line-height: 2.9;
-  @extend %xsmall-serif;
-  color: white;
-  padding-left: 1em;
-  background: $dark-blue;
-}
-
-.site-nav__links {
-  // the links, stacked at mobile - horz at desk
-  // off-screen at mobile
-  display: block;
-  background: $grey;
-  >li a {
-    display: block;
-    height: 2.625rem; //42px
-    line-height: 3.1;
-    @extend %small-sans;
-    color: white;
-    padding: 0 0 0 1em;
-    border-bottom: 1px solid #6e6e70;
-    b {
-      color: $blue-grey;
-      margin-left: .5em;
-      display: inline-block;
-    }
+  .site-nav__button {
+    display: none;
   }
-}
 
-@media only screen and (min-width: 769px) {
+  .site-nav__title {
+    margin-left: 1.5rem;
+    line-height: 2.4;
+  }
+
   .site-nav__ke-title {
     float: left;
-    margin-left: .5em;
+    padding-left: 1.5rem;
+    background: $darker-blue;
+    line-height: 2.5;
+
   }
 
   .site-nav__links {
     background: transparent;
-    float: left;
+    float: right;
+    margin-right: 2em;
+
     > li {
       display: inline-block;
       a {
         display: inline-block;
         border-bottom: none;
+        padding: 0 0 0 .25em;
+        font-family: "ITCLubalinGraphW01-Md", georgia, serif;
+        font-weight: normal;
+        color: white;
+        opacity: .3;
+        line-height: 2.6;
+        &.is-active {
+          opacity: 1;
+        }
         b {
           display: none;
         }

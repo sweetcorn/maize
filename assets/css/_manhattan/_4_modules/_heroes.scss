@@ -56,6 +56,14 @@
   @extend %xxs-sans-medium;
 }
 
+// RWD Desk
+@media only screen and (min-width: 769px) {
+  .hero {
+    overflow: hidden;
+    height: 13em;
+  }
+}
+
 
 
 

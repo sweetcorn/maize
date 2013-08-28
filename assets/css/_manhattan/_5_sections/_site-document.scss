@@ -6,7 +6,7 @@
 --------------------------------------------------------
 
   Main HTML structure, styles, & font declarations
-  Main body structure, styles, & font declarationsr
+  Main body structure, styles, & font declarations
 ------------------------------------------------------ */
 
 
@@ -24,7 +24,7 @@ html {
   font-size: 100%;
   background: $grey;
   @media only screen and (min-width: 769px) {
-    background: $light-grey;
+    background: white;
   }
 }
 
@@ -49,8 +49,8 @@ body {
 
   // at desk
   @media only screen and (min-width: 769px) {
-    padding: 2em;
-    max-width: 1100px;
+    padding: .75em;
+    max-width: 58rem;
     margin: 0 auto;
     font-size: 125%;
   }

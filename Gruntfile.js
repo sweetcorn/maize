@@ -95,12 +95,12 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      options: {
-        livereload: true
-      },
       scss: {
         files: ['assets/css/**/*.scss'],
-        tasks: ['sass']
+        tasks: ['sass'],
+        options: {
+          livereload: true
+        },
       },
       handlebars: {
         files: ['shared/templates/**/*.handlebars'],
@@ -127,9 +127,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask('bower', 'Install bower dependencies', function () {
     var done = this.async();
-    if (grunt.file.exists('./vendor/components')) {
-      gruGruntnt.log.writeln('Cleaning existing bower components');
-      grunt.file.delete('./vendor/components');
+    if (grunt.file.exists('./assets/vendor/components')) {
+      grunt.log.writeln('Cleaning existing bower components');
+      grunt.file.delete('./assets/vendor/components');
     }
     grunt.log.writeln('Installing bower components...');
      cp

@@ -10,7 +10,6 @@ set :keep_releases, 5                               #capper default
 set :deploy_via, :remote_cache                      #capper default
 
 set :main_js, "app.js"
-set :forever_cmd, "./node_modules/.bin/forever"           #use the forever that is installed along with the app
 
 # your log folder to share between different releases
 # you can add more folders here...

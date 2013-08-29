@@ -1,5 +1,6 @@
 module.exports = [
   require('./0af17960-db7a-4551-a6f0-e6ed5145d9e8.json'),
+  require('./8a18a90e-e55d-4c1c-955c-8ef66e27e4a5.json'),
   require('./95017953-cca4-4d11-acb8-13ec5d657cde.json'),
   require('./ccab7c6e-ec15-41d1-abcf-2f4a93c1ede9.json'),
   require('./e81ca67c-e932-428f-b83e-fc1d73cd1f13.json'),

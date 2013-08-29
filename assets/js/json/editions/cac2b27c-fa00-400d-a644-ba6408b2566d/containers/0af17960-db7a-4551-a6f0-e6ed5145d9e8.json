@@ -6,7 +6,7 @@
         {
             "id": "4edbc75e-4568-410a-a94f-ef396d15a453",
             "template": "I1",
-            "body": "What you and your clients should be thinking about cloud, and where to start",
+            "body": "How you should be thinking about cloud, and where to start",
             "background": {
                 "url": "image.jpg",
                 "url@2x": "image@2x.jpg"
@@ -15,13 +15,13 @@
         {
             "id": "3b60e3d3-8e64-42c7-9fcb-75a99e433467",
             "template": "T1",
-            "title": "Cloud is a business growth engine. Beyond rethinking IT, it is a path to reinventing business."
+            "title": "Cloud is a business growth engine. Beyond rethinking IT, it is a path for reinventing business."
         },
         {
             "id": "16147468-959e-495f-92f5-43fba5c8a1c2",
             "template": "A1",
-            "title": "Innovate continuously",
-            "body": "Cloud is more than just apps made easy. It enables organizations to compose apps that generate and use data to rapidly evolve new services. Innovations can now be rapid, personal and continuous.",
+            "title": "Get faster",
+            "body": "To drive innovation and meet the increasing expectations of consumers, employees, suppliers and partners, organizations must continuously and more quickly develop, deploy and improve applications and services.",
             "items": [
                 {
                     "color": {
@@ -29,9 +29,52 @@
                         "g": "0",
                         "b": "0"
                     },
-                    "highlight": "200",
-                    "text": "billion intermittently connected devices by 2020."
+                    "highlight": "72%",
+                    "text": "of CEOs surveyed see the need to improve response time to market.\n\nBased on IBM PuresystemsTM research."
                 },
+                {
+                    "color": {
+                        "r": "0",
+                        "g": "0",
+                        "b": "0"
+                    },
+                    "highlight": "58%",
+                    "text": "of companies move to the private cloud to gain agility and speed.\n\nFpweb.net, \"value of the private cloud\" infographic, may 14, 2013."
+                }
+            ]
+        },
+        {
+            "id": "0d40e813-f913-43b8-8d17-c85b2248f0a9",
+            "template": "A1",
+            "title": "Get empowered",
+            "body": "It is under pressure to rapidly deliver intuitive, on-demand access to business services across the enterprise and to speed application and service deployment by enabling developers to create their own development and test environments.",
+            "items": [
+                {
+                    "color": {
+                        "r": "0",
+                        "g": "0",
+                        "b": "0"
+                    },
+                    "highlight": "45%",
+                    "text": "of CFOs need improved technology support for the quality of the data used for business decisions.\n\nFinancial executives international, \"the CFO's top technology imperatives,\" John e. Van decker and William m. Sinnett, June 2013."
+                },
+                {
+                    "color": {
+                        "r": "0",
+                        "g": "0",
+                        "b": "0"
+                    },
+                    "highlight": "36%",
+                    "text": "of business leaders manage cloud services without involvement or support of it.\n\nIBM center for applied insights, cloud global study, 2013."
+                }
+            ]
+        },
+        {
+            "id": "4f3d113f-d2f0-4056-b811-a80b78de1853",
+            "template": "A1",
+            "title": "Get efficient",
+            "body": "Organizations must improve the economics of it, using self-service business services and applications with a use-based payment model, adding new capabilities and capacity as needed, and maximizing the value of existing infrastructure.",
+            "items": [
                 {
                     "color": {
                         "r": "0",
@@ -39,24 +82,7 @@
                         "b": "0"
                     },
                     "highlight": "76%",
-                    "text": "of IT decision makers are concerned or very concerned by the rising pressure to reduce costs"
-                }
-            ]
-        },
-        {
-            "id": "0d40e813-f913-43b8-8d17-c85b2248f0a9",
-            "template": "A1",
-            "title": "Drive growth through hybrid cloud",
-            "body": "While some say public clouds are the future, the real opportunity is in a hybrid approach that integrates mobile and social apps on public clouds with transactional capabilities of  private cloud to convert interactions into revenue.",
-            "items": [
-                {
-                    "color": {
-                        "r": "0",
-                        "g": "0",
-                        "b": "0"
-                    },
-                    "highlight": "89%",
-                    "text": "of security professionals feel that more training is needed on how security applies to cloud."
+                    "text": "of it decision makers are concerned or very concerned by the rising pressure to reduce costs.\n\nForrester consulting, challenging the status quo on maintenance contracts and refresh cycles to lower costs, may 2013."
                 },
                 {
                     "color": {
@@ -64,25 +90,8 @@
                         "g": "0",
                         "b": "0"
                     },
-                    "highlight": "60-80%",
-                    "text": "growth year-over-year in traditional content types in 2012"
-                }
-            ]
-        },
-        {
-            "id": "4f3d113f-d2f0-4056-b811-a80b78de1853",
-            "template": "A1",
-            "title": "Spur new collaboration",
-            "body": "Maximum advantage doesn’t come through bypassing IT to get cloud services. It happens when IT and LOB come together to more effectively align IT with business strategy, simultaneously reducing cost and delivering results.",
-            "items": [
-                {
-                    "color": {
-                        "r": "0",
-                        "g": "0",
-                        "b": "0"
-                    },
-                    "highlight": "62%",
-                    "text": "of workloads will be cloud-based by 2014"
+                    "highlight": "31%",
+                    "text": "of executives surveyed cited cloud's ability to reduce fixed it costs and shift to a more variable \"pay as you go\" cost structure as a top benefit.\n\nIBM, the power of cloud: driving business model innovation, February 2012."
                 }
             ]
         }

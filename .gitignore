@@ -6,3 +6,6 @@ config/key.pem
 public/scripts
 public/styles
 .vagrant
+assets/vendor
+assets/js/compiled
+assets/css/compiled

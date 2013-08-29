@@ -1,0 +1,80 @@
+{
+    "id": "e8b0be7b-eebc-4a4c-9824-a78238947eda",
+    "number": "12",
+    "title": "The system choices",
+    "pages": [
+        {
+            "id": "654ebf7b-6b2a-4344-b5de-7b009281a201",
+            "template": "I1",
+            "body": "Explore how ibm delivers key infrastructure characteristics and creates new value.",
+            "background": {
+                "url": "image.jpg",
+                "url@2x": "image@2x.jpg"
+            }
+        },
+        {
+            "id": "66012181-10ac-4b19-95ba-cb15bb3adb0d",
+            "template": "M3",
+            "body": "Today's industry leaders need to be armed with the right infrastructure to address the ever-changing needs and expectations of their customers and organizations. To claim leadership, their it systems need to demonstrate the right characteristics. Explore how ibm can help.",
+            "buttons": [
+                {
+                    "title": "Resiliency matters",
+                    "target": {
+                        "id": "e6ac0abb-1dc8-4dbe-a714-7e41f55bd79b",
+                        "template": "PO3",
+                        "title": "Resiliency matters",
+                        "body": "A dynamic, responsive, security-rich infrastructure that rapidly scales up and down",
+                        "items": [
+                            {
+                                "title": "How ibm delivers on resiliency",
+                                "body": "Advanced memory utilization and caching offer near-linear scalability (scale up to 100,000 virtual machines on a single system). Resource management across physical and virtual infrastructures can scale in accordance with business needs. Robust security governance tools and audit processes help reduce risk."
+                            },
+                            {
+                                "title": "The value to the cio",
+                                "body": "A rich, interactive experience can increase revenue and user satisfaction."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Efficiency matters",
+                    "target": {
+                        "id": "87f91e8a-c03a-4350-8489-0e1fdd54b11b",
+                        "template": "PO3",
+                        "title": "Efficiency matters",
+                        "body": "Effective utilization of it infrastructure",
+                        "items": [
+                            {
+                                "title": "How ibm delivers on efficiency",
+                                "body": "Integrated management and automation help simplify it management, reduce administrative time and improve efficiency while reducing costs. Repeatable, proven patterns of expertise can more quickly build innovative solutions with logical representations of recurring topologies for given requirements."
+                            },
+                            {
+                                "title": "The value to the cio",
+                                "body": "New client services are rapidly developed, while operational costs decrease."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Responsiveness matters",
+                    "target": {
+                        "id": "63a360b7-95fb-4fbc-b051-7c5f493bf566",
+                        "template": "PO3",
+                        "title": "Responsiveness matters",
+                        "body": "An integrated, modular infrastructure that is rapidly deployable and highly scalable",
+                        "items": [
+                            {
+                                "title": "How ibm delivers on responsiveness",
+                                "body": "A deeply integrated computing, storage and networking system can rapidly deploy cloud services in minutes instead of days. An integrated set of capabilities helps build security-rich private clouds and cloud delivery platforms for managed service providers."
+                            },
+                            {
+                                "title": "The value to the cio",
+                                "body": "A cost-competitive, highly responsive solution is quickly brought to the marketplace."
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

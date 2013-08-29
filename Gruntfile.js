@@ -42,7 +42,8 @@ module.exports = function(grunt) {
           alias: [
             'assets/vendor/components/backbone/backbone.js:backbone',
             'assets/js/compiled/templates:templates',
-            'assets/js/compiled/json:json'
+            'assets/js/compiled/json:json',
+            'assets/js/lib/global-ui:global-ui'
           ]
         }
       },
@@ -51,7 +52,7 @@ module.exports = function(grunt) {
         dest: 'assets/js/compiled/app.js',
         options: {
           debug: true,
-          external: ['jQuery', 'handlebars', 'backbone', 'templates', 'json', 'fastclick']
+          external: ['jQuery', 'handlebars', 'backbone', 'templates', 'json', 'fastclick', 'global-ui']
         }
       },
       json: {

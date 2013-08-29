@@ -42,18 +42,12 @@ function zoomBaseFontSize(){
 }
 zoomBaseFontSize();
 
-
-$(function(){
+module.exports = function(){
 
   // Resizing
   $(window).resize(function(){
     zoomBaseFontSize();
   });
-
-});
-
-
-$(function(){
 
   /* @paging
   ----------------------------------------------------- */
@@ -133,4 +127,4 @@ $(function(){
   });
 
 
-});
+};

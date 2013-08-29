@@ -910,7 +910,6 @@ module.exports = function(){
   $(".js-toggle-nav ").on("click", function(e){
     // prevent default event
     e.preventDefault();
-    alert('click');
     // toggle active nav classes for site header and main
     $(".site-header, .site-main").toggleClass("is-active-nav");
   });

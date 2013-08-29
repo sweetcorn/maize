@@ -99,6 +99,17 @@ module.exports = function(grunt) {
       }
     },
 
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 version', '> 1%', 'ie 8']
+      },
+      your_target: {
+        files: {
+          'assets/css/compiled/screen.css': ['assets/css/compiled/screen.css']
+        }
+      },
+    },
+
     watch: {
       scss: {
         files: ['assets/css/**/*.scss'],
@@ -106,6 +117,10 @@ module.exports = function(grunt) {
         options: {
           livereload: true
         },
+      },
+      css: {
+        files: ['assets/css/compiled/**/*.css'],
+        tasks: ['autoprefixer']
       },
       handlebars: {
         files: ['shared/templates/**/*.handlebars'],
@@ -124,6 +139,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
 
 
@@ -145,7 +161,7 @@ module.exports = function(grunt) {
       });
   });
 
-  grunt.registerTask('base', ['browserify', 'handlebars', 'sass']);
+  grunt.registerTask('base', ['browserify', 'handlebars', 'sass', 'autoprefixer']);
   grunt.registerTask('server', ['base', 'bower', 'express', 'watch']);
   grunt.registerTask('dev', ['base', 'watch']);
   grunt.registerTask('deploy', ['base', 'jshint'])

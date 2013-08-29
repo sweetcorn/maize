@@ -21,7 +21,8 @@
     "underscore": "~1.5.1",
     "grunt": "~0.4.1",
     "grunt-express": "~1.0.0-beta2",
-    "bower": "~1.1.2"
+    "bower": "~1.1.2",
+    "grunt-autoprefixer": "~0.2.20130806"
   },
   "devDependencies": {
     "grunt-contrib-sass": "*",

@@ -30,17 +30,17 @@
         {
             "id": "e81ca67c-e932-428f-b83e-fc1d73cd1f13",
             "number": "06",
-            "title": "Three important conversations to have"
+            "title": "Important conversations to have"
+        },
+        {
+            "id": "9b271ebc-7294-47e0-a4a4-efa1bd903e3e",
+            "number": "07",
+            "title": "Opportunities for innovation"
         },
         {
             "id": "45713ccf-bfdf-4a76-abe9-1337de360833",
-            "number": "07",
-            "title": "The IBM industry perspective"
-        },
-        {
-            "id": "fb4a9e17-6665-4d48-a964-a82c50cde47a",
             "number": "08",
-            "title": "The new vocabulary"
+            "title": "The IBM industry perspective"
         },
         {
             "id": "8a18a90e-e55d-4c1c-955c-8ef66e27e4a5",
@@ -48,24 +48,24 @@
             "title": "Why IBM beats the competition"
         },
         {
-            "id": "ccab7c6e-ec15-41d1-abcf-2f4a93c1ede9",
+            "id": "fb4a9e17-6665-4d48-a964-a82c50cde47a",
             "number": "10",
+            "title": "The new vocabulary"
+        },
+        {
+            "id": "ccab7c6e-ec15-41d1-abcf-2f4a93c1ede9",
+            "number": "11",
             "title": "Why infrastructure matters"
         },
         {
             "id": "e8b0be7b-eebc-4a4c-9824-a78238947eda",
-            "number": "11",
+            "number": "12",
             "title": "The system choices"
         },
         {
             "id": "ab2eecc6-a50e-41e9-ba8a-f6cc2e15db6e",
-            "number": "12",
-            "title": "Partnering options to explore"
-        },
-        {
-            "id": "9b271ebc-7294-47e0-a4a4-efa1bd903e3e",
             "number": "13",
-            "title": "Container #13"
+            "title": "Partnering options to explore"
         }
     ]
 }

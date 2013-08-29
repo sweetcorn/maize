@@ -4,7 +4,7 @@ var Handlebars = require('handlebars');
 
 
 
-Handlebars.registerHelper('po', function(template, context, parentContext, options){
+Handlebars.registerHelper('template', function(template, context, parentContext, options){
   template = template.replace(/\//g, '_');
   var f = Handlebars.partials['pages.' + template.toLowerCase()];
   if (!f) {

@@ -1,14 +1,3 @@
-GIT
-  remote: git@github.com:adeven/capper.git
-  revision: b2cf329ed244b8830bb721cd5ed51aaf7fb5e0c1
-  specs:
-    capper (2.0.0)
-      capistrano
-      capistrano_colors
-      dedent
-      erubis
-      rvm-capistrano
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -19,6 +8,12 @@ GEM
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
     capistrano_colors (0.5.5)
+    capper (2.0.0)
+      capistrano
+      capistrano_colors
+      dedent
+      erubis
+      rvm-capistrano
     dedent (0.0.2)
     erubis (2.7.0)
     ffi (1.9.0)
@@ -48,5 +43,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capper!
+  capper
   sass (= 3.3.0.alpha.231)

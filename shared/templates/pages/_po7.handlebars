@@ -1,13 +1,15 @@
 <section class="t modal po7" id="{{parent.id}}-po" style="background-image: url(/images/fpo-po7-background.jpg);">
+  <div class="container">
 
-  <button class="icon icon--close modal__close">x</button>
+    <button class="icon icon--close modal__close">x</button>
 
-  <div class="po7__body">
-    {{#each questions}}
-      <h1 class="po7__title">{{text}}</h1>
-    {{/each}}
+    <div class="po7__body">
+      {{#each questions}}
+        <h1 class="po7__title">{{text}}</h1>
+      {{/each}}
+    </div>
+
+    <button class="icon icon--scroll modal__scroll">scroll down</button>
+
   </div>
-
-  <button class="icon icon--scroll modal__scroll">scroll down</button>
-
 </section>

@@ -574,15 +574,47 @@ table {
   Use @extend %clearfix in your CSS
 
 --------------------------------------------------------- */
-.nav, .figures, .site-header, .site-nav, .ke-header {
+.container, .nav, .figures, .site-header, .site-nav, .ke-header {
   zoom: 1;
 }
-.nav:before, .figures:before, .site-header:before, .site-nav:before, .ke-header:before, .nav:after, .figures:after, .site-header:after, .site-nav:after, .ke-header:after {
+.container:before, .nav:before, .figures:before, .site-header:before, .site-nav:before, .ke-header:before, .container:after, .nav:after, .figures:after, .site-header:after, .site-nav:after, .ke-header:after {
   content: " ";
   display: table;
 }
-.nav:after, .figures:after, .site-header:after, .site-nav:after, .ke-header:after {
+.container:after, .nav:after, .figures:after, .site-header:after, .site-nav:after, .ke-header:after {
   clear: both;
+}
+
+/**
+
+  @container
+--------------------------------------------------------
+  _2_layout/_container.scss
+--------------------------------------------------------
+
+
+  Restricts content to the site's max width
+  but allows for full color bars for sections.
+
+  Example: Container
+
+  <section class="awesome-section-with-background-color">
+    <div class="container">
+      <!--your content here-->
+    </div>
+  </section>
+
+------------------------------------------------------ */
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media only screen and (min-width: 769px) {
+  .container {
+    max-width: 74rem;
+    padding: 0 2rem;
+  }
 }
 
 /**
@@ -2599,7 +2631,7 @@ Copyright © 2012 Oak Studios LLC
 ------------------------------------------------------ */
 .hero {
   position: relative;
-  margin: 0 -1.25em 1.25em;
+  margin: 0 0 1.25em;
 }
 
 .hero__media {
@@ -2617,12 +2649,6 @@ Copyright © 2012 Oak Studios LLC
   color: white;
 }
 
-@media only screen and (min-width: 769px) {
-  .hero {
-    overflow: hidden;
-    height: 13em;
-  }
-}
 /* Have something else to add?
 --------------------------------------------------------
   + Add any new modifier classes below
@@ -2656,12 +2682,6 @@ Copyright © 2012 Oak Studios LLC
     <li><a class="btn" href="#responsiveness-matters">Responsiveness matters</a></li>
   </ul>
 ------------------------------------------------------ */
-.btn-menu {
-  position: absolute;
-  bottom: 1.25em;
-  left: 1.25em;
-  right: 1.25em;
-}
 .btn-menu li {
   display: block;
 }
@@ -2855,7 +2875,6 @@ Copyright © 2012 Oak Studios LLC
   .list-menu li .list-menu__link.list-menu__link--with-highlight {
     height: 8.75em;
     padding: 3em 2em 0 2em;
-    background: blue;
   }
 }
 /* @accordian-menu
@@ -2939,8 +2958,6 @@ body {
 }
 @media only screen and (min-width: 769px) {
   body {
-    padding: .75em;
-    max-width: 58rem;
     margin: 0 auto;
     font-size: 125%;
   }
@@ -2967,6 +2984,9 @@ body {
 }
 .site-header.is-active-nav {
   transform: translate3d(85%, 0, 0);
+}
+.site-header .container {
+  padding: 0;
 }
 
 .site-nav__button {
@@ -3010,6 +3030,9 @@ body {
   bottom: 0;
   width: 85%;
   overflow: auto;
+}
+.site-nav .container {
+  padding: 0;
 }
 
 .site-nav__ke-title {
@@ -3129,8 +3152,6 @@ body {
 }
 @media only screen and (min-width: 769px) {
   .site-main {
-    height: 34rem;
-    overflow: scroll;
     transform: translate3d(0, 0, 0) !important;
   }
 }
@@ -3144,31 +3165,15 @@ body {
 
 -----------------------------------------------------  */
 .t {
-  height: 30em;
-  width: 20em;
-  overflow: hidden;
-  padding: 4.125em 1.25em;
+  padding: 1.25em 0;
   background: #f0f0f0;
-  position: absolute;
-  top: -9999%;
-  transform: translate3d(100%, 0, 0);
-  transition: transform .6s;
-}
-.t.is-active {
-  top: 0;
-  transform: translate3d(0, 0, 0);
-}
-@media only screen and (min-width: 769px) {
-  .t {
-    width: 100%;
-    height: 34rem;
-    padding: 1.25em;
-  }
+  position: relative;
 }
 .t .t__pager {
   position: absolute;
   bottom: 1.25rem;
   left: 1.25rem;
+  border: 2px solid red;
 }
 @media only screen and (min-width: 769px) {
   .t .t__pager {
@@ -3188,28 +3193,6 @@ body {
   background: #00b0da;
   background-size: cover;
   color: white;
-  transform: translate3d(0, 0, 0);
-  display: none;
-}
-.modal.is-active {
-  position: fixed;
-  z-index: 200;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-}
-@media only screen and (min-width: 769px) {
-  .modal.is-active {
-    top: 1.25em;
-    bottom: 6.25em;
-    left: 1.25em;
-    right: 1.25em;
-    border: none;
-    width: auto;
-    height: auto;
-  }
 }
 
 .modal__close {
@@ -3234,6 +3217,10 @@ body {
   background: url(/images/fpo-intro.jpg);
   background-size: cover;
   color: white;
+  padding-top: 6em;
+}
+.i1 .container {
+  height: 28.75em;
 }
 
 .ke-header {
@@ -3254,18 +3241,18 @@ body {
 .i1__deck {
   position: absolute;
   bottom: 3em;
-  left: 1.125em;
-  right: 1.125em;
 }
 
 @media only screen and (min-width: 769px) {
   .i1 {
-    padding: .25em 1.25em;
+    padding: 4rem 0;
+    height: 24rem;
+    overflow: hidden;
   }
 
   .ke-header {
     border: none;
-    padding: .25em 0 0;
+    padding: 0;
     margin-bottom: 0;
   }
 
@@ -3275,7 +3262,7 @@ body {
 
   .ke-number {
     float: none;
-    font-size: 9em;
+    font-size: 7em;
     margin-bottom: .25em;
     font-family: "ITCLubalinGraphW01-XLt", georgia, serif;
     font-weight: normal;
@@ -3284,21 +3271,15 @@ body {
   .kc-title {
     font-size: 3.5em;
     line-height: 1.05;
+    margin-bottom: 1rem;
   }
 
   .i1__deck {
-    position: absolute;
-    bottom: 1.5em;
-    left: 33.3333%;
-    right: 3.5em;
-    text-align: right;
-    margin: 0;
-  }
-
-  .t__pager {
+    position: relative;
+    top: auto;
+    bottom: auto;
     left: auto;
-    right: 2.25rem;
-    bottom: 3.2rem;
+    right: auto;
   }
 }
 /* @t1

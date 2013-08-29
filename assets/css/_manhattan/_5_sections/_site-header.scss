@@ -21,6 +21,10 @@
   &.is-active-nav {
     transform: translate3d(85%, 0, 0);
   }
+  // containers in site header don't have padding
+  .container {
+    padding: 0;
+  }
 }
 
 .site-nav__button {
@@ -70,6 +74,11 @@
   bottom: 0;
   width: 85%;
   overflow: auto;
+
+  // containers in site nav don't have padding
+  .container {
+    padding: 0;
+  }
 }
 
 .site-nav__ke-title {

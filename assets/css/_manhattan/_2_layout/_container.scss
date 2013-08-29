@@ -21,16 +21,11 @@
 
 .container {
   @extend %clearfix;
+  position: relative;
   margin: 0 auto;
-  max-width: 1024px;   // restricts width **TODO**
-  padding: 0 1.25rem;  // adds padding on viewports less than the max-width
-}
-
-
-// Full containers go full height
-.container--full {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0; bottom: 0; left: 0; right: 0;
+  padding: 0 1rem;
+  @media only screen and (min-width: 769px) {
+    max-width: 74rem;
+    padding: 0 2rem;
+  }
 }

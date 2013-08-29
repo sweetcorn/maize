@@ -1,18 +1,21 @@
 <section class="t modal po4" id="{{parent.id}}-po">
-  <button class="icon icon--close modal__close">x</button>
+  <div class="container">
 
-  <h1 class="po4__title">{{title}}</h1>
+    <button class="icon icon--close modal__close">x</button>
 
-  <div class="po4__body">
+    <h1 class="po4__title">{{title}}</h1>
 
-    {{#each items}}
-      <blockquote class="bubble {{style}} align-{{placement}}">
-        <p>{{text}}</p>
-      </blockquote>
-    {{/each}}
+    <div class="po4__body">
+
+      {{#each items}}
+        <blockquote class="bubble {{style}} align-{{placement}}">
+          <p>{{text}}</p>
+        </blockquote>
+      {{/each}}
+
+    </div>
+
+    <button class="icon icon--scroll modal__scroll">scroll down</button>
 
   </div>
-
-  <button class="icon icon--scroll modal__scroll">scroll down</button>
-
 </section>

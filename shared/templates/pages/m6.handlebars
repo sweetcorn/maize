@@ -1,25 +1,11 @@
 <section class="t m6">
-  <ul class="list-menu">
-    {{#each links}}
-      <li><a href="#{{target}}-po" class="list-menu__link list-menu__link--large">{{text}}</a></li>
-      {{po target.template target .}}
-    {{/each}}
-  </ul>
-  <button class="icon icon--pager t__pager">next page</button>
-</section>
+  <div class="container">
 
+    <ul class="list-menu">
+      {{#each links}}
+        <li><a href="#{{target}}-po" class="list-menu__link list-menu__link--large">{{text}}</a></li>
+      {{/each}}
+    </ul>
 
-
-<section class="t m6">
-  <ul class="list-menu">
-    {{#each links}}
-      <li><a href="#{{target}}-po" class="list-menu__link list-menu__link--large">{{text}}</a></li>
-    {{/each}}
-  </ul>
-  <ul class="list-content">
-    {{#each links}}
-      {{po target.template target .}}
-    {{/each}}
-  </ul>
-  <button class="icon icon--pager t__pager">next page</button>
+  </div>
 </section>

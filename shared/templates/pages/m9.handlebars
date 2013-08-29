@@ -1,11 +1,15 @@
 <section class="t m9">
-  <ul class="list-menu accordian-menu">
-    {{#each items}}
-      <li><a data-toggle="{{id}}" href="#" class="list-menu__link accordian-menu__toggle js-accordian-toggle"><img src="/images/fpo-accordian-icon.png"> Retail</a></li>
-      {{#each links}}
-        <li><a data-toggle="{{../id}}" href="#{{id}}-po" class="list-menu__link accordian-menu__link">{{text}}</a></li>
-        {{po target.template target .}}
+  <div class="container">
+
+    <ul class="list-menu accordian-menu">
+      {{#each items}}
+        <li><a data-toggle="{{id}}" href="#" class="list-menu__link accordian-menu__toggle js-accordian-toggle"><img src="/images/fpo-accordian-icon.png"> Retail</a></li>
+        {{#each links}}
+          <li><a data-toggle="{{../id}}" href="#{{id}}-po" class="list-menu__link accordian-menu__link">{{text}}</a></li>
+          {{po target.template target .}}
+        {{/each}}
       {{/each}}
-    {{/each}}
-  </ul>
+    </ul>
+
+  </div>
 </section>

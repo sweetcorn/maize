@@ -33,6 +33,10 @@ module.exports = function(grunt) {
             handlebars: {
               path: 'assets/vendor/components/handlebars/handlebars.js',
               exports: 'Handlebars'
+            },
+            fastclick: {
+              path: 'assets/vendor/components/fastclick/lib/fastclick.js',
+              exports: 'FastClick'
             }
           },
           alias: [
@@ -47,7 +51,7 @@ module.exports = function(grunt) {
         dest: 'assets/js/compiled/app.js',
         options: {
           debug: true,
-          external: ['jQuery', 'handlebars', 'backbone', 'templates', 'json']
+          external: ['jQuery', 'handlebars', 'backbone', 'templates', 'json', 'fastclick']
         }
       },
       json: {

@@ -1,0 +1,112 @@
+{
+    "id": "ab2eecc6-a50e-41e9-ba8a-f6cc2e15db6e",
+    "number": "13",
+    "title": "Partnering options to explore",
+    "pages": [
+        {
+            "id": "1af97732-d58b-4ff9-ad52-d59b6981471a",
+            "template": "I1",
+            "body": "A tool to help you decide how to work together",
+            "background": {
+                "url": "image.jpg",
+                "url@2x": "image@2x.jpg"
+            }
+        },
+        {
+            "id": "b1213582-6c56-4642-b5b4-a140731f653a",
+            "template": "T2",
+            "title": "Gauge readiness and expertise within the organization",
+            "body": "The drive toward cloud is putting some IT departments in unique and unfamiliar territory. Hybrid IT models require new capabilities, skills and insights. The dilemma of whether to build a private cloud or move to a managed cloud is common among IT leadership."
+        },
+        {
+            "id": "e21681e7-3dbb-422c-b711-cb5665dd4b06",
+            "template": "A5",
+            "title": "Take the assessment",
+            "body": "For each selection, please choose the answer that best describes your organization's current state.",
+            "buttons": [
+                {
+                    "title": "Explore the options",
+                    "target": {
+                        "id": "ab274eab-ea26-4b0c-88b7-5cc6bc98ed54",
+                        "template": "PO3",
+                        "title": "",
+                        "body": "Explore the options by considering the following dimensions:",
+                        "items": [
+                            {
+                                "title": "Skills and experience",
+                                "body": "How much experience does your team have?\n\nA. We have a team of experts who have the know-how to develop and manage a cloud.\nB. We have a mix of seasoned professionals and novices.\nC. No one in our organization has ever done anything like this before."
+                            },
+                            {
+                                "title": "Timing",
+                                "body": "When would you like to migrate to the cloud?\n\nA. It's part of our long-term strategy.\nB. We're currently working to have it this quarter.\nC. Yesterday."
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "bf62904d-bd31-4786-9616-3af2004b3743",
+            "template": "A5",
+            "title": "Choose a sourcing model",
+            "body": "This assessment can help guide a nuanced discussion with IBM. In general, if you selected mostly a's, you may be inclined to build your solution in-house. If you've selected mostly b's, you may benefit from a strategy that mixes building your own solution and tapping into managed cloud services. For mostly c's, you may want to focus on tapping into cloud services.",
+            "buttons": [
+                {
+                    "title": "Explore the models",
+                    "target": {
+                        "id": "fd5fd9a4-a1c5-4925-818f-7ac96a11aacc",
+                        "template": "PO3",
+                        "title": "",
+                        "body": "",
+                        "items": [
+                            {
+                                "title": "Build",
+                                "body": "Through involvement in specific projects that support your cloud initiative, ibm can help you build your cloud environment, help augment skills and staff levels, and help navigate the experience to avoid traditional pitfalls."
+                            },
+                            {
+                                "title": "Build and tap in",
+                                "body": "Use a mix of traditional it, private cloud and IBM public cloud capabilities to get the solution off the ground. IBM serves as a partially integrated collaborator that can help plan for the long term while performing highly targeted tasks."
+                            },
+                            {
+                                "title": "Tap in ",
+                                "body": "Moving more to the public cloud, you gain an integrated, long-term ally with an arsenal of experts who can work within constraints. IBM takes the lead in bringing the solution to life, delivering predictable results."
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "72649a80-2298-41e5-b4a2-1049b2fd3661",
+            "template": "A3",
+            "title": {
+                "color": {
+                    "r": "0",
+                    "g": "0",
+                    "b": "0"
+                },
+                "text": "Explore the IBM solutions"
+            },
+            "subtitle": "IBM can team with you in the following dimensions across the spectrum of client need and through the layers of business operations:",
+            "items": [
+                {
+                    "title": "Consulting",
+                    "body": "Jump-start transformation using business value accelerators-rapid, outcome-driven consulting projects.\n\n* Cloud application virtualization accelerator\n* Cloud-enabled business model accelerator\n* Cloud migration rapid assessment"
+                },
+                {
+                    "title": "Process",
+                    "body": "Deliver sustainable competitive advantage through process innovation.\n\n* Customer relationship management (CRM)\n* Finance and administration (F&A)\n* Supply chain management (SCM)\n* HR, learning and recruiting (HR)\n* Financial services"
+                },
+                {
+                    "title": "Application",
+                    "body": "Strategically manage application portfolios in support of business goals.\n\n* Cloud application management\n* Smarter application development and management\n* Application outsourcing services\n* Application modernization services\n* Sap application management\n* Oracle application management\n* Testing services\n* Application assembly optimization"
+                },
+                {
+                    "title": "Infrastructure",
+                    "body": "Apply deep technological expertise and industry insights to your specific infrastructure priorities.\n\n* Cloud services"
+                }
+            ],
+            "button": null
+        }
+    ]
+}

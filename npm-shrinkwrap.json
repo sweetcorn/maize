@@ -163,8 +163,7 @@
     },
     "async": {
       "version": "0.2.9",
-      "from": "async@0.2.9",
-      "resolved": "https://registry.npmjs.org/async/-/async-0.2.9.tgz"
+      "from": "async@~0.2.9"
     },
     "express3-handlebars": {
       "version": "0.5.0",

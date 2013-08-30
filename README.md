@@ -52,4 +52,16 @@ The application will now be live at [http://0.0.0.0:3000](http://0.0.0.0:3000)
 
 ## Deployment
 
-tbd
+For now, a temp deployment is up on Heroku.
+
+### Set your Heroku remote up
+
+``` bash
+git remote add production git@heroku.com:ibm-knowledge-editions-app.git
+```
+
+### Deploy
+
+``` bash
+git push production master
+```

@@ -4,8 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js",
-    "postinstall": "grunt deploy"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +21,6 @@
     "ejs": "~0.8.4",
     "path": "~0.4.9",
     "underscore": "~1.5.1",
-    "grunt-cli": "~0.1.9",
     "grunt": "~0.4.1",
     "grunt-express": "~1.0.0-beta2",
     "bower": "~1.1.2",

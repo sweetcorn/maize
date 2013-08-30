@@ -164,7 +164,7 @@ module.exports = function(grunt) {
   grunt.registerTask('base', ['handlebars', 'browserify', 'sass', 'autoprefixer']);
   grunt.registerTask('server', ['base', 'bower', 'express', 'watch']);
   grunt.registerTask('dev', ['base', 'watch']);
-  grunt.registerTask('deploy', ['base'])
+  grunt.registerTask('heroku', ['base'])
   grunt.registerTask('default', ['dev']);
 
 

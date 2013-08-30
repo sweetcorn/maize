@@ -90,8 +90,9 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          style: 'expanded',
-          sourcemap: true
+          includePaths: ['assets/css/**/*'],
+          outputStyle: 'expanded',
+          sourceComments: 'map'
         },
         files: {
           'assets/css/compiled/screen.css': 'assets/css/screen.css.scss'
@@ -135,7 +136,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-express');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-jshint');

@@ -1377,16 +1377,6 @@
         }
       }
     },
-    "grunt-contrib-sass": {
-      "version": "0.5.0",
-      "from": "grunt-contrib-sass@*",
-      "dependencies": {
-        "dargs": {
-          "version": "0.1.0",
-          "from": "dargs@~0.1.0"
-        }
-      }
-    },
     "grunt-contrib-handlebars": {
       "version": "0.5.10",
       "from": "grunt-contrib-handlebars@*",
@@ -1970,6 +1960,47 @@
     "grunt-style-injector": {
       "version": "0.1.7",
       "from": "grunt-style-injector@~0.1.7"
+    },
+    "grunt-sass": {
+      "version": "0.6.1",
+      "from": "grunt-sass@~0.6.1",
+      "dependencies": {
+        "node-sass": {
+          "version": "0.6.4",
+          "from": "node-sass@~0.6.2",
+          "dependencies": {
+            "mkdirp": {
+              "version": "0.3.5",
+              "from": "mkdirp@0.3.x"
+            },
+            "colors": {
+              "version": "0.6.0-1",
+              "from": "colors@0.6.0-1",
+              "resolved": "https://registry.npmjs.org/colors/-/colors-0.6.0-1.tgz"
+            },
+            "optimist": {
+              "version": "0.4.0",
+              "from": "optimist@0.4.x",
+              "dependencies": {
+                "wordwrap": {
+                  "version": "0.0.2",
+                  "from": "wordwrap@~0.0.2"
+                }
+              }
+            }
+          }
+        },
+        "grunt-lib-contrib": {
+          "version": "0.6.1",
+          "from": "grunt-lib-contrib@~0.6.1",
+          "dependencies": {
+            "zlib-browserify": {
+              "version": "0.0.1",
+              "from": "zlib-browserify@0.0.1"
+            }
+          }
+        }
+      }
     },
     "chokidar": {
       "version": "0.6.3",

@@ -25,11 +25,11 @@
     "grunt-express": "~1.0.0-beta2",
     "bower": "~1.1.2",
     "grunt-autoprefixer": "~0.2.20130806",
-    "grunt-contrib-sass": "*",
     "grunt-contrib-handlebars": "*",
     "grunt-contrib-watch": "*",
     "grunt-browserify": "~1.2.4",
     "grunt-contrib-jshint": "~0.6.3",
-    "grunt-style-injector": "~0.1.7"
+    "grunt-style-injector": "~0.1.7",
+    "grunt-sass": "~0.6.1"
   }
 }

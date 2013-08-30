@@ -21,6 +21,10 @@ module.exports = function(grunt) {
     },
 
     browserify: {
+      json: {
+        src: ['assets/json/**/*.json'],
+        dest: 'assets/js/compiled/json.js'
+      },
       vendor: {
         src: [],
         dest: 'assets/js/compiled/vendor.js',
@@ -54,10 +58,6 @@ module.exports = function(grunt) {
           debug: true,
           external: ['jQuery', 'handlebars', 'backbone', 'templates', 'json', 'fastclick', 'global-ui']
         }
-      },
-      json: {
-        src: ['assets/json/**/*.json'],
-        dest: 'assets/js/compiled/json.js'
       }
     },
 
@@ -161,10 +161,10 @@ module.exports = function(grunt) {
       });
   });
 
-  grunt.registerTask('base', ['browserify', 'handlebars', 'sass', 'autoprefixer']);
+  grunt.registerTask('base', ['handlebars', 'browserify', 'sass', 'autoprefixer']);
   grunt.registerTask('server', ['base', 'bower', 'express', 'watch']);
   grunt.registerTask('dev', ['base', 'watch']);
-  grunt.registerTask('deploy', ['base', 'jshint'])
+  grunt.registerTask('deploy', ['base'])
   grunt.registerTask('default', ['dev']);
 
 

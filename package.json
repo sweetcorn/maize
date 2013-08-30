@@ -21,9 +21,7 @@
     "express3-handlebars": "0.5.0",
     "ejs": "~0.8.4",
     "path": "~0.4.9",
-    "underscore": "~1.5.1"
-  },
-  "devDependencies": {
+    "underscore": "~1.5.1",
     "grunt-cli": "~0.1.9",
     "grunt": "~0.4.1",
     "grunt-express": "~1.0.0-beta2",

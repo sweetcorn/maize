@@ -90,9 +90,8 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          includePaths: ['assets/css/**/*'],
-          outputStyle: 'expanded',
-          sourceComments: 'map'
+          style: 'expanded',
+          sourcemap: true
         },
         files: {
           'assets/css/compiled/screen.css': 'assets/css/screen.css.scss'
@@ -136,7 +135,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-express');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
-  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -162,8 +161,8 @@ module.exports = function(grunt) {
       });
   });
 
-  grunt.registerTask('base', ['handlebars', 'browserify', 'sass', 'autoprefixer']);
-  grunt.registerTask('server', ['base', 'bower', 'express', 'watch']);
+  grunt.registerTask('base', ['handlebars', 'browserify', 'autoprefixer']);
+  grunt.registerTask('server', ['base', 'sass', 'bower', 'express', 'watch']);
   grunt.registerTask('dev', ['base', 'watch']);
   grunt.registerTask('heroku', ['base'])
   grunt.registerTask('default', ['dev']);

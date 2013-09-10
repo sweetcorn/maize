@@ -21,13 +21,9 @@ module.exports = function(grunt) {
     },
 
     browserify: {
-      json: {
-        src: ['assets/json/**/*.json'],
-        dest: 'assets/js/compiled/json.js'
-      },
       vendor: {
         src: [],
-        dest: 'assets/js/compiled/vendor.js',
+        dest: 'public/js/vendor.js',
         options: {
           shim: {
             jQuery: {
@@ -41,22 +37,29 @@ module.exports = function(grunt) {
             fastclick: {
               path: 'assets/vendor/components/fastclick/lib/fastclick.js',
               exports: 'FastClick'
+            },
+            jsonform: {
+              path: 'assets/vendor/components/jsonform/lib/jsonform.js',
+              depends: {jQuery: '$', underscore: '_'},
+              exports: 'jsonform'
+            },
+            Base64: {
+              path: 'assets/vendor/components/js-base64/base64.js',
+              exports: 'Base64'
             }
           },
           alias: [
             'assets/vendor/components/backbone/backbone.js:backbone',
-            'assets/js/compiled/templates:templates',
-            'assets/js/compiled/json:json',
-            'assets/js/lib/global-ui:global-ui'
+            'assets/js/compiled/templates:templates'
           ]
         }
       },
       app: {
-        src: ['assets/js/lib/**/*.js', 'assets/js/app/**/*.js'],
-        dest: 'assets/js/compiled/app.js',
+        src: ['assets/js/lib/**/*.js', 'assets/js/app/**/*.js', 'assets/json/**/*.json'],
+        dest: 'public/js/app.js',
         options: {
           debug: true,
-          external: ['jQuery', 'handlebars', 'backbone', 'templates', 'json', 'fastclick', 'global-ui']
+          external: ['jQuery', 'handlebars', 'backbone', 'templates', 'json', 'fastclick', 'jsonform', 'Base64']
         }
       }
     },
@@ -94,7 +97,7 @@ module.exports = function(grunt) {
           sourcemap: true
         },
         files: {
-          'assets/css/compiled/screen.css': 'assets/css/screen.css.scss'
+          'public/css/screen.css': 'assets/css/screen.css.scss'
         }
       }
     },
@@ -128,7 +131,10 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: ['assets/js/app/**/*.js', 'assets/js/lib/**/*.js'],
-        tasks: ['browserify:app']
+        tasks: ['browserify:app'],
+        options: {
+          livereload: true
+        },
       },
     },
   });
@@ -138,7 +144,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browserify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-autoprefixer');
 
 
@@ -162,7 +167,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('base', ['handlebars', 'browserify', 'autoprefixer']);
-  grunt.registerTask('server', ['base', 'sass', 'bower', 'express', 'watch']);
+  grunt.registerTask('server', ['base', 'sass', 'express', 'watch']);
   grunt.registerTask('dev', ['base', 'watch']);
   grunt.registerTask('heroku', ['base'])
   grunt.registerTask('default', ['dev']);

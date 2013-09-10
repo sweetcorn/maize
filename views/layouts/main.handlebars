@@ -5,6 +5,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
@@ -13,25 +14,36 @@
 
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="IBM Knowledge Editions">
+    <meta name="apple-mobile-web-app-title" content="Maize">
 
-    {{{css 'compiled/screen'}}}
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
   </head>
 
   <body class="js-body">
 
-   <!-- Main site nav -->
-    <div class="js-nav-container">
+    <nav>
+      <ul>
+        {{^user}}
+          <li><a href="/login">Login</a></li>
+        {{/user}}
+        {{#user}}
+          <li><a href="/files">Files</a></li>
+          <li><a href="/login">Logout</a></li>
+        {{/user}}
+      </ul>
+    </nav>
 
-    </div>
+    {{{body}}}
 
     <!-- Site's Main Content-->
-    <main class="site-main js-main" role="main">
 
-    </main>
+    <script type='text/javascript' src='/js/vendor.js'></script>
+    <script type='text/javascript' src='/js/app.js'></script>
 
-    {{{js 'compiled/vendor'}}}
-    {{{js 'compiled/app'}}}
+    <script type="text/javascript">
+
+    </script>
 
   </body>
 </html>

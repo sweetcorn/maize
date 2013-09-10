@@ -2,9 +2,29 @@ var $ = require('jQuery');
 var Backbone = require('backbone');
 Backbone.$ = $;
 
-var AppRouter = require('./backbone/routers/app');
+var AppRouter = require('./routers/app');
 
 require('templates')(require('handlebars'));
+
+
+
+$.fn.serializeObject = function() {
+  var o = {};
+  var a = this.serializeArray();
+  $.each(a, function() {
+    if (o[this.name]) {
+      if (!o[this.name].push) {
+        o[this.name] = [o[this.name]];
+      }
+      o[this.name].push(this.value || '');
+    } else {
+      o[this.name] = this.value || '';
+    }
+  });
+  return o;
+};
+
+
 
 module.exports = (function (options) {
   options = options || {};

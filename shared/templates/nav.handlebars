@@ -1,22 +1,5 @@
-<nav class="site-nav">
-  <div class="container">
-
-    <h1 class="site-nav__ke-title">{{title}}</h1>
-    <ul class="site-nav__links" role="navigation">
-      {{#each containers}}
-        <li><a href="/editions/{{../id}}/containers/{{id}}">{{number}}<b>{{title}}</b></a></li>
-      {{/each}}
-    </ul>
-
-  </div>
+<nav>
+  <ul class="js-nav">
+    <li><a class="js-nav-link" href="/sign-up">Sign Up</a></li>
+  </ul>
 </nav>
-
-<!-- Site's Header-->
-<header class="site-header" role="banner">
-  <div class="container">
-
-    <button class="site-nav__button js-toggle-nav"><i class="ss-icon">=</i></button>
-    <h1 class="site-nav__title">{{title}}</h1>
-
-  </div>
-</header>

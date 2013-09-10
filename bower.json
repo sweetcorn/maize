@@ -17,6 +17,9 @@
     "REM-unit-polyfill": "git@github.com:chuckcarpenter/REM-unit-polyfill.git",
     "respond": "~1.3.0",
     "jquery.scrollTo": "~1.4.6",
-    "bootstrap-js": "git@github.com:crushlovely/bootstrap-js.git"
+    "bootstrap-js": "git@github.com:crushlovely/bootstrap-js.git",
+    "bootstrap": "bootstrap",
+    "jsonform": "git@github.com:joshfire/jsonform.git",
+    "js-base64": "2.1.2"
   }
 }

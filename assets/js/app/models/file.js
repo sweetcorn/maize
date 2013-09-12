@@ -1,5 +1,6 @@
 var Backbone = require('backbone');
 var Base64 = require('Base64');
+
 var Schema = require('./schema');
 
 
@@ -7,16 +8,11 @@ var Schema = require('./schema');
 
 module.exports = Backbone.Model.extend({
 
-  url: function(){
-    return '/api/files/' + this.id;
-  }
+
+  idAttribute: '_id'
 
 , initialize: function(options) {
-    $.ajaxSetup({
-      beforeSend: function(xhr) {
-        // xhr.setRequestHeader('Authentication', 'token ' + this.account.administrator.access_token);
-      }
-    });
+    this.apiUrl = 'https://api.github.com/repos/' + user.github.username + '/' + options.repoName + '/contents/' + options.filePath;
 
     this.on('sync', this.getContents, this);
   }
@@ -24,9 +20,10 @@ module.exports = Backbone.Model.extend({
 , getContents: function() {
     var _this = this;
 
-    this.schema = new Schema({}, {file: this, url: this.get('repo').url});
+    // this.schema = new Schema({}, {file: this, url: this.get('repo').url});
 
-    $.get(this.get('url'), function(resp){
+    $.get(this.apiUrl, function(resp){
+      _this.set(_.extend(resp, {content: Base64.decode(resp.content)}));
       _this.trigger('github:get', Base64.decode(resp.content));
     })
   }
@@ -41,10 +38,10 @@ module.exports = Backbone.Model.extend({
     }
 
     $.ajax({
-      url: 'https://api.github.com/repos/createbang/testForMaize/contents/bunnies.json',
+      url: this.apiUrl,
       type: 'put',
       beforeSend: function(xhr){
-        xhr.setRequestHeader('Authorization', 'token ' + '3d169c37a53d743c925182fb8eb7a10d123db239');
+        xhr.setRequestHeader('Authorization', 'token ' + user.github.accessToken);
       },
       data: JSON.stringify(data),
       success: function(data, status, xhr) {

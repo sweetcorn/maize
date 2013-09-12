@@ -1,33 +1,29 @@
 var Backbone = require('backbone');
 
-var PageView = require('../views/page');
+var pageViews = require('../views/pages');
 var File = require('../models/file');
-var AppRouter;
 
 
 
 
-AppRouter = module.exports = Backbone.Router.extend({
-
+module.exports = Backbone.Router.extend({
 
   routes: {
-    '': 'index',
-    'files': 'files',
+    '': 'home',
+    'files': 'fileIndex',
     'files/:id': 'fileShow'
   }
 
-, index: function() {
-    new PageView();
+, home: function() {
+    new pageViews.HomeView();
   }
 
-, files: function() {
-    new PageView();
+, fileIndex: function() {
+    new pageViews.FileIndexView();
   }
 
 , fileShow: function(id) {
-    var file = new File({id: id});
-    console.log(file);
-    new PageView({model: file})
+    new pageViews.FileShowView({id: id});
   }
 
 });

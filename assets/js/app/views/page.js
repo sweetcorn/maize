@@ -1,9 +1,9 @@
 var Backbone = require('backbone');
 
-var $ = require('jQuery');
 var jsonform = require('jsonform');
 var Base64 = require('Base64');
 var Files = require('../collections/files');
+
 
 
 
@@ -82,55 +82,6 @@ module.exports = Backbone.View.extend({
       this.listenTo(this.model, 'github:get', this.showFileContents);
       this.model.fetch();
     }
-
-    $('.js-form-main').jsonForm({
-      "schema": {
-        "friends": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "title": "Friend",
-            "properties": {
-              "nick": {
-                "type": "string",
-                "title": "Nickname"
-              },
-              "animals": {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "title": "Animal name"
-                }
-              }
-            }
-          }
-        }
-      },
-      "form": [
-        {
-          "type": "tabarray",
-          "items": {
-            "type": "section",
-            "items": [
-              "friends[].nick",
-              {
-                "type": "array",
-                "items": [
-                  "friends[].animals[]"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "type": "submit",
-          "title": "OK Go - This Too Shall Pass"
-        }
-      ],
-      onSubmit: function (errors, values) {
-        console.log(JSON.stringify(values));
-      }
-    })
 
     this.delegateEvents();
   }

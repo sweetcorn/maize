@@ -1,0 +1,9 @@
+{{#if .}}
+  <ul class="js-files">
+    {{#each .}}
+      <li><a class="file" href="/files/{{_id}}">{{filePath}}</a><span> </span></li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No files found for this account!</p>
+{{/if}}

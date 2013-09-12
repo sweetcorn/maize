@@ -37,14 +37,13 @@ passport.use(new GithubStrategy({
   },
   function(accessToken, refreshToken, profile, done) {
     var _profile = profile;
-    var _done = done;
 
     var accounts = db.collection('accounts');
     var profile = profile._json;
     var matchObj = {email: profile.email};
 
     accounts.findOne(matchObj, function(err, account){
-
+      if (err) { return done(err); }
       var attributes = {
         name: profile.name,
         administrator: true,
@@ -57,13 +56,25 @@ passport.use(new GithubStrategy({
         }
       }
 
+      // update the existing record with the Github information or create a new one
       if (account){
-        accounts.update(matchObj, attributes);
+        accounts.update(matchObj, attributes, function (err) {
+          if (err) { return done(err) }
+          accounts.findOne(matchObj, function(err, account){
+            if (err) { return done(err); }
+            return done(null, account);
+          });
+        });
       } else {
-        account = accounts.insert(attributes);
-      }
+        accounts.insert(attributes, function (err) {
+          if (err) { return done(err); }
+          accounts.findOne(matchObj, function(err, account){
+            if (err) { return done(err); }
+            return done(null, account);
+          });
+        });
 
-      return _done(null, account);
+      }
 
     })
   }
@@ -124,7 +135,8 @@ app.get('/logout', function(req, res){
 app.get('/files', function(req, res){
   ensureAuthenticated(req, res, function(){
     db.collection('files').find({account_id: req.user._id}).toArray(function(err, files){
-      res.render('files', { title: 'Express', files: files, user: req.user});
+      res.locals.user = JSON.stringify(req.user);
+      res.render('file_index', { title: 'Express', files: files});
     });
   });
 });
@@ -132,10 +144,14 @@ app.get('/files', function(req, res){
 app.get('/files/:id', function(req, res){
   ensureAuthenticated(req, res, function(){
     db.collection('files').findById(req.params.id, function(err, file){
-      res.render('fileshow', {file: file, user: req.user})
+      res.locals.user = JSON.stringify(req.user);
+      res.render('file_show', {file: file})
     });
   });
 });
+
+
+
 
 app.get('/api/files/:id', function(req, res){
   ensureAuthenticated(req, res, function(){
@@ -148,12 +164,9 @@ app.get('/api/files/:id', function(req, res){
 app.patch('/api/files/:id', function(req, res){
   ensureAuthenticated(req, res, function(){
     var id = req.params.id;
-    var _res = res;
-    console.log({$set: req.body});
     db.collection('files').updateById(id, {$set: req.body}, function(err){
-      console.log(err);
       db.collection('files').findById(id, function(err, file){
-        _res.send(file);
+        res.send(file);
       });
     });
   });
@@ -163,6 +176,40 @@ app.post('/api/files', function(req, res){
   ensureAuthenticated(req, res, function(){
     db.collection('files').insert(_.extend({account_id: req.user._id}, req.body), function(err, file){
       res.send(file[0]);
+    });
+  });
+});
+
+app.get('/api/files', function(req, res){
+  ensureAuthenticated(req, res, function(){
+    db.collection('files').findItems({account_id: req.user._id}, function(err, files){
+      res.send(files);
+    });
+  });
+});
+
+// create a new account
+// arguments: {email: 'test@test.com', file_id: '1234'}
+// should not be tied to an administrator, but to a file
+// argument should be a file id and an email address
+// the account record will be created with the email and the email will be sent for verification
+// the file record will have an 'accounts' array and will include the new account
+app.post('/api/accounts', function(req, res){
+  ensureAuthenticated(req, res, function(){
+    db.collection('files').insert(_.extend({account_id: req.user._id}, req.body), function(err, file){
+      res.send(file[0]);
+    });
+  });
+});
+
+// update an account
+app.patch('/api/accounts/:id', function(req, res){
+  ensureAuthenticated(req, res, function(){
+    var id = req.params.id;
+    db.collection('files').updateById(id, {$set: req.body}, function(err){
+      db.collection('files').findById(id, function(err, file){
+        res.send(file);
+      });
     });
   });
 });

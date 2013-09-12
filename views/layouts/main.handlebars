@@ -34,7 +34,9 @@
       </ul>
     </nav>
 
-    {{{body}}}
+    <div class="js-container">
+      {{{body}}}
+    </div>
 
     <!-- Site's Main Content-->
 
@@ -42,7 +44,9 @@
     <script type='text/javascript' src='/js/app.js'></script>
 
     <script type="text/javascript">
-
+      {{#if user}}
+        window.user = {{{user}}};
+      {{/if}}
     </script>
 
   </body>

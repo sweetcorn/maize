@@ -22,10 +22,20 @@ module.exports = Backbone.Model.extend({
 
     // this.schema = new Schema({}, {file: this, url: this.get('repo').url});
 
-    $.get(this.apiUrl, function(resp){
-      _this.set(_.extend(resp, {content: Base64.decode(resp.content)}));
-      _this.trigger('github:get', Base64.decode(resp.content));
+    $.ajax({
+      url: this.apiUrl
+    , beforeSend: function(xhr){
+        xhr.setRequestHeader('Authorization', 'token ' + user.github.accessToken);
+      }
+    , success: function(resp){
+        _this.set(resp);
+        _this.trigger('github:get');
+      }
     })
+  }
+
+, content: function() {
+    return JSON.parse(Base64.decode(this.get('content')));
   }
 
 , saveContents: function(obj) {
@@ -33,7 +43,7 @@ module.exports = Backbone.Model.extend({
 
     var data = {
       message: "foobar"
-    , content: Base64.encode(obj)
+    , content: Base64.encode(JSON.stringify(obj))
     , sha: this.get('sha')
     }
 
@@ -52,6 +62,7 @@ module.exports = Backbone.Model.extend({
         _this.trigger('github:put:error', error);
       }
     })
+
   }
 
 });

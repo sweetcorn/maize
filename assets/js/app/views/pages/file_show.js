@@ -8,10 +8,6 @@ module.exports = Backbone.View.extend({
 
   el: ('.js-container')
 
-, events: {
-    'click [type=submit]': 'submit'
-  }
-
 , initialize: function(options) {
     var _this = this;
 
@@ -26,18 +22,38 @@ module.exports = Backbone.View.extend({
     });
 
     this.collection.fetch();
+
+    this.on('foo', this.test, this);
   }
 
-, submit: function(e) {
-    e.preventDefault();
-    this.model.saveContents(this.$('textarea').val());
+, test: function(values){
+    this.model.saveContents(values);
   }
 
 , render: function() {
+    var _this = this;
     var template = JST.file_show;
     var html = template(this.model.toJSON());
 
     $('.js-file-show').html(html);
+
+    $('form').jsonForm({
+      schema: {
+        name: {
+          type: 'string',
+          title: 'Name',
+          required: true
+        },
+        age: {
+          type: 'number',
+          title: 'Age'
+        }
+      },
+      value: this.model.content(),
+      onSubmit: function(err, values){
+        _this.trigger('foo', values);
+      }
+    });
   }
 
 })

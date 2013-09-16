@@ -47,6 +47,14 @@ module.exports = Backbone.View.extend({
         age: {
           type: 'number',
           title: 'Age'
+        },
+        gender: {
+          type: 'select',
+          title: 'gender',
+          enum: [
+            "male",
+            "female"
+          ]
         }
       },
       value: this.model.content(),
